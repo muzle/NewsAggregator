@@ -1,5 +1,6 @@
 included:
     - NewsAggregator
+    - Domain
 
 identifier_name:
   allowed_symbols: "_"
