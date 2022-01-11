@@ -9,12 +9,16 @@ PODS:
   - RxSwift (6.2.0)
   - RxTest (6.2.0):
     - RxSwift (= 6.2.0)
+  - Sourcery (1.6.1):
+    - Sourcery/CLI-Only (= 1.6.1)
+  - Sourcery/CLI-Only (1.6.1)
 
 DEPENDENCIES:
   - RxBlocking
   - RxCocoa
   - RxSwift
   - RxTest
+  - Sourcery
 
 SPEC REPOS:
   trunk:
@@ -23,6 +27,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - Sourcery
 
 SPEC CHECKSUMS:
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
@@ -30,7 +35,8 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
+  Sourcery: f3759f803bd0739f74fc92a4341eed0473ce61ac
 
-PODFILE CHECKSUM: d345010edaea0445ad6635204265e41e964070d9
+PODFILE CHECKSUM: a5fa62bec453d3764eba072f19f335119eb8b275
 
 COCOAPODS: 1.11.2

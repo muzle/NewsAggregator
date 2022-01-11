@@ -1,0 +1,19 @@
+{
+    "status":"ok",
+    "totalResults":15053,
+    "articles":[
+        {
+            "source":{
+                "id":null,
+                "name":"Business Today"
+            },
+            "author":"Prerna Lidhoo",
+            "title":"Why the Mahindra-SsangYong partnership didn’t work out",
+            "description":"Mahindra-owned SsangYong Motor is finally sold to South Korean electric bus and truck maker Edison Motors. But why did M&M’s much-hyped partnership fail?",
+            "url":"https://www.businesstoday.in/auto/story/why-the-mahindra-ssangyong-partnership-didnt-work-out-318698-2022-01-11",
+            "urlToImage":"https://akm-img-a-in.tosshub.com/businesstoday/images/story/202201/ezgif-sixteen_nine_117.jpg",
+            "publishedAt":"2022-01-11T16:11:30Z",
+            "content":"Debt-ridden SsangYong Motor is finally acquired by a local consortium led by South Korean electric bus and truck maker Edison Motors for 305 billion Won ($254.56 million). According to the companys r… [+3914 chars]"
+        }
+    ]
+}

@@ -16,6 +16,10 @@ def rxTest
   pod 'RxTest'
 end
 
+def sourcery
+  pod 'Sourcery'
+end
+
 target 'NewsAggregator' do
   # Pods for NewsAggregator
   rxSwift
@@ -46,4 +50,8 @@ target 'NetworkPlatform' do
   target 'NetworkPlatformTests' do
     rxTest
   end
+end
+
+target 'AutoGenerator' do
+  sourcery
 end

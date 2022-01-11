@@ -1,6 +1,7 @@
 included:
     - NewsAggregator
     - Domain
+    - NetworkPlatform
 
 identifier_name:
   allowed_symbols: "_"

@@ -1,10 +1,3 @@
-//
-//  NetworkPlatform.h
-//  NetworkPlatform
-//
-//  Created by muzle on 11.01.2022.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for NetworkPlatform.

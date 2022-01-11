@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <language>ru</language>
+    <title>Lenta.ru : Новости</title>
+    <description>Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки.</description>
+    <link>https://lenta.ru</link>
+    <image>
+      <url>https://lenta.ru/images/small_logo.png</url>
+      <title>Lenta.ru</title>
+      <link>https://lenta.ru</link>
+      <width>134</width>
+      <height>22</height>
+    </image>
+    <atom:link rel="self" type="application/rss+xml" href="http://lenta.ru/rss"/>
+<item>
+  <guid>https://lenta.ru/news/2022/01/11/tochkaq/</guid>
+  <author>Дмитрий Настасьев</author>
+  <title>Советник Назарбаева назвал слабое место в Казахстане</title>
+  <link>https://lenta.ru/news/2022/01/11/tochkaq/</link>
+  <description>
+    <![CDATA[На фоне массовых беспорядков в Казахстане бывший советник первого президента республики Нурсултана Назарбаева Ермухамет Ертысбаев назвал юг страны «слабым местом» для проникновения и ударов боевиков. Мнением Ертысбаев поделился в разговоре с российским журналистом Владимиром Соловьевым.]]>
+  </description>
+  <pubDate>Tue, 11 Jan 2022 19:09:37 +0300</pubDate>
+  <enclosure url="https://icdn.lenta.ru/images/2022/01/11/18/20220111185024470/pic_103329fa3ca2d8df93f7b219b8a70595.jpeg" type="image/jpeg" length="54200"/>
+  <category>Бывший СССР</category>
+</item>
+  </channel>
+</rss>
