@@ -1,6 +1,6 @@
 import Foundation
 
-internal class RssChanelImage: Decodable, AutoEquatable {
+internal final class RssChanelImage: Decodable, AutoEquatable, AutoHashable {
     var url: String?
     var title: String?
     var link: String?

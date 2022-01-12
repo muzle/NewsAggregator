@@ -1,6 +1,6 @@
 import Foundation
 
-internal class RssChannel: Decodable, AutoEquatable {
+internal final class RssChannel: Decodable, AutoEquatable, AutoHashable {
     /// Channel language.
     var language: String?
     /// Channel name. If you have a website that contains some information about a channel,

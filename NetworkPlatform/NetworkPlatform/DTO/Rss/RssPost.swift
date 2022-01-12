@@ -1,7 +1,6 @@
 import Foundation
-import Domain
 
-internal class RssPost: Decodable, AutoEquatable {
+internal final class RssPost: Decodable, AutoEquatable, AutoHashable {
     /// A string that uniquely identifies the publication.
     var guid: String?
     /// E-mail address of the author of the publication.
@@ -17,36 +16,4 @@ internal class RssPost: Decodable, AutoEquatable {
     var link: String?
     /// Description of the media object that is attached to the publication.
     var enclosure: RssEnclosure?
-    
-    func asDomaim(
-        with source: PostSource?,
-        dateFormatter: DateFormatter
-    ) -> Post {
-        var linkURL: URL?
-        if let link = link {
-            linkURL = URL(string: link)
-        }
-        var date: Date?
-        if let pubDate = pubDate {
-            date = dateFormatter.date(from: pubDate)
-        }
-        var image: Image?
-        if
-            let enclosureUrl = enclosure?.url,
-            let imageUrl = URL(string: enclosureUrl) {
-            image = .init(url_: imageUrl)
-        }
-        
-        return Post(
-            id_: "",
-            author_: nil,
-            link_: linkURL,
-            publicationDate_: date,
-            title_: title,
-            description_: description,
-            category_: category,
-            image_: image,
-            source_: source
-        )
-    }
 }

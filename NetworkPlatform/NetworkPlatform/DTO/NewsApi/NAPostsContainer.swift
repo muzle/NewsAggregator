@@ -1,6 +1,6 @@
 import Foundation
 
-internal struct NAPostsContainer: Codable, Equatable {
+internal struct NAPostsContainer: Codable, Hashable {
     let posts: [NAPost]
     
     enum CodingKeys: String, CodingKey {

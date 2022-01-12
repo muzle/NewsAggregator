@@ -42,4 +42,22 @@ extension Post {
         self.image = image_
     }
 }
+// MARK: - PostsContainer
+extension PostsContainer {
+    public init(
+        id_: String,
+        name_: String? = nil,
+        image_: Image? = nil,
+        url_: URL? = nil,
+        description_: String? = nil,
+        posts_: [Post]
+    ) {
+        self.id = id_
+        self.name = name_
+        self.image = image_
+        self.url = url_
+        self.description = description_
+        self.posts = posts_
+    }
+}
 // swiftlint:enable all

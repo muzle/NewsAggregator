@@ -1,5 +1,5 @@
 import Foundation
 
-internal class RssEnclosure: Decodable, AutoEquatable {
+internal final class RssEnclosure: Decodable, AutoEquatable, AutoHashable {
     var url: String?
 }

@@ -26,6 +26,17 @@
 		2F0A3E8E278F39D600C881BF /* URLSessionDataTask+Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */; };
 		2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E8F278F3A8C00C881BF /* NetworkLoaderError.swift */; };
 		2F0A3E92278F41FF00C881BF /* RootRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E91278F41FF00C881BF /* RootRepository.swift */; };
+		2F0A3E9F278F672000C881BF /* RssDtoMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E9E278F672000C881BF /* RssDtoMapperImpl.swift */; };
+		2F0A3EA1278F672A00C881BF /* NewsApiDtoMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EA0278F672A00C881BF /* NewsApiDtoMapperImpl.swift */; };
+		2F0A3EA3278F68D500C881BF /* DtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EA2278F68D500C881BF /* DtoMapper.swift */; };
+		2F0A3EA6278F6B7500C881BF /* EmailChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EA5278F6B7500C881BF /* EmailChecker.swift */; };
+		2F0A3EA8278F6C8800C881BF /* AutoHashable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EA7278F6C8800C881BF /* AutoHashable.generated.swift */; };
+		2F0A3EAA278F7EA100C881BF /* EmailCheckerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EA9278F7EA100C881BF /* EmailCheckerImpl.swift */; };
+		2F0A3EAC278F7F0100C881BF /* EmailCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EAB278F7F0100C881BF /* EmailCheckerTests.swift */; };
+		2F0A3EAF278F85CD00C881BF /* DtoMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EAE278F85CD00C881BF /* DtoMapperTests.swift */; };
+		2F0A3EB4278F889B00C881BF /* RssDtoMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */; };
+		2F0A3EB6278F88AC00C881BF /* NewApiMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */; };
+		2F0A3EB9278F893200C881BF /* ResourceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB8278F893200C881BF /* ResourceId.swift */; };
 		2F671784278DCBE400BD1F85 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */; };
 		2F67178A278DCBE400BD1F85 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAAB3E0278DF1F00096901B /* NAPost.swift */; };
@@ -81,6 +92,17 @@
 		2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Cancelable.swift"; sourceTree = "<group>"; };
 		2F0A3E8F278F3A8C00C881BF /* NetworkLoaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderError.swift; sourceTree = "<group>"; };
 		2F0A3E91278F41FF00C881BF /* RootRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRepository.swift; sourceTree = "<group>"; };
+		2F0A3E9E278F672000C881BF /* RssDtoMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssDtoMapperImpl.swift; sourceTree = "<group>"; };
+		2F0A3EA0278F672A00C881BF /* NewsApiDtoMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiDtoMapperImpl.swift; sourceTree = "<group>"; };
+		2F0A3EA2278F68D500C881BF /* DtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoMapper.swift; sourceTree = "<group>"; };
+		2F0A3EA5278F6B7500C881BF /* EmailChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailChecker.swift; sourceTree = "<group>"; };
+		2F0A3EA7278F6C8800C881BF /* AutoHashable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoHashable.generated.swift; sourceTree = "<group>"; };
+		2F0A3EA9278F7EA100C881BF /* EmailCheckerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckerImpl.swift; sourceTree = "<group>"; };
+		2F0A3EAB278F7F0100C881BF /* EmailCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCheckerTests.swift; sourceTree = "<group>"; };
+		2F0A3EAE278F85CD00C881BF /* DtoMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoMapperTests.swift; sourceTree = "<group>"; };
+		2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssDtoMapperTests.swift; sourceTree = "<group>"; };
+		2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApiMapperTest.swift; sourceTree = "<group>"; };
+		2F0A3EB8278F893200C881BF /* ResourceId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceId.swift; sourceTree = "<group>"; };
 		2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		2F671783278DCBE400BD1F85 /* NetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +210,43 @@
 			path = NetworkLoader;
 			sourceTree = "<group>";
 		};
+		2F0A3E9D278F66F900C881BF /* ToDomainMapping */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3EA2278F68D500C881BF /* DtoMapper.swift */,
+				2F0A3E9E278F672000C881BF /* RssDtoMapperImpl.swift */,
+				2F0A3EA0278F672A00C881BF /* NewsApiDtoMapperImpl.swift */,
+			);
+			path = ToDomainMapping;
+			sourceTree = "<group>";
+		};
+		2F0A3EA4278F6B4E00C881BF /* EmailChecker */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3EA5278F6B7500C881BF /* EmailChecker.swift */,
+				2F0A3EA9278F7EA100C881BF /* EmailCheckerImpl.swift */,
+			);
+			path = EmailChecker;
+			sourceTree = "<group>";
+		};
+		2F0A3EB2278F887500C881BF /* MappToDomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3EAE278F85CD00C881BF /* DtoMapperTests.swift */,
+				2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */,
+				2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */,
+			);
+			path = MappToDomainTests;
+			sourceTree = "<group>";
+		};
+		2F0A3EB7278F892200C881BF /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3EB8278F893200C881BF /* ResourceId.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		2F671771278DCBE400BD1F85 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAAB3DB278DE2070096901B /* Source */,
+				2F0A3E9D278F66F900C881BF /* ToDomainMapping */,
 				2FAAB3DE278DF1D50096901B /* DTO */,
 				2F0A3E55278F093000C881BF /* Routing */,
 				2F0A3E86278F33DC00C881BF /* NetworkLoader */,
@@ -228,7 +288,9 @@
 			children = (
 				2FAAB3EA278DF6020096901B /* Source */,
 				2FAAB3E6278DF4500096901B /* DTODecodingTests */,
+				2F0A3EB2278F887500C881BF /* MappToDomainTests */,
 				2F0A3E5F278F0F6400C881BF /* RoutingTests.swift */,
+				2F0A3EAB278F7F0100C881BF /* EmailCheckerTests.swift */,
 			);
 			path = NetworkPlatformTests;
 			sourceTree = "<group>";
@@ -236,8 +298,10 @@
 		2FAAB3DB278DE2070096901B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2F0A3EB7278F892200C881BF /* Global */,
 				2FAAB405278E058C0096901B /* RssDecodingSupport */,
 				2F0A3E65278F236300C881BF /* CodableFactory */,
+				2F0A3EA4278F6B4E00C881BF /* EmailChecker */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -307,6 +371,7 @@
 			children = (
 				2FFF5E24278E3E2700567F7B /* Markers.swift */,
 				2FFF5E34278E41D900567F7B /* AutoEquatable.generated.swift */,
+				2F0A3EA7278F6C8800C881BF /* AutoHashable.generated.swift */,
 			);
 			path = Autogenerated;
 			sourceTree = "<group>";
@@ -522,18 +587,25 @@
 				2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */,
 				2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */,
 				2F0A3E74278F2D1B00C881BF /* GazetaRuRepository.swift in Sources */,
+				2F0A3EA1278F672A00C881BF /* NewsApiDtoMapperImpl.swift in Sources */,
 				2F0A3E8C278F38E200C881BF /* NetworkLoaderImpl.swift in Sources */,
+				2F0A3EAA278F7EA100C881BF /* EmailCheckerImpl.swift in Sources */,
 				2FAAB407278E058C0096901B /* RssDecoder.swift in Sources */,
 				2FAAB3E3278DF2250096901B /* NASource.swift in Sources */,
 				2F0A3E8A278F350400C881BF /* JSONDecoderFactory.swift in Sources */,
 				2FFF5E25278E3E2700567F7B /* Markers.swift in Sources */,
 				2F0A3E76278F2D2700C881BF /* NewsApiRepository.swift in Sources */,
 				2FDCE29B278E13F000C6AC66 /* RssPath.swift in Sources */,
+				2F0A3E9F278F672000C881BF /* RssDtoMapperImpl.swift in Sources */,
+				2F0A3EB9278F893200C881BF /* ResourceId.swift in Sources */,
 				2F0A3E58278F0A0500C881BF /* NewsApiRouter.swift in Sources */,
 				2F0A3E67278F238300C881BF /* JSONEncoderFactory.swift in Sources */,
 				2FAAB3FC278DFE100096901B /* RssPost.swift in Sources */,
+				2F0A3EA6278F6B7500C881BF /* EmailChecker.swift in Sources */,
+				2F0A3EA3278F68D500C881BF /* DtoMapper.swift in Sources */,
 				2FAAB402278E03150096901B /* RssChanelImage.swift in Sources */,
 				2F0A3E62278F1E5400C881BF /* NAPostsQuery.swift in Sources */,
+				2F0A3EA8278F6C8800C881BF /* AutoHashable.generated.swift in Sources */,
 				2FAAB3E5278DF3F70096901B /* NAPostsContainer.swift in Sources */,
 				2F0A3E78278F2D4E00C881BF /* NetworkRepositoryFactory.swift in Sources */,
 				2F0A3E6C278F241600C881BF /* Formatter+extension.swift in Sources */,
@@ -549,9 +621,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0A3EAF278F85CD00C881BF /* DtoMapperTests.swift in Sources */,
 				2F0A3E60278F0F6400C881BF /* RoutingTests.swift in Sources */,
 				2FAAB3EE278DF65B0096901B /* NewsApiParsingTest.swift in Sources */,
+				2F0A3EAC278F7F0100C881BF /* EmailCheckerTests.swift in Sources */,
+				2F0A3EB6278F88AC00C881BF /* NewApiMapperTest.swift in Sources */,
 				2FAAB3F0278DF6CC0096901B /* Helpers.swift in Sources */,
+				2F0A3EB4278F889B00C881BF /* RssDtoMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
