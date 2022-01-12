@@ -15,6 +15,17 @@
 		2F0A3E62278F1E5400C881BF /* NAPostsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E61278F1E5400C881BF /* NAPostsQuery.swift */; };
 		2F0A3E67278F238300C881BF /* JSONEncoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E66278F238300C881BF /* JSONEncoderFactory.swift */; };
 		2F0A3E6C278F241600C881BF /* Formatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E6B278F241600C881BF /* Formatter+extension.swift */; };
+		2F0A3E72278F2CEC00C881BF /* LentaRuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E71278F2CEC00C881BF /* LentaRuRepository.swift */; };
+		2F0A3E74278F2D1B00C881BF /* GazetaRuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E73278F2D1B00C881BF /* GazetaRuRepository.swift */; };
+		2F0A3E76278F2D2700C881BF /* NewsApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E75278F2D2700C881BF /* NewsApiRepository.swift */; };
+		2F0A3E78278F2D4E00C881BF /* NetworkRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E77278F2D4E00C881BF /* NetworkRepositoryFactory.swift */; };
+		2F0A3E82278F336C00C881BF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0A3E81278F336C00C881BF /* Domain.framework */; };
+		2F0A3E88278F340B00C881BF /* NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E87278F340B00C881BF /* NetworkLoader.swift */; };
+		2F0A3E8A278F350400C881BF /* JSONDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E89278F350400C881BF /* JSONDecoderFactory.swift */; };
+		2F0A3E8C278F38E200C881BF /* NetworkLoaderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E8B278F38E200C881BF /* NetworkLoaderImpl.swift */; };
+		2F0A3E8E278F39D600C881BF /* URLSessionDataTask+Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */; };
+		2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E8F278F3A8C00C881BF /* NetworkLoaderError.swift */; };
+		2F0A3E92278F41FF00C881BF /* RootRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E91278F41FF00C881BF /* RootRepository.swift */; };
 		2F671784278DCBE400BD1F85 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */; };
 		2F67178A278DCBE400BD1F85 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAAB3E0278DF1F00096901B /* NAPost.swift */; };
@@ -59,6 +70,17 @@
 		2F0A3E61278F1E5400C881BF /* NAPostsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPostsQuery.swift; sourceTree = "<group>"; };
 		2F0A3E66278F238300C881BF /* JSONEncoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderFactory.swift; sourceTree = "<group>"; };
 		2F0A3E6B278F241600C881BF /* Formatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+extension.swift"; sourceTree = "<group>"; };
+		2F0A3E71278F2CEC00C881BF /* LentaRuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentaRuRepository.swift; sourceTree = "<group>"; };
+		2F0A3E73278F2D1B00C881BF /* GazetaRuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GazetaRuRepository.swift; sourceTree = "<group>"; };
+		2F0A3E75278F2D2700C881BF /* NewsApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiRepository.swift; sourceTree = "<group>"; };
+		2F0A3E77278F2D4E00C881BF /* NetworkRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepositoryFactory.swift; sourceTree = "<group>"; };
+		2F0A3E81278F336C00C881BF /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0A3E87278F340B00C881BF /* NetworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoader.swift; sourceTree = "<group>"; };
+		2F0A3E89278F350400C881BF /* JSONDecoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderFactory.swift; sourceTree = "<group>"; };
+		2F0A3E8B278F38E200C881BF /* NetworkLoaderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderImpl.swift; sourceTree = "<group>"; };
+		2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Cancelable.swift"; sourceTree = "<group>"; };
+		2F0A3E8F278F3A8C00C881BF /* NetworkLoaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoaderError.swift; sourceTree = "<group>"; };
+		2F0A3E91278F41FF00C881BF /* RootRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRepository.swift; sourceTree = "<group>"; };
 		2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		2F671783278DCBE400BD1F85 /* NetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0A3E82278F336C00C881BF /* Domain.framework in Frameworks */,
 				92725038EDE37B79BE091F00 /* Pods_NetworkPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0A3E66278F238300C881BF /* JSONEncoderFactory.swift */,
+				2F0A3E89278F350400C881BF /* JSONDecoderFactory.swift */,
 			);
 			path = CodableFactory;
 			sourceTree = "<group>";
@@ -137,8 +161,31 @@
 			isa = PBXGroup;
 			children = (
 				2F0A3E6B278F241600C881BF /* Formatter+extension.swift */,
+				2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */,
 			);
 			path = "Foundation+extension";
+			sourceTree = "<group>";
+		};
+		2F0A3E70278F2CD300C881BF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3E77278F2D4E00C881BF /* NetworkRepositoryFactory.swift */,
+				2F0A3E91278F41FF00C881BF /* RootRepository.swift */,
+				2F0A3E71278F2CEC00C881BF /* LentaRuRepository.swift */,
+				2F0A3E73278F2D1B00C881BF /* GazetaRuRepository.swift */,
+				2F0A3E75278F2D2700C881BF /* NewsApiRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2F0A3E86278F33DC00C881BF /* NetworkLoader */ = {
+			isa = PBXGroup;
+			children = (
+				2F0A3E8F278F3A8C00C881BF /* NetworkLoaderError.swift */,
+				2F0A3E87278F340B00C881BF /* NetworkLoader.swift */,
+				2F0A3E8B278F38E200C881BF /* NetworkLoaderImpl.swift */,
+			);
+			path = NetworkLoader;
 			sourceTree = "<group>";
 		};
 		2F671771278DCBE400BD1F85 = {
@@ -167,6 +214,8 @@
 				2FAAB3DB278DE2070096901B /* Source */,
 				2FAAB3DE278DF1D50096901B /* DTO */,
 				2F0A3E55278F093000C881BF /* Routing */,
+				2F0A3E86278F33DC00C881BF /* NetworkLoader */,
+				2F0A3E70278F2CD300C881BF /* Repositories */,
 				2F0A3E69278F23F000C881BF /* Extension */,
 				2FFF5E23278E3E1100567F7B /* Autogenerated */,
 				2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */,
@@ -277,6 +326,7 @@
 		E581F01838490C178004299A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F0A3E81278F336C00C881BF /* Domain.framework */,
 				363935DA61F5EC9B408A84A6 /* Pods_NetworkPlatform.framework */,
 				812CA1277F9D23CFC0EB2461 /* Pods_NetworkPlatform_NetworkPlatformTests.framework */,
 			);
@@ -463,14 +513,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFF5E35278E41D900567F7B /* AutoEquatable.generated.swift in Sources */,
+				2F0A3E92278F41FF00C881BF /* RootRepository.swift in Sources */,
 				2FDCE299278E0FEB00C6AC66 /* RssDecoderError.swift in Sources */,
 				2FAAB400278E00940096901B /* RssChanel.swift in Sources */,
+				2F0A3E8E278F39D600C881BF /* URLSessionDataTask+Cancelable.swift in Sources */,
 				2F0A3E5C278F0A4300C881BF /* GazetaRuRouter.swift in Sources */,
 				2F0A3E5E278F0ABD00C881BF /* AbstractRouter+extension.swift in Sources */,
+				2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */,
 				2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */,
+				2F0A3E74278F2D1B00C881BF /* GazetaRuRepository.swift in Sources */,
+				2F0A3E8C278F38E200C881BF /* NetworkLoaderImpl.swift in Sources */,
 				2FAAB407278E058C0096901B /* RssDecoder.swift in Sources */,
 				2FAAB3E3278DF2250096901B /* NASource.swift in Sources */,
+				2F0A3E8A278F350400C881BF /* JSONDecoderFactory.swift in Sources */,
 				2FFF5E25278E3E2700567F7B /* Markers.swift in Sources */,
+				2F0A3E76278F2D2700C881BF /* NewsApiRepository.swift in Sources */,
 				2FDCE29B278E13F000C6AC66 /* RssPath.swift in Sources */,
 				2F0A3E58278F0A0500C881BF /* NewsApiRouter.swift in Sources */,
 				2F0A3E67278F238300C881BF /* JSONEncoderFactory.swift in Sources */,
@@ -478,9 +535,12 @@
 				2FAAB402278E03150096901B /* RssChanelImage.swift in Sources */,
 				2F0A3E62278F1E5400C881BF /* NAPostsQuery.swift in Sources */,
 				2FAAB3E5278DF3F70096901B /* NAPostsContainer.swift in Sources */,
+				2F0A3E78278F2D4E00C881BF /* NetworkRepositoryFactory.swift in Sources */,
 				2F0A3E6C278F241600C881BF /* Formatter+extension.swift in Sources */,
 				2FAAB3FE278DFEC20096901B /* RssEnclosure.swift in Sources */,
+				2F0A3E72278F2CEC00C881BF /* LentaRuRepository.swift in Sources */,
 				2FDCE297278E0D1B00C6AC66 /* RssDecoderImpl.swift in Sources */,
+				2F0A3E88278F340B00C881BF /* NetworkLoader.swift in Sources */,
 				2F0A3E5A278F0A2000C881BF /* LentaRuRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
