@@ -46,6 +46,7 @@ end
 target 'NetworkPlatform' do
   project 'NetworkPlatform/NetworkPlatform'
   rxSwift
+  pod 'ApiRouter'
   
   target 'NetworkPlatformTests' do
     rxTest

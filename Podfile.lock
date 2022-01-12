@@ -1,4 +1,5 @@
 PODS:
+  - ApiRouter (0.0.1)
   - RxBlocking (6.2.0):
     - RxSwift (= 6.2.0)
   - RxCocoa (6.2.0):
@@ -14,6 +15,7 @@ PODS:
   - Sourcery/CLI-Only (1.6.1)
 
 DEPENDENCIES:
+  - ApiRouter
   - RxBlocking
   - RxCocoa
   - RxSwift
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ApiRouter
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -30,6 +33,7 @@ SPEC REPOS:
     - Sourcery
 
 SPEC CHECKSUMS:
+  ApiRouter: c6d894bbe3800d05f9957f937319e9ce4249afd3
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
   Sourcery: f3759f803bd0739f74fc92a4341eed0473ce61ac
 
-PODFILE CHECKSUM: a5fa62bec453d3764eba072f19f335119eb8b275
+PODFILE CHECKSUM: 03d1606cb41de6852f4cdaf76de2301b57dff1d0
 
 COCOAPODS: 1.11.2
