@@ -1,0 +1,17 @@
+import Foundation
+// swiftlint:disable all
+{% for type in types.implementing.AutoInit %}{% if not type.kind == "protocol" %}{% if not type.storedVariables.count == 0 %}
+// MARK: - {{ type.name }}
+extension {{ type.name }} {
+    {{ type.accessLevel }} init(
+        {% for variable in type.storedVariables %}
+        {{ variable.name }}_: {{ variable.typeName }}{% if variable.isOptional %} = nil{% endif %}{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    ) {
+        {% for variable in type.storedVariables %}
+        self.{{ variable.name }} = {{ variable.name }}_
+        {% endfor %}
+    }
+}
+{% endif %}{% endif %}{% endfor %}
+// swiftlint:enable all
