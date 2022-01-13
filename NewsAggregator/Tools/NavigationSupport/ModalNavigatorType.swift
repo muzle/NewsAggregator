@@ -1,6 +1,6 @@
 import class UIKit.UIViewController
 
-protocol ModalNavigatorType: AnyObject {
+protocol ModalNavigatorType: AnyObject, AlertPresentable {
     typealias Item = UIViewController
 
     func present(_ item: Item, animated: Bool, completion: (() -> Void)?)
