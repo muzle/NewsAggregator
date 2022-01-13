@@ -27,7 +27,9 @@ end
 target 'NewsAggregator' do
   # Pods for NewsAggregator
   rxSwift
+  rxCocoa
   apiRouter
+  pod 'SnapKit', '~> 5.0.0'
 
   target 'NewsAggregatorTests' do
     inherit! :search_paths

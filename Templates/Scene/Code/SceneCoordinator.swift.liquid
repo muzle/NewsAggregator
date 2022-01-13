@@ -1,0 +1,52 @@
+import UIKit
+import Domain
+
+enum {{ module_info.name }}SceneCoordinatorEvent {
+}
+
+final class {{ module_info.name }}SceneCoordinator: AutoCoordinatorType {
+    typealias Context = CoordinatorsFactory & {{ module_info.name }}SceneModel.Context
+    typealias Navigator = EmptyNavigatorType
+    typealias Router = AnyRouter<{{ module_info.name }}SceneCoordinatorEvent>
+    struct Configuration {
+    }
+    
+    private let context: Context
+    private weak var navigation: Navigator?
+    private let configuration: Configuration
+    private let router: Router
+    
+    init(
+        context: Context,
+        navigation: Navigator?,
+        configuration: Configuration,
+        router: Router
+    ) {
+        self.context = context
+        self.navigation = navigation
+        self.configuration = configuration
+        self.router = router
+    }
+}
+
+// MARK: - Implement CoordinatorType
+
+extension {{ module_info.name }}SceneCoordinator: CoordinatorType {
+    func makeScene() -> UIViewController {
+        let sceneModel = {{ module_info.name }}SceneModel(
+            context: context,
+            configuration: .init(),
+            router: asRouter()
+        )
+        let scene = {{ module_info.name }}Scene()
+        scene.viewModel = sceneModel.asAnyViewModel()
+        return scene
+    }
+}
+
+// MARK: - Implement RouterType
+
+extension {{ module_info.name }}SceneCoordinator: RouterType {
+    func handle(event: {{ module_info.name }}SceneUnit.Event) {
+    }
+}
