@@ -20,9 +20,14 @@ def sourcery
   pod 'Sourcery'
 end
 
+def apiRouter
+  pod 'ApiRouter'
+end
+
 target 'NewsAggregator' do
   # Pods for NewsAggregator
   rxSwift
+  apiRouter
 
   target 'NewsAggregatorTests' do
     inherit! :search_paths
@@ -46,7 +51,7 @@ end
 target 'NetworkPlatform' do
   project 'NetworkPlatform/NetworkPlatform'
   rxSwift
-  pod 'ApiRouter'
+  apiRouter
   
   target 'NetworkPlatformTests' do
     rxTest
