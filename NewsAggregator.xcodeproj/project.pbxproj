@@ -34,6 +34,9 @@
 		2FAE2972278FAD3D00F059B4 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FAE2976278FAE4400F059B4 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2974278FAE3F00F059B4 /* CoordinatorType.swift */; };
 		2FAE2977278FAE4400F059B4 /* AutoCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2975278FAE3F00F059B4 /* AutoCoordinatorType.swift */; };
+		2FAE297C278FAEF700F059B4 /* ContextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE297A278FAEBE00F059B4 /* ContextBuilder.swift */; };
+		2FAE297D278FAEF700F059B4 /* NoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2979278FAEBE00F059B4 /* NoContext.swift */; };
+		2FAE297E278FAEF700F059B4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE297B278FAEBE00F059B4 /* Context.swift */; };
 		2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */; };
 		2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */; };
 		2FE75147278BBB0B00C252E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE75146278BBB0B00C252E9 /* Assets.xcassets */; };
@@ -122,6 +125,9 @@
 		2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAE2974278FAE3F00F059B4 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		2FAE2975278FAE3F00F059B4 /* AutoCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCoordinatorType.swift; sourceTree = "<group>"; };
+		2FAE2979278FAEBE00F059B4 /* NoContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContext.swift; sourceTree = "<group>"; };
+		2FAE297A278FAEBE00F059B4 /* ContextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextBuilder.swift; sourceTree = "<group>"; };
+		2FAE297B278FAEBE00F059B4 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		2FE7513A278BBB0A00C252E9 /* NewsAggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		2FAE2934278FAA3700F059B4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE2978278FAEBE00F059B4 /* Context */,
 				2FAE2956278FAC3900F059B4 /* NavigationSupport */,
 				2FAE2973278FAE3F00F059B4 /* CoordinatorSupport */,
 				2FAE2935278FAA4500F059B4 /* StyleSupport */,
@@ -276,6 +283,16 @@
 				2FAE2975278FAE3F00F059B4 /* AutoCoordinatorType.swift */,
 			);
 			path = CoordinatorSupport;
+			sourceTree = "<group>";
+		};
+		2FAE2978278FAEBE00F059B4 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2979278FAEBE00F059B4 /* NoContext.swift */,
+				2FAE297B278FAEBE00F059B4 /* Context.swift */,
+				2FAE297A278FAEBE00F059B4 /* ContextBuilder.swift */,
+			);
+			path = Context;
 			sourceTree = "<group>";
 		};
 		2FE75131278BBB0A00C252E9 = {
@@ -757,6 +774,7 @@
 				2FAE2960278FAC4600F059B4 /* StackNavigatorType.swift in Sources */,
 				2FAE2953278FAB6900F059B4 /* AutoSetable.generated.swift in Sources */,
 				2FAE2949278FAA6700F059B4 /* TextStyle.swift in Sources */,
+				2FAE297C278FAEF700F059B4 /* ContextBuilder.swift in Sources */,
 				2FAE296B278FACAC00F059B4 /* AlertPresentable.swift in Sources */,
 				2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */,
 				2FAE2977278FAE4400F059B4 /* AutoCoordinatorType.swift in Sources */,
@@ -766,9 +784,11 @@
 				2FAE2968278FACAC00F059B4 /* AlertConfigurationBlock.swift in Sources */,
 				2FAE295D278FAC4600F059B4 /* EmptyNavigator.swift in Sources */,
 				2FAE295C278FAC4600F059B4 /* ModalNavigatorType.swift in Sources */,
+				2FAE297D278FAEF700F059B4 /* NoContext.swift in Sources */,
 				2FAE294C278FAA6C00F059B4 /* UIKit+ShadowStyleApplicable.swift in Sources */,
 				2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */,
 				2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */,
+				2FAE297E278FAEF700F059B4 /* Context.swift in Sources */,
 				2FAE2976278FAE4400F059B4 /* CoordinatorType.swift in Sources */,
 				2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */,
 				2FAE2969278FACAC00F059B4 /* AlertStyle.swift in Sources */,
