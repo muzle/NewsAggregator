@@ -28,6 +28,10 @@
 		2FAE2969278FACAC00F059B4 /* AlertStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2962278FAC9A00F059B4 /* AlertStyle.swift */; };
 		2FAE296A278FACAC00F059B4 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2963278FAC9A00F059B4 /* AlertConfiguration.swift */; };
 		2FAE296B278FACAC00F059B4 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2965278FAC9A00F059B4 /* AlertPresentable.swift */; };
+		2FAE296D278FAD3800F059B4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE296C278FAD3800F059B4 /* Domain.framework */; };
+		2FAE296E278FAD3800F059B4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE296C278FAD3800F059B4 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2FAE2971278FAD3D00F059B4 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */; };
+		2FAE2972278FAD3D00F059B4 /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */; };
 		2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */; };
 		2FE75147278BBB0B00C252E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE75146278BBB0B00C252E9 /* Assets.xcassets */; };
@@ -66,6 +70,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2FAE296F278FAD3800F059B4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2FAE2972278FAD3D00F059B4 /* NetworkPlatform.framework in Embed Frameworks */,
+				2FAE296E278FAD3800F059B4 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFF5E28278E40EF00567F7B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +116,8 @@
 		2FAE2964278FAC9A00F059B4 /* AlertPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPosition.swift; sourceTree = "<group>"; };
 		2FAE2965278FAC9A00F059B4 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		2FAE2966278FAC9A00F059B4 /* AlertConfigurationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfigurationBlock.swift; sourceTree = "<group>"; };
+		2FAE296C278FAD3800F059B4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE7513A278BBB0A00C252E9 /* NewsAggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAE296D278FAD3800F059B4 /* Domain.framework in Frameworks */,
+				2FAE2971278FAD3D00F059B4 /* NetworkPlatform.framework in Frameworks */,
 				726283D5FD1449B38539E02E /* Pods_NewsAggregator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +337,8 @@
 		A1A872367AB9207483017AD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */,
+				2FAE296C278FAD3800F059B4 /* Domain.framework */,
 				ABB8E5C3E6F1634AA255DF8D /* Pods_NewsAggregator.framework */,
 				EAD6B799F9974D8D2A3BE6D2 /* Pods_NewsAggregator_NewsAggregatorUITests.framework */,
 				58A2F510BDA7DFA13B66136D /* Pods_NewsAggregatorTests.framework */,
@@ -353,6 +375,7 @@
 				2FE75138278BBB0A00C252E9 /* Resources */,
 				2FE7516D278BBB3900C252E9 /* SwiftLint */,
 				C8DFA654A695198BEFA7FE9D /* [CP] Embed Pods Frameworks */,
+				2FAE296F278FAD3800F059B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
