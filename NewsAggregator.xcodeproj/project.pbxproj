@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2943278FAA4500F059B4 /* ViewStyleApplicable.swift */; };
+		2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2944278FAA4500F059B4 /* UIKit+ViewStyleApplicable+extension.swift */; };
+		2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2945278FAA4500F059B4 /* ViewStyle.swift */; };
+		2FAE2949278FAA6700F059B4 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE293B278FAA4500F059B4 /* TextStyle.swift */; };
+		2FAE294A278FAA6700F059B4 /* TextStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE293C278FAA4500F059B4 /* TextStyleApplicable.swift */; };
+		2FAE294B278FAA6C00F059B4 /* ShadowStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2938278FAA4500F059B4 /* ShadowStyleApplicable.swift */; };
+		2FAE294C278FAA6C00F059B4 /* UIKit+ShadowStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2939278FAA4500F059B4 /* UIKit+ShadowStyleApplicable.swift */; };
+		2FAE294D278FAA6C00F059B4 /* ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2937278FAA4500F059B4 /* ShadowStyle.swift */; };
+		2FAE2950278FAAAB00F059B4 /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE294F278FAAAB00F059B4 /* Markers.swift */; };
+		2FAE2953278FAB6900F059B4 /* AutoSetable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2952278FAB6900F059B4 /* AutoSetable.generated.swift */; };
+		2FAE2955278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2954278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift */; };
 		2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */; };
 		2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */; };
 		2FE75147278BBB0B00C252E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE75146278BBB0B00C252E9 /* Assets.xcassets */; };
@@ -58,6 +69,17 @@
 
 /* Begin PBXFileReference section */
 		1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FAE2937278FAA4500F059B4 /* ShadowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
+		2FAE2938278FAA4500F059B4 /* ShadowStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowStyleApplicable.swift; sourceTree = "<group>"; };
+		2FAE2939278FAA4500F059B4 /* UIKit+ShadowStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ShadowStyleApplicable.swift"; sourceTree = "<group>"; };
+		2FAE293B278FAA4500F059B4 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		2FAE293C278FAA4500F059B4 /* TextStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleApplicable.swift; sourceTree = "<group>"; };
+		2FAE2943278FAA4500F059B4 /* ViewStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyleApplicable.swift; sourceTree = "<group>"; };
+		2FAE2944278FAA4500F059B4 /* UIKit+ViewStyleApplicable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ViewStyleApplicable+extension.swift"; sourceTree = "<group>"; };
+		2FAE2945278FAA4500F059B4 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		2FAE294F278FAAAB00F059B4 /* Markers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
+		2FAE2952278FAB6900F059B4 /* AutoSetable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSetable.generated.swift; sourceTree = "<group>"; };
+		2FAE2954278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyleApplicable+UIKit+extension.swift"; sourceTree = "<group>"; };
 		2FE7513A278BBB0A00C252E9 /* NewsAggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +141,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FAE2934278FAA3700F059B4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2935278FAA4500F059B4 /* StyleSupport */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2FAE2935278FAA4500F059B4 /* StyleSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2936278FAA4500F059B4 /* ShadowStyle */,
+				2FAE293A278FAA4500F059B4 /* TextStyle */,
+				2FAE2942278FAA4500F059B4 /* ViewStyle */,
+			);
+			path = StyleSupport;
+			sourceTree = "<group>";
+		};
+		2FAE2936278FAA4500F059B4 /* ShadowStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2937278FAA4500F059B4 /* ShadowStyle.swift */,
+				2FAE2938278FAA4500F059B4 /* ShadowStyleApplicable.swift */,
+				2FAE2939278FAA4500F059B4 /* UIKit+ShadowStyleApplicable.swift */,
+			);
+			path = ShadowStyle;
+			sourceTree = "<group>";
+		};
+		2FAE293A278FAA4500F059B4 /* TextStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE293B278FAA4500F059B4 /* TextStyle.swift */,
+				2FAE293C278FAA4500F059B4 /* TextStyleApplicable.swift */,
+				2FAE2954278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift */,
+			);
+			path = TextStyle;
+			sourceTree = "<group>";
+		};
+		2FAE2942278FAA4500F059B4 /* ViewStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2945278FAA4500F059B4 /* ViewStyle.swift */,
+				2FAE2943278FAA4500F059B4 /* ViewStyleApplicable.swift */,
+				2FAE2944278FAA4500F059B4 /* UIKit+ViewStyleApplicable+extension.swift */,
+			);
+			path = ViewStyle;
+			sourceTree = "<group>";
+		};
+		2FAE294E278FAA8E00F059B4 /* Autogenerated */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE294F278FAAAB00F059B4 /* Markers.swift */,
+				2FAE2952278FAB6900F059B4 /* AutoSetable.generated.swift */,
+			);
+			path = Autogenerated;
+			sourceTree = "<group>";
+		};
 		2FE75131278BBB0A00C252E9 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				2FE7516E278BBBC800C252E9 /* Root */,
+				2FAE2934278FAA3700F059B4 /* Tools */,
 				2FE7516F278BBBDA00C252E9 /* SupportedFiles */,
+				2FAE294E278FAA8E00F059B4 /* Autogenerated */,
 			);
 			path = NewsAggregator;
 			sourceTree = "<group>";
@@ -287,6 +368,7 @@
 				2FFF5E28278E40EF00567F7B /* CopyFiles */,
 				2FFF5E31278E411B00567F7B /* Sourcery[NetworkPlatform] */,
 				2F0A3E98278F533C00C881BF /* Sourcery[Domain] */,
+				2FAE2951278FAAF200F059B4 /* Sourcery[Client] */,
 			);
 			buildRules = (
 			);
@@ -422,6 +504,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Sourcery/bin/sourcery\" --sources \"${SRCROOT}/Domain/Domain\" --templates \"${SRCROOT}/Templates/Sourcery/Domain\" --output \"${SRCROOT}/Domain/Domain/Autogenerated\"\n";
+		};
+		2FAE2951278FAAF200F059B4 /* Sourcery[Client] */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sourcery[Client]";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Sourcery/bin/sourcery\" --sources \"${SRCROOT}/NewsAggregator\" --templates \"${SRCROOT}/Templates/Sourcery/Client\" --output \"${SRCROOT}/NewsAggregator/Autogenerated\"\n";
 		};
 		2FE7516D278BBB3900C252E9 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -571,8 +671,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAE2953278FAB6900F059B4 /* AutoSetable.generated.swift in Sources */,
+				2FAE2949278FAA6700F059B4 /* TextStyle.swift in Sources */,
 				2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */,
+				2FAE294B278FAA6C00F059B4 /* ShadowStyleApplicable.swift in Sources */,
+				2FAE294D278FAA6C00F059B4 /* ShadowStyle.swift in Sources */,
+				2FAE294C278FAA6C00F059B4 /* UIKit+ShadowStyleApplicable.swift in Sources */,
+				2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */,
+				2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */,
+				2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */,
 				2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */,
+				2FAE2955278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift in Sources */,
+				2FAE294A278FAA6700F059B4 /* TextStyleApplicable.swift in Sources */,
+				2FAE2950278FAAAB00F059B4 /* Markers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
