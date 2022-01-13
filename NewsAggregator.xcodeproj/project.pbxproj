@@ -23,6 +23,11 @@
 		2FAE295E278FAC4600F059B4 /* SingleNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2958278FAC3900F059B4 /* SingleNavigatorType.swift */; };
 		2FAE295F278FAC4600F059B4 /* NavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2957278FAC3900F059B4 /* NavigatorType.swift */; };
 		2FAE2960278FAC4600F059B4 /* StackNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE295A278FAC3900F059B4 /* StackNavigatorType.swift */; };
+		2FAE2967278FACAC00F059B4 /* AlertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2964278FAC9A00F059B4 /* AlertPosition.swift */; };
+		2FAE2968278FACAC00F059B4 /* AlertConfigurationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2966278FAC9A00F059B4 /* AlertConfigurationBlock.swift */; };
+		2FAE2969278FACAC00F059B4 /* AlertStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2962278FAC9A00F059B4 /* AlertStyle.swift */; };
+		2FAE296A278FACAC00F059B4 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2963278FAC9A00F059B4 /* AlertConfiguration.swift */; };
+		2FAE296B278FACAC00F059B4 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2965278FAC9A00F059B4 /* AlertPresentable.swift */; };
 		2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */; };
 		2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */; };
 		2FE75147278BBB0B00C252E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE75146278BBB0B00C252E9 /* Assets.xcassets */; };
@@ -90,6 +95,11 @@
 		2FAE2959278FAC3900F059B4 /* EmptyNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNavigator.swift; sourceTree = "<group>"; };
 		2FAE295A278FAC3900F059B4 /* StackNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigatorType.swift; sourceTree = "<group>"; };
 		2FAE295B278FAC3900F059B4 /* ModalNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigatorType.swift; sourceTree = "<group>"; };
+		2FAE2962278FAC9A00F059B4 /* AlertStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStyle.swift; sourceTree = "<group>"; };
+		2FAE2963278FAC9A00F059B4 /* AlertConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.swift; sourceTree = "<group>"; };
+		2FAE2964278FAC9A00F059B4 /* AlertPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPosition.swift; sourceTree = "<group>"; };
+		2FAE2965278FAC9A00F059B4 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		2FAE2966278FAC9A00F059B4 /* AlertConfigurationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfigurationBlock.swift; sourceTree = "<group>"; };
 		2FE7513A278BBB0A00C252E9 /* NewsAggregator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAggregator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE7513D278BBB0A00C252E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FE7513F278BBB0A00C252E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 			children = (
 				2FAE2956278FAC3900F059B4 /* NavigationSupport */,
 				2FAE2935278FAA4500F059B4 /* StyleSupport */,
+				2FAE2961278FAC9A00F059B4 /* AlertSupport */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -219,6 +230,18 @@
 				2FAE2957278FAC3900F059B4 /* NavigatorType.swift */,
 			);
 			path = NavigationSupport;
+			sourceTree = "<group>";
+		};
+		2FAE2961278FAC9A00F059B4 /* AlertSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2962278FAC9A00F059B4 /* AlertStyle.swift */,
+				2FAE2964278FAC9A00F059B4 /* AlertPosition.swift */,
+				2FAE2965278FAC9A00F059B4 /* AlertPresentable.swift */,
+				2FAE2963278FAC9A00F059B4 /* AlertConfiguration.swift */,
+				2FAE2966278FAC9A00F059B4 /* AlertConfigurationBlock.swift */,
+			);
+			path = AlertSupport;
 			sourceTree = "<group>";
 		};
 		2FE75131278BBB0A00C252E9 = {
@@ -697,19 +720,24 @@
 				2FAE2960278FAC4600F059B4 /* StackNavigatorType.swift in Sources */,
 				2FAE2953278FAB6900F059B4 /* AutoSetable.generated.swift in Sources */,
 				2FAE2949278FAA6700F059B4 /* TextStyle.swift in Sources */,
+				2FAE296B278FACAC00F059B4 /* AlertPresentable.swift in Sources */,
 				2FE7513E278BBB0A00C252E9 /* AppDelegate.swift in Sources */,
 				2FAE295E278FAC4600F059B4 /* SingleNavigatorType.swift in Sources */,
 				2FAE294B278FAA6C00F059B4 /* ShadowStyleApplicable.swift in Sources */,
 				2FAE294D278FAA6C00F059B4 /* ShadowStyle.swift in Sources */,
+				2FAE2968278FACAC00F059B4 /* AlertConfigurationBlock.swift in Sources */,
 				2FAE295D278FAC4600F059B4 /* EmptyNavigator.swift in Sources */,
 				2FAE295C278FAC4600F059B4 /* ModalNavigatorType.swift in Sources */,
 				2FAE294C278FAA6C00F059B4 /* UIKit+ShadowStyleApplicable.swift in Sources */,
 				2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */,
 				2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */,
 				2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */,
+				2FAE2969278FACAC00F059B4 /* AlertStyle.swift in Sources */,
 				2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */,
 				2FAE2955278FABA700F059B4 /* TextStyleApplicable+UIKit+extension.swift in Sources */,
+				2FAE296A278FACAC00F059B4 /* AlertConfiguration.swift in Sources */,
 				2FAE295F278FAC4600F059B4 /* NavigatorType.swift in Sources */,
+				2FAE2967278FACAC00F059B4 /* AlertPosition.swift in Sources */,
 				2FAE294A278FAA6700F059B4 /* TextStyleApplicable.swift in Sources */,
 				2FAE2950278FAAAB00F059B4 /* Markers.swift in Sources */,
 			);
