@@ -6,6 +6,9 @@ private struct Constants {
 private let constants = Constants()
 
 final class PostsSceneView: UIView {
+    
+    let tableView = UITableView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -28,7 +31,10 @@ private extension PostsSceneView {
     }
     
     func setConstraints() {
-    
+        addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(safeAreaLayoutGuide)
+        }
     }
     
     func localize() {
