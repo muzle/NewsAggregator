@@ -1,0 +1,37 @@
+// GoogleSheet: https://docs.google.com/spreadsheets/d/1HpckF6iXbEOCkUF-hMXFbVcYrJLVjIgHko2wGGQLfMs/edit#gid=0
+// Generated using GoogleSheetLocalizationExport: https://github.com/muzle/GoogleSheetLocalizationExport
+
+import Foundation
+
+// swiftlint:disable superfluous_disable_command file_length implicit_return
+
+// MARK: - Strings
+
+// swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
+internal enum GSln {
+
+}
+// swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
+
+// MARK: - Implementation Details
+
+extension GSln {
+  private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
+    let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
+    return String(format: format, locale: Locale.current, arguments: args)
+  }
+}
+
+// swiftlint:disable convenience_type
+private final class BundleToken {
+  static let bundle: Bundle = {
+    #if SWIFT_PACKAGE
+    return Bundle.module
+    #else
+    return Bundle(for: BundleToken.self)
+    #endif
+  }()
+}
+// swiftlint:enable convenience_type
