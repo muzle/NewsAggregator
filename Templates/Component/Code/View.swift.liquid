@@ -1,0 +1,59 @@
+import UIKit
+import RxSwift
+import RxCocoa
+import SnapKit
+
+private struct Constants {
+}
+private let constants = Constants()
+
+final class {{ module_info.name }}: UIView, ViewModelBindable {
+    typealias Unit = {{ module_info.name }}Unit
+    typealias ViewModel = Unit.ViewModel
+    private let disposeBag = DisposeBag()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+}
+
+// MARK: - CommonInit
+
+private extension {{ module_info.name }} {
+    func commonInit() {
+        setConstraints()
+        localize()
+        setUI()
+    }
+    
+    func setConstraints() {
+    
+    }
+    
+    func localize() {
+    
+    }
+
+    func setUI() {
+    
+    }
+}
+
+// MARK: - Implement ViewModelBindable
+
+extension {{ module_info.name }} {
+    func bind(viewModel: ViewModel) {
+        let input = Unit.Input()
+        let output = viewModel.transform(input: input)
+        
+        disposeBag.insert(
+            output.empty.emit()
+        )
+    }
+}

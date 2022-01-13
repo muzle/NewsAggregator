@@ -1,0 +1,47 @@
+import UIKit
+import Domain
+import RxSwift
+import RxCocoa
+
+enum {{ module_info.name }}Unit: UnitType {
+    enum Event {
+    }
+    
+    struct Input {
+    }
+    
+    struct Output {
+        let empty: Signal<Void>
+    }
+}
+
+// MARK: - Implement {{ module_info.name }}Unit.ViewModel
+
+final class {{ module_info.name }}Model: ViewModelType {
+    typealias Unit = {{ module_info.name }}Unit
+    typealias Router = Unit.Router
+    typealias Context = NoContext
+    struct Configuration {
+    
+    }
+    
+    private let context: Context
+    private let configuration: Configuration
+    private let router: Router
+    
+    init(
+        context: Context,
+        configuration: Configuration,
+        router: Router
+    ) {
+        self.context = context
+        self.configuration = configuration
+        self.router = router
+    }
+    
+    func transform(input: Unit.Input) -> Unit.Output {
+        return Unit.Output(
+            empty: .never()
+        )
+    }
+}

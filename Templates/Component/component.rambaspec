@@ -1,0 +1,14 @@
+# Template information section
+name: component
+summary: An MVVM-based view
+
+# The declarations for code files.
+code_files:
+- {name: .swift, path: Code/View.swift.liquid}
+- {name: Unit.swift, path: Code/ViewUnit.swift.liquid}
+
+# Template dependencies
+dependencies:
+- RxSwift
+- RxCocoa
+- SnapKit

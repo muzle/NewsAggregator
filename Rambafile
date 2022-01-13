@@ -17,7 +17,7 @@ project_file_path: NewsAggregator/Scenes
 test_target: NewsAggregatorTests
 
 # The file path for new tests
-test_file_path: NewsAggregator/Scenes
+test_file_path: NewsAggregatorTests/Scenes
 
 ### Dependencies settings section
 podfile_path: Podfile
