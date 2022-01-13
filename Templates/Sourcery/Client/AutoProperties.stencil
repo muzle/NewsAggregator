@@ -1,4 +1,5 @@
 import Foundation
+import Domain
 
 {% for type in types.implementing.AutoProperties %}// MARK: - {{type.name}}
 {% for property in type.storedVariables|!annotated:"skipComposition" %}{% set protoName %}{{ "Has" }}{{ property.name|titlecase }}{% endset %}

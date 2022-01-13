@@ -1,5 +1,5 @@
 import Foundation
 
-public struct Image: AutoInit, Equatable {
+public struct Image: AutoInit, Hashable {
     public let url: URL?
 }

@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.start(window: window!)
-            print("POPOWER")
         }
     }
 

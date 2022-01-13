@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Post: AutoInit, Equatable {
+public struct Post: AutoInit, Hashable {
     public let id: String
     public let author: Author?
     public let link: URL?
