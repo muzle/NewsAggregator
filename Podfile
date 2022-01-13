@@ -20,6 +20,10 @@ def sourcery
   pod 'Sourcery'
 end
 
+def swiftGen
+  pod 'SwiftGen', '~> 6.0'
+end
+
 def apiRouter
   pod 'ApiRouter'
 end
@@ -62,4 +66,5 @@ end
 
 target 'AutoGenerator' do
   sourcery
+  swiftGen
 end
