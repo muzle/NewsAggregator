@@ -5,6 +5,7 @@ import RxCocoa
 enum PostsSceneUnit: UnitType {
     typealias CellModel = PostCardUnit.ViewModel
     enum Event {
+        case post(Post)
     }
     
     struct Input {
@@ -46,9 +47,16 @@ final class PostsSceneModel: ViewModelType {
         
         let cellModels = posts.map(makeCellModels(for:))
         
+        let toPostEvent = input.selectedItem
+            .withLatestFrom(posts.trackToSignal(errorTracker)) { $1[$0.row] }
+            .map(Unit.Event.post)
+            .route(with: router)
+        
+        let empty = Signal.merge(toPostEvent)
+        
         return Unit.Output(
             dataSource: cellModels,
-            empty: .never()
+            empty: empty
         )
     }
 }

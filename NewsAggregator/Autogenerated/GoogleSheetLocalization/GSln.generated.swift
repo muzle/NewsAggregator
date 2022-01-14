@@ -14,6 +14,18 @@ internal enum GSln {
 		/// Новости
 		internal static let navigationTitle = GSln.tr("Localizable", "PostsScene.navigationTitle")
 	}
+	internal enum InvalidPostUrlAlert {
+		/// Ошибка
+		internal static let title = GSln.tr("Localizable", "InvalidPostUrlAlert.title")
+		/// Не правильный URL
+		internal static let message = GSln.tr("Localizable", "InvalidPostUrlAlert.message")
+		/// Хоршо
+		internal static let ok = GSln.tr("Localizable", "InvalidPostUrlAlert.ok")
+	}
+	internal enum ShortPostInfo {
+		/// Перейти
+		internal static let completeButtonTitle = GSln.tr("Localizable", "ShortPostInfo.completeButtonTitle")
+	}
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

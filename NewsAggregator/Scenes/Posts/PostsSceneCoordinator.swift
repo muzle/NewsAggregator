@@ -24,7 +24,7 @@ extension PostsSceneCoordinator: CoordinatorType {
         let sceneModel = PostsSceneModel(
             context: context,
             configuration: .init(),
-            router: asRouter()
+            router: .init(handle(event:))
         )
         let scene = PostsScene()
         scene.viewModel = sceneModel.asAnyViewModel()
@@ -37,9 +37,33 @@ extension PostsSceneCoordinator: CoordinatorType {
     }
 }
 
-// MARK: - Implement RouterType
+// MARK: - Handle PostsSceneUnit.Event
 
-extension PostsSceneCoordinator: RouterType {
+extension PostsSceneCoordinator {
     func handle(event: PostsSceneUnit.Event) {
+        switch event {
+        case .post(let post):
+            let config = ShortPostInfoSceneCoordinator.Configuration(post: post)
+            let coordinator = context.makeShortPostInfoSceneCoordinator(
+                configuration: config,
+                router: .init(handle(event:))
+            )
+            let scene = coordinator.makeScene()
+            navigation?.present(scene, animated: true)
+        }
+    }
+}
+
+// MARK: - Handle ShortPostInfoSceneCoordinatorEvent
+
+extension PostsSceneCoordinator {
+    func handle(event: ShortPostInfoSceneCoordinatorEvent) {
+        switch event {
+        case .complete(let post):
+            let config = PostWebviewSceneCoordinator.Configuration(post: post)
+            let coordinator = context.makePostWebviewSceneCoordinator(configuration: config)
+            let scene = coordinator.makeScene()
+            navigation?.present(scene, animated: true)
+        }
     }
 }

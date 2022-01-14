@@ -27,5 +27,20 @@ struct ShadowStyle: ShadowStyleType, AutoSetable {
         self.radius = radius
     }
     
+    // swiftlint:disable identifier_name
+    init(
+        color: UIColor,
+        opacity: Float,
+        x: CGFloat,
+        y: CGFloat,
+        blurRadius: CGFloat
+    ) {
+        self.color = color.cgColor
+        self.radius = blurRadius
+        self.offset = CGSize(width: x, height: y)
+        self.opacity = opacity
+    }
+    // swiftlint:enable identifier_name
+    
     static let zero = Self(color: UIColor.clear.cgColor, opacity: .zero, offset: .zero, radius: .zero)
 }

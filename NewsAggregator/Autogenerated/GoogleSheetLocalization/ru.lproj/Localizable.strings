@@ -2,3 +2,7 @@
 // Generated using GoogleSheetLocalizationExport: https://github.com/muzle/GoogleSheetLocalizationExport
 
 "PostsScene.navigationTitle" = "Новости";
+"InvalidPostUrlAlert.title" = "Ошибка";
+"InvalidPostUrlAlert.message" = "Не правильный URL";
+"InvalidPostUrlAlert.ok" = "Хоршо";
+"ShortPostInfo.completeButtonTitle" = "Перейти";
