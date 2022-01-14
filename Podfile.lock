@@ -1,6 +1,11 @@
 PODS:
   - ApiRouter (0.0.1)
   - lottie-ios (3.3.0)
+  - Realm (10.21.1):
+    - Realm/Headers (= 10.21.1)
+  - Realm/Headers (10.21.1)
+  - RealmSwift (10.21.1):
+    - Realm (= 10.21.1)
   - RxBlocking (6.2.0):
     - RxSwift (= 6.2.0)
   - RxCocoa (6.2.0):
@@ -23,6 +28,7 @@ PODS:
 DEPENDENCIES:
   - ApiRouter
   - lottie-ios
+  - RealmSwift
   - RxBlocking
   - RxCocoa
   - RxSwift
@@ -36,6 +42,8 @@ SPEC REPOS:
   trunk:
     - ApiRouter
     - lottie-ios
+    - Realm
+    - RealmSwift
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -49,6 +57,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ApiRouter: c6d894bbe3800d05f9957f937319e9ce4249afd3
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  Realm: 44b41c3ae39e3ecfded71a04434bfde066c7b317
+  RealmSwift: dbf9a4eb06e0c929d51c4ef2e8f951bca541feab
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
@@ -59,6 +69,6 @@ SPEC CHECKSUMS:
   Sourcery: f3759f803bd0739f74fc92a4341eed0473ce61ac
   SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
 
-PODFILE CHECKSUM: acfd105b3b8bb640d29b4da2b0cbfb67dca55e61
+PODFILE CHECKSUM: 079012f1aa997c1a84a42b2f85e7b9bd27c5b516
 
 COCOAPODS: 1.11.2

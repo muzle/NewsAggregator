@@ -32,6 +32,8 @@
 		2F6F58AD279142D50025552B /* ImageRepository+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58AC279142D50025552B /* ImageRepository+extension.swift */; };
 		2F6F58AF279149270025552B /* TextStyleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58AE279149270025552B /* TextStyleFactory.swift */; };
 		2F6F58B12791494C0025552B /* FontFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58B02791494C0025552B /* FontFactory.swift */; };
+		2F6F58D527914F2D0025552B /* RealmPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F58D427914F2D0025552B /* RealmPlatform.framework */; };
+		2F6F58D627914F2D0025552B /* RealmPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6F58D427914F2D0025552B /* RealmPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2943278FAA4500F059B4 /* ViewStyleApplicable.swift */; };
 		2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2944278FAA4500F059B4 /* UIKit+ViewStyleApplicable+extension.swift */; };
 		2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2945278FAA4500F059B4 /* ViewStyle.swift */; };
@@ -132,6 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2F6F58D627914F2D0025552B /* RealmPlatform.framework in Embed Frameworks */,
 				2FAE2972278FAD3D00F059B4 /* NetworkPlatform.framework in Embed Frameworks */,
 				2FAE296E278FAD3800F059B4 /* Domain.framework in Embed Frameworks */,
 			);
@@ -177,6 +180,7 @@
 		2F6F58AC279142D50025552B /* ImageRepository+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageRepository+extension.swift"; sourceTree = "<group>"; };
 		2F6F58AE279149270025552B /* TextStyleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleFactory.swift; sourceTree = "<group>"; };
 		2F6F58B02791494C0025552B /* FontFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFactory.swift; sourceTree = "<group>"; };
+		2F6F58D427914F2D0025552B /* RealmPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAE2937278FAA4500F059B4 /* ShadowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
 		2FAE2938278FAA4500F059B4 /* ShadowStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowStyleApplicable.swift; sourceTree = "<group>"; };
 		2FAE2939278FAA4500F059B4 /* UIKit+ShadowStyleApplicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ShadowStyleApplicable.swift"; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAE296D278FAD3800F059B4 /* Domain.framework in Frameworks */,
+				2F6F58D527914F2D0025552B /* RealmPlatform.framework in Frameworks */,
 				2FAE2971278FAD3D00F059B4 /* NetworkPlatform.framework in Frameworks */,
 				726283D5FD1449B38539E02E /* Pods_NewsAggregator.framework in Frameworks */,
 			);
@@ -740,6 +745,7 @@
 		A1A872367AB9207483017AD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F6F58D427914F2D0025552B /* RealmPlatform.framework */,
 				2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */,
 				2FAE296C278FAD3800F059B4 /* Domain.framework */,
 				ABB8E5C3E6F1634AA255DF8D /* Pods_NewsAggregator.framework */,

@@ -32,6 +32,10 @@ def imageLoader
   pod 'SDWebImage', '~> 5.0'
 end
 
+def realm
+  pod 'RealmSwift'
+end
+
 target 'NewsAggregator' do
   # Pods for NewsAggregator
   rxSwift
@@ -40,6 +44,7 @@ target 'NewsAggregator' do
   imageLoader
   pod 'SnapKit', '~> 5.0.0'
   pod 'lottie-ios'
+  realm
 
   target 'NewsAggregatorTests' do
     inherit! :search_paths
@@ -71,6 +76,17 @@ target 'NetworkPlatform' do
     rxTest
   end
 end
+
+target 'RealmPlatform' do
+  project 'RealmPlatform/RealmPlatform'
+  realm
+  rxSwift
+  
+  target 'RealmPlatformTests' do
+    rxTest
+  end
+end
+
 
 target 'AutoGenerator' do
   sourcery
