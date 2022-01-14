@@ -33,7 +33,9 @@ def imageLoader
 end
 
 def realm
-  pod 'RealmSwift'
+  pod 'RxRealm'
+  pod 'RealmSwift', '10.7'
+  pod 'Realm', '10.7'
 end
 
 target 'NewsAggregator' do

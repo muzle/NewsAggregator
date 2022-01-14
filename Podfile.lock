@@ -1,16 +1,21 @@
 PODS:
   - ApiRouter (0.0.1)
   - lottie-ios (3.3.0)
-  - Realm (10.21.1):
-    - Realm/Headers (= 10.21.1)
-  - Realm/Headers (10.21.1)
-  - RealmSwift (10.21.1):
-    - Realm (= 10.21.1)
+  - Realm (10.7.0):
+    - Realm/Headers (= 10.7.0)
+  - Realm/Headers (10.7.0)
+  - RealmSwift (10.7.0):
+    - Realm (= 10.7.0)
   - RxBlocking (6.2.0):
     - RxSwift (= 6.2.0)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
+  - RxRealm (5.0.3):
+    - Realm (~> 10.7)
+    - RealmSwift (~> 10.7)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
@@ -28,9 +33,11 @@ PODS:
 DEPENDENCIES:
   - ApiRouter
   - lottie-ios
-  - RealmSwift
+  - Realm (= 10.7)
+  - RealmSwift (= 10.7)
   - RxBlocking
   - RxCocoa
+  - RxRealm
   - RxSwift
   - RxTest
   - SDWebImage (~> 5.0)
@@ -46,6 +53,7 @@ SPEC REPOS:
     - RealmSwift
     - RxBlocking
     - RxCocoa
+    - RxRealm
     - RxRelay
     - RxSwift
     - RxTest
@@ -57,10 +65,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ApiRouter: c6d894bbe3800d05f9957f937319e9ce4249afd3
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
-  Realm: 44b41c3ae39e3ecfded71a04434bfde066c7b317
-  RealmSwift: dbf9a4eb06e0c929d51c4ef2e8f951bca541feab
+  Realm: a03c41a3afbda6c197ba4dfba5428b8b54cc2df4
+  RealmSwift: 5e7abc842276d7fabd386e67afbf3efde54eb1c6
   RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRealm: d9fedf16e3ead54b0be2077d2ff4a1b2dc27be39
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
@@ -69,6 +78,6 @@ SPEC CHECKSUMS:
   Sourcery: f3759f803bd0739f74fc92a4341eed0473ce61ac
   SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
 
-PODFILE CHECKSUM: 079012f1aa997c1a84a42b2f85e7b9bd27c5b516
+PODFILE CHECKSUM: 875cc6ead88e85aeafa1baedede860a2f98bc3e9
 
 COCOAPODS: 1.11.2
