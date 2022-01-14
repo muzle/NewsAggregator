@@ -7,3 +7,6 @@ import Domain
 
 protocol HasPostsUseCase { var postsUseCase: PostsUseCase { get } }
 extension Context: HasPostsUseCase { }
+
+protocol HasDateToStringConverter { var dateToStringConverter: DateToStringConverter { get } }
+extension Context: HasDateToStringConverter { }

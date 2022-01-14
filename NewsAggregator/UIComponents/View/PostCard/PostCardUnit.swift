@@ -4,14 +4,16 @@ import RxSwift
 import RxCocoa
 
 enum PostCardUnit: UnitType {
-    enum Event {
-    }
-    
     struct Input {
     }
     
     struct Output {
-        let empty: Signal<Void>
+        let title: String?
+        let sourceName: String?
+        let category: String?
+        let publicationDate: String?
+        let withImage: Bool
+        let image: Driver<UIImage?>
     }
 }
 
@@ -19,29 +21,34 @@ enum PostCardUnit: UnitType {
 
 final class PostCardModel: ViewModelType {
     typealias Unit = PostCardUnit
-    typealias Router = Unit.Router
-    typealias Context = NoContext
+    typealias Context = HasPostsUseCase & HasDateToStringConverter
     struct Configuration {
-    
+        let post: Post
     }
     
     private let context: Context
     private let configuration: Configuration
-    private let router: Router
     
     init(
         context: Context,
-        configuration: Configuration,
-        router: Router
+        configuration: Configuration
     ) {
         self.context = context
         self.configuration = configuration
-        self.router = router
     }
     
     func transform(input: Unit.Input) -> Unit.Output {
+        let errorTracker = ErrorTracker()
+        let image = context.postsUseCase.image(for: configuration.post)
+            .trackToDriver(errorTracker)
+        
         return Unit.Output(
-            empty: .never()
+            title: configuration.post.title,
+            sourceName: nil,
+            category: configuration.post.category,
+            publicationDate: context.dateToStringConverter.convert(configuration.post.publicationDate, commonDateFormat: .mmDDyyyyHHmm),
+            withImage: configuration.post.image?.url != nil,
+            image: image
         )
     }
 }

@@ -51,6 +51,7 @@ end
 target 'Domain' do
   project 'Domain/Domain'
   rxSwift
+  rxCocoa
 end
 
 

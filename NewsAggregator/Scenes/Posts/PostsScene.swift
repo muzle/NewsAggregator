@@ -54,11 +54,16 @@ extension PostsScene {
 private extension PostsScene {
     func commonInit() {
         setUI()
+        localize()
     }
     
     func setUI() {
         contentView.tableView.run {
             $0.register(Cell.self)
         }
+    }
+    
+    func localize() {
+        navigationItem.title = GSln.PostsScene.navigationTitle
     }
 }

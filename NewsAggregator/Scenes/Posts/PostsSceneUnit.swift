@@ -20,7 +20,7 @@ enum PostsSceneUnit: UnitType {
 final class PostsSceneModel: ViewModelType {
     typealias Unit = PostsSceneUnit
     typealias Router = Unit.Router
-    typealias Context = NoContext
+    typealias Context = HasPostsUseCase & HasDateToStringConverter
     struct Configuration {
     }
     
@@ -39,8 +39,15 @@ final class PostsSceneModel: ViewModelType {
     }
     
     func transform(input: Unit.Input) -> Unit.Output {
+        let errorTracker = ErrorTracker()
+        
+        let posts = context.postsUseCase.posts()
+            .trackToDriver(errorTracker)
+        
+        let cellModels = posts.map(makeCellModels(for:))
+        
         return Unit.Output(
-            dataSource: .never(),
+            dataSource: cellModels,
             empty: .never()
         )
     }
@@ -49,5 +56,13 @@ final class PostsSceneModel: ViewModelType {
 // MARK: - ViewModel transform
 
 private extension PostsSceneModel {
+    private func makeCellModels(for posts: [Post]) -> [Unit.CellModel] {
+        posts.map(makeCellModel(for:))
+    }
     
+    private func makeCellModel(for post: Post) -> Unit.CellModel {
+        let config = PostCardModel.Configuration(post: post)
+        let model = PostCardModel(context: context, configuration: config)
+        return model.asAnyViewModel()
+    }
 }

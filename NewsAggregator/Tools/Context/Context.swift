@@ -4,10 +4,14 @@ import Domain
 final class Context {
     let postsUseCase: PostsUseCase
     
+    let dateToStringConverter: DateToStringConverter
+    
     init(
-        postsUseCase: PostsUseCase
+        postsUseCase: PostsUseCase,
+        dateToStringConverter: DateToStringConverter
     ) {
         self.postsUseCase = postsUseCase
+        self.dateToStringConverter = dateToStringConverter
     }
 }
 
