@@ -23,6 +23,7 @@
 		2F4BAEB9278C6BEB00E9CFD6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAEB8278C6BEB00E9CFD6 /* Image.swift */; };
 		2F6F587E2790E7640025552B /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F587D2790E7640025552B /* ErrorTracker.swift */; };
 		2F6F58802790E7C80025552B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F587F2790E7C80025552B /* ActivityIndicator.swift */; };
+		2F6F58A727913DDB0025552B /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58A627913DDB0025552B /* ImageRepository.swift */; };
 		2FAE29AE278FDB6300F059B4 /* PostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE29AD278FDB6300F059B4 /* PostsUseCase.swift */; };
 		3653E58A447D8D9E01C02FB7 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0CB73FED9795D0D4798157 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		2F4BAEB8278C6BEB00E9CFD6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2F6F587D2790E7640025552B /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		2F6F587F2790E7C80025552B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		2F6F58A627913DDB0025552B /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		2FAE29AD278FDB6300F059B4 /* PostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCase.swift; sourceTree = "<group>"; };
 		36B6CA4B00CCEE4EABA60D01 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0CB73FED9795D0D4798157 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0A3E6E278F2C2100C881BF /* PostsRepository.swift */,
+				2F6F58A627913DDB0025552B /* ImageRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				2F6F58802790E7C80025552B /* ActivityIndicator.swift in Sources */,
 				2F4BAEB7278C6A3400E9CFD6 /* Post.swift in Sources */,
 				2F6F587E2790E7640025552B /* ErrorTracker.swift in Sources */,
+				2F6F58A727913DDB0025552B /* ImageRepository.swift in Sources */,
 				2F4BAEB5278C6A2400E9CFD6 /* Author.swift in Sources */,
 				2F0A3E9A278F537800C881BF /* AutoInit.generated.swift in Sources */,
 				2F0A3E7E278F32FF00C881BF /* Applicable.swift in Sources */,

@@ -28,12 +28,18 @@ def apiRouter
   pod 'ApiRouter'
 end
 
+def imageLoader
+  pod 'SDWebImage', '~> 5.0'
+end
+
 target 'NewsAggregator' do
   # Pods for NewsAggregator
   rxSwift
   rxCocoa
   apiRouter
+  imageLoader
   pod 'SnapKit', '~> 5.0.0'
+  pod 'lottie-ios'
 
   target 'NewsAggregatorTests' do
     inherit! :search_paths
@@ -59,6 +65,7 @@ target 'NetworkPlatform' do
   project 'NetworkPlatform/NetworkPlatform'
   rxSwift
   apiRouter
+  imageLoader
   
   target 'NetworkPlatformTests' do
     rxTest
