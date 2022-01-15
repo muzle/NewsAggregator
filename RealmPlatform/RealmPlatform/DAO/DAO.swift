@@ -7,7 +7,7 @@ internal protocol DAO {
     
     func query(
         with predicate: NSPredicate,
-        sortDescptors: [NSSortDescriptor]
+        sortDescriptors: [NSSortDescriptor]
     ) -> Observable<[CommonEntity]>
     
     func saveOrUpdate(entity: CommonEntity) -> Single<CommonEntity>

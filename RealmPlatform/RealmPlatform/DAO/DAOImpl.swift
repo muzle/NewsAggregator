@@ -25,9 +25,9 @@ final class DAOImpl<Entity: RealmRepresentable>: DAO where Entity == Entity.Real
     
     func query(
         with predicate: NSPredicate,
-        sortDescptors: [NSSortDescriptor] = []
+        sortDescriptors: [NSSortDescriptor] = []
     ) -> Observable<[Entity]> {
-        let descriptors = sortDescptors.compactMap(makeRealmSortDescriptor(from:))
+        let descriptors = sortDescriptors.compactMap(makeRealmSortDescriptor(from:))
         let objects = realm.objects(Entity.RealmType.self)
             .filter(predicate)
             .sorted(by: descriptors)

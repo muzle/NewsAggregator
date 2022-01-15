@@ -21,6 +21,7 @@
 		2F4BAEB5278C6A2400E9CFD6 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAEB4278C6A2400E9CFD6 /* Author.swift */; };
 		2F4BAEB7278C6A3400E9CFD6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAEB6278C6A3400E9CFD6 /* Post.swift */; };
 		2F4BAEB9278C6BEB00E9CFD6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAEB8278C6BEB00E9CFD6 /* Image.swift */; };
+		2F660123279350E300C44A2D /* PostsStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F660122279350E300C44A2D /* PostsStoreRepository.swift */; };
 		2F6F587E2790E7640025552B /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F587D2790E7640025552B /* ErrorTracker.swift */; };
 		2F6F58802790E7C80025552B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F587F2790E7C80025552B /* ActivityIndicator.swift */; };
 		2F6F58A727913DDB0025552B /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58A627913DDB0025552B /* ImageRepository.swift */; };
@@ -57,6 +58,7 @@
 		2F4BAEB4278C6A2400E9CFD6 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		2F4BAEB6278C6A3400E9CFD6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2F4BAEB8278C6BEB00E9CFD6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		2F660122279350E300C44A2D /* PostsStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsStoreRepository.swift; sourceTree = "<group>"; };
 		2F6F587D2790E7640025552B /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		2F6F587F2790E7C80025552B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		2F6F58A627913DDB0025552B /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				2F6F58A627913DDB0025552B /* ImageRepository.swift */,
 				2F6F58FE2791D9E80025552B /* FavoritePostsRepository.swift */,
 				2F6F59002791D9F90025552B /* VisitedPostsRepository.swift */,
+				2F660122279350E300C44A2D /* PostsStoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				2F6F587E2790E7640025552B /* ErrorTracker.swift in Sources */,
 				2F6F58A727913DDB0025552B /* ImageRepository.swift in Sources */,
 				2F4BAEB5278C6A2400E9CFD6 /* Author.swift in Sources */,
+				2F660123279350E300C44A2D /* PostsStoreRepository.swift in Sources */,
 				2F0A3E9A278F537800C881BF /* AutoInit.generated.swift in Sources */,
 				2F0A3E7E278F32FF00C881BF /* Applicable.swift in Sources */,
 				2F4BAE9E278C697200E9CFD6 /* Domain.docc in Sources */,

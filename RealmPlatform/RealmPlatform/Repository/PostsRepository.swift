@@ -15,7 +15,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         postsDao
             .query(
                 with: NSPredicate(format: "isFavorite == %@", NSNumber(value: true)),
-                sortDescptors: [
+                sortDescriptors: [
                     .init(key: "addToFavoriteDate", ascending: true)
                 ]
             )
@@ -26,7 +26,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         let currentPost = postsDao
             .query(
                 with: NSPredicate(format: "uid == %@", post.id),
-                sortDescptors: []
+                sortDescriptors: []
             )
             .map { $0.first }
         
@@ -49,7 +49,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         postsDao
             .query(
                 with: NSPredicate(format: "uid == %@", post.id),
-                sortDescptors: []
+                sortDescriptors: []
             )
             .map { $0.first?.isFavorite ?? false }
     }
@@ -58,7 +58,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         postsDao
             .query(
                 with: NSPredicate(format: "visitCount > %@", NSNumber(value: 0)),
-                sortDescptors: [
+                sortDescriptors: [
                     NSSortDescriptor(key: "visitCount", ascending: true)
                 ]
             )
@@ -69,7 +69,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         let visitedPost = postsDao
             .query(
                 with: NSPredicate(format: "uid == %@", post.id),
-                sortDescptors: []
+                sortDescriptors: []
             )
             .map { $0.first }
         
@@ -91,7 +91,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
         postsDao
             .query(
                 with: NSPredicate(format: "uid == %@", post.id),
-                sortDescptors: []
+                sortDescriptors: []
             )
             .map { $0.first?.visitCount ?? 0 }
     }

@@ -24,6 +24,17 @@
 		2F6601082793271900C44A2D /* CDAuthor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601072793271900C44A2D /* CDAuthor+extension.swift */; };
 		2F66010A2793274C00C44A2D /* CDImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601092793274C00C44A2D /* CDImage+extension.swift */; };
 		2F66010C2793277800C44A2D /* CDPost+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66010B2793277800C44A2D /* CDPost+extension.swift */; };
+		2F66010E2793289500C44A2D /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66010D2793289500C44A2D /* Persistable.swift */; };
+		2F660110279328D400C44A2D /* CoreDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66010F279328D400C44A2D /* CoreDataRepresentable.swift */; };
+		2F66011327933B5200C44A2D /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66011227933B5200C44A2D /* DAO.swift */; };
+		2F66011527933C4C00C44A2D /* DAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66011427933C4C00C44A2D /* DAOImpl.swift */; };
+		2F6601182793400E00C44A2D /* NSManagedObjectContext+rx+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601172793400E00C44A2D /* NSManagedObjectContext+rx+extension.swift */; };
+		2F66011A279340AF00C44A2D /* FetchedResultsControllerEntityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F660119279340AF00C44A2D /* FetchedResultsControllerEntityObserver.swift */; };
+		2F66011D279343E500C44A2D /* NSManagedObjectContext+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66011C279343E400C44A2D /* NSManagedObjectContext+extension.swift */; };
+		2F66011F2793461000C44A2D /* Sequence+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66011E2793461000C44A2D /* Sequence+extension.swift */; };
+		2F6601212793466800C44A2D /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601202793466800C44A2D /* Observable+extension.swift */; };
+		2F660126279351DC00C44A2D /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F660125279351DC00C44A2D /* PostsRepository.swift */; };
+		2F6601282793670800C44A2D /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601272793670800C44A2D /* RepositoryFactory.swift */; };
 		5DDF84F6FF2D2F414432AEE5 /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +67,17 @@
 		2F6601072793271900C44A2D /* CDAuthor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAuthor+extension.swift"; sourceTree = "<group>"; };
 		2F6601092793274C00C44A2D /* CDImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDImage+extension.swift"; sourceTree = "<group>"; };
 		2F66010B2793277800C44A2D /* CDPost+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPost+extension.swift"; sourceTree = "<group>"; };
+		2F66010D2793289500C44A2D /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		2F66010F279328D400C44A2D /* CoreDataRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepresentable.swift; sourceTree = "<group>"; };
+		2F66011227933B5200C44A2D /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		2F66011427933C4C00C44A2D /* DAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOImpl.swift; sourceTree = "<group>"; };
+		2F6601172793400E00C44A2D /* NSManagedObjectContext+rx+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+rx+extension.swift"; sourceTree = "<group>"; };
+		2F660119279340AF00C44A2D /* FetchedResultsControllerEntityObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerEntityObserver.swift; sourceTree = "<group>"; };
+		2F66011C279343E400C44A2D /* NSManagedObjectContext+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+extension.swift"; sourceTree = "<group>"; };
+		2F66011E2793461000C44A2D /* Sequence+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+extension.swift"; sourceTree = "<group>"; };
+		2F6601202793466800C44A2D /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
+		2F660125279351DC00C44A2D /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		2F6601272793670800C44A2D /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataPlatform_CoreDataPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC4889CC1734EE03D63D7B7 /* Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform-CoreDataPlatformTests/Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE422C3FDCF4557D331DF6B /* Pods-CoreDataPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform/Pods-CoreDataPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +142,10 @@
 			children = (
 				2F6600CB2793184500C44A2D /* DBLoader.swift */,
 				2F6600CD2793196300C44A2D /* Entities */,
+				2F66011127933B3900C44A2D /* DAO */,
+				2F660124279351C800C44A2D /* Repository */,
+				2F66011627933FAE00C44A2D /* RxCoreData */,
+				2F66011B279343BC00C44A2D /* Extension */,
 				2F6600AC2793072A00C44A2D /* CoreDataPlatform.h */,
 				2F6600C82793120200C44A2D /* Model.xcdatamodeld */,
 			);
@@ -155,8 +181,47 @@
 			isa = PBXGroup;
 			children = (
 				2F660105279326ED00C44A2D /* DomainConvertible.swift */,
+				2F66010F279328D400C44A2D /* CoreDataRepresentable.swift */,
+				2F66010D2793289500C44A2D /* Persistable.swift */,
 			);
 			path = Convertation;
+			sourceTree = "<group>";
+		};
+		2F66011127933B3900C44A2D /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				2F66011227933B5200C44A2D /* DAO.swift */,
+				2F66011427933C4C00C44A2D /* DAOImpl.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		2F66011627933FAE00C44A2D /* RxCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2F660119279340AF00C44A2D /* FetchedResultsControllerEntityObserver.swift */,
+				2F6601172793400E00C44A2D /* NSManagedObjectContext+rx+extension.swift */,
+			);
+			path = RxCoreData;
+			sourceTree = "<group>";
+		};
+		2F66011B279343BC00C44A2D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F66011E2793461000C44A2D /* Sequence+extension.swift */,
+				2F66011C279343E400C44A2D /* NSManagedObjectContext+extension.swift */,
+				2F6601202793466800C44A2D /* Observable+extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2F660124279351C800C44A2D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2F6601272793670800C44A2D /* RepositoryFactory.swift */,
+				2F660125279351DC00C44A2D /* PostsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		68978E83FAF7201F51D0906D /* Pods */ = {
@@ -348,17 +413,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F66010E2793289500C44A2D /* Persistable.swift in Sources */,
+				2F660126279351DC00C44A2D /* PostsRepository.swift in Sources */,
 				2F6600CC2793184500C44A2D /* DBLoader.swift in Sources */,
 				2F660106279326ED00C44A2D /* DomainConvertible.swift in Sources */,
+				2F6601182793400E00C44A2D /* NSManagedObjectContext+rx+extension.swift in Sources */,
 				2F66010C2793277800C44A2D /* CDPost+extension.swift in Sources */,
 				2F6600CA2793120200C44A2D /* Model.xcdatamodeld in Sources */,
 				2F6601082793271900C44A2D /* CDAuthor+extension.swift in Sources */,
 				2F660101279323D400C44A2D /* CDImage+CoreDataProperties.swift in Sources */,
+				2F66011F2793461000C44A2D /* Sequence+extension.swift in Sources */,
+				2F66011D279343E500C44A2D /* NSManagedObjectContext+extension.swift in Sources */,
+				2F660110279328D400C44A2D /* CoreDataRepresentable.swift in Sources */,
 				2F660100279323D400C44A2D /* CDAuthor+CoreDataClass.swift in Sources */,
+				2F6601212793466800C44A2D /* Observable+extension.swift in Sources */,
+				2F66011327933B5200C44A2D /* DAO.swift in Sources */,
 				2F660103279323D400C44A2D /* CDImage+CoreDataClass.swift in Sources */,
 				2F66010A2793274C00C44A2D /* CDImage+extension.swift in Sources */,
+				2F6601282793670800C44A2D /* RepositoryFactory.swift in Sources */,
+				2F66011A279340AF00C44A2D /* FetchedResultsControllerEntityObserver.swift in Sources */,
 				2F6600FF279323D400C44A2D /* CDPost+CoreDataProperties.swift in Sources */,
 				2F6600FE279323D400C44A2D /* CDAuthor+CoreDataProperties.swift in Sources */,
+				2F66011527933C4C00C44A2D /* DAOImpl.swift in Sources */,
 				2F660102279323D400C44A2D /* CDPost+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
