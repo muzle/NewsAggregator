@@ -20,6 +20,10 @@
 		2F660101279323D400C44A2D /* CDImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */; };
 		2F660102279323D400C44A2D /* CDPost+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */; };
 		2F660103279323D400C44A2D /* CDImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */; };
+		2F660106279326ED00C44A2D /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F660105279326ED00C44A2D /* DomainConvertible.swift */; };
+		2F6601082793271900C44A2D /* CDAuthor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601072793271900C44A2D /* CDAuthor+extension.swift */; };
+		2F66010A2793274C00C44A2D /* CDImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6601092793274C00C44A2D /* CDImage+extension.swift */; };
+		2F66010C2793277800C44A2D /* CDPost+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66010B2793277800C44A2D /* CDPost+extension.swift */; };
 		5DDF84F6FF2D2F414432AEE5 /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,10 @@
 		2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPost+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F660105279326ED00C44A2D /* DomainConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
+		2F6601072793271900C44A2D /* CDAuthor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDAuthor+extension.swift"; sourceTree = "<group>"; };
+		2F6601092793274C00C44A2D /* CDImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDImage+extension.swift"; sourceTree = "<group>"; };
+		2F66010B2793277800C44A2D /* CDPost+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPost+extension.swift"; sourceTree = "<group>"; };
 		3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataPlatform_CoreDataPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC4889CC1734EE03D63D7B7 /* Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform-CoreDataPlatformTests/Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE422C3FDCF4557D331DF6B /* Pods-CoreDataPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform/Pods-CoreDataPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,14 +137,26 @@
 		2F6600CD2793196300C44A2D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				2F660104279326CF00C44A2D /* Convertation */,
 				2F6600FA279323D400C44A2D /* CDAuthor+CoreDataClass.swift */,
 				2F6600F8279323D400C44A2D /* CDAuthor+CoreDataProperties.swift */,
+				2F6601072793271900C44A2D /* CDAuthor+extension.swift */,
 				2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */,
 				2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */,
+				2F6601092793274C00C44A2D /* CDImage+extension.swift */,
 				2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */,
 				2F6600F9279323D400C44A2D /* CDPost+CoreDataProperties.swift */,
+				2F66010B2793277800C44A2D /* CDPost+extension.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2F660104279326CF00C44A2D /* Convertation */ = {
+			isa = PBXGroup;
+			children = (
+				2F660105279326ED00C44A2D /* DomainConvertible.swift */,
+			);
+			path = Convertation;
 			sourceTree = "<group>";
 		};
 		68978E83FAF7201F51D0906D /* Pods */ = {
@@ -329,10 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6600CC2793184500C44A2D /* DBLoader.swift in Sources */,
+				2F660106279326ED00C44A2D /* DomainConvertible.swift in Sources */,
+				2F66010C2793277800C44A2D /* CDPost+extension.swift in Sources */,
 				2F6600CA2793120200C44A2D /* Model.xcdatamodeld in Sources */,
+				2F6601082793271900C44A2D /* CDAuthor+extension.swift in Sources */,
 				2F660101279323D400C44A2D /* CDImage+CoreDataProperties.swift in Sources */,
 				2F660100279323D400C44A2D /* CDAuthor+CoreDataClass.swift in Sources */,
 				2F660103279323D400C44A2D /* CDImage+CoreDataClass.swift in Sources */,
+				2F66010A2793274C00C44A2D /* CDImage+extension.swift in Sources */,
 				2F6600FF279323D400C44A2D /* CDPost+CoreDataProperties.swift in Sources */,
 				2F6600FE279323D400C44A2D /* CDAuthor+CoreDataProperties.swift in Sources */,
 				2F660102279323D400C44A2D /* CDPost+CoreDataClass.swift in Sources */,
