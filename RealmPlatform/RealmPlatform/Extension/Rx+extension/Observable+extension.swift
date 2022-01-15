@@ -8,3 +8,9 @@ extension Observable where Element: Sequence, Element.Element: CommonRepresentab
         map { $0.mapToCommon() }
     }
 }
+
+extension Observable where Element: Sequence, Element.Element: DomainRepresentable {
+    func mapToDomain() -> Observable<[Element.Element.DomainType]> {
+        map { $0.mapToDomain() }
+    }
+}

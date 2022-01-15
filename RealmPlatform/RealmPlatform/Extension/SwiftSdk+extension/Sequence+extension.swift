@@ -5,3 +5,9 @@ extension Sequence where Element: CommonRepresentable {
         map { $0.asCommon() }
     }
 }
+
+extension Sequence where Element: DomainRepresentable {
+    func mapToDomain() -> [Element.DomainType] {
+        map { $0.asDomain() }
+    }
+}

@@ -2,6 +2,7 @@ included:
     - NewsAggregator
     - Domain
     - NetworkPlatform
+    - RealmPlatform
 
 identifier_name:
   allowed_symbols: "_"

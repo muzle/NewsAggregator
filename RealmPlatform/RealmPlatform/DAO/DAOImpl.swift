@@ -10,8 +10,12 @@ final class DAOImpl<Entity: RealmRepresentable>: DAO where Entity == Entity.Real
     
     init(
         configuration: Realm.Configuration
-    ) throws {
-        realm = try Realm(configuration: configuration)
+    ) {
+        do {
+            realm = try Realm(configuration: configuration)
+        } catch {
+            preconditionFailure(error.localizedDescription)
+        }
     }
     
     func entities() -> Observable<[Entity]> {

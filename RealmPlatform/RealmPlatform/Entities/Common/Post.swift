@@ -1,6 +1,7 @@
 import Foundation
+import Domain
 
-internal struct Post: RealmRepresentable, Equatable {
+internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSetable {
     let uid: String
     let authorName: String?
     let authorEmail: String?
@@ -10,6 +11,9 @@ internal struct Post: RealmRepresentable, Equatable {
     let postDescription: String?
     let category: String?
     let imageUrl: String?
+    var isFavorite: Bool
+    var addToFavoriteDate: Date?
+    var visitCount: Int
     
     func asRealm() -> RMPost {
         let object = RMPost()
@@ -22,6 +26,22 @@ internal struct Post: RealmRepresentable, Equatable {
         object.postDescription = postDescription
         object.category = category
         object.imageUrl = imageUrl
+        object.isFavorite = isFavorite
+        object.addToFavoriteDate = addToFavoriteDate
+        object.visitCount = visitCount
         return object
+    }
+    
+    func asDomain() -> Domain.Post {
+        Domain.Post(
+            id_: uid,
+            author_: .init(name_: authorName, email_: authorEmail),
+            link_: .init(string: link ?? ""),
+            publicationDate_: publicationDate,
+            title_: title,
+            description_: postDescription,
+            category_: category,
+            image_: .init(url_: .init(string: imageUrl ?? ""))
+        )
     }
 }

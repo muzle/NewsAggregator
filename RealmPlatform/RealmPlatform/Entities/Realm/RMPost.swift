@@ -12,6 +12,7 @@ final class RMPost: Object, CommonRepresentable {
     @objc dynamic var category: String?
     @objc dynamic var imageUrl: String?
     @objc dynamic var isFavorite: Bool = false
+    @objc dynamic var addToFavoriteDate: Date?
     @objc dynamic var visitCount: Int = 0
     
     func asCommon() -> Post {
@@ -24,7 +25,10 @@ final class RMPost: Object, CommonRepresentable {
             title: title,
             postDescription: postDescription,
             category: category,
-            imageUrl: imageUrl
+            imageUrl: imageUrl,
+            isFavorite: isFavorite,
+            addToFavoriteDate: addToFavoriteDate,
+            visitCount: visitCount
         )
     }
     

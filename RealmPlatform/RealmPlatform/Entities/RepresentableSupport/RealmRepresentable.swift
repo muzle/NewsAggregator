@@ -1,9 +1,7 @@
 import Foundation
 
-protocol RealmRepresentable {
-    
+internal protocol RealmRepresentable {
     associatedtype RealmType: CommonRepresentable
     
-    var uid: String { get }
     func asRealm() -> RealmType
 }
