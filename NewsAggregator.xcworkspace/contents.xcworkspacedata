@@ -14,6 +14,9 @@
       location = "group:RealmPlatform/RealmPlatform.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CoreDataPlatform/CoreDataPlatform.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -89,6 +89,15 @@ target 'RealmPlatform' do
   end
 end
 
+target 'CoreDataPlatform' do
+  project 'CoreDataPlatform/CoreDataPlatform'
+  rxSwift
+  
+  target 'CoreDataPlatformTests' do
+    rxTest
+  end
+end
+
 
 target 'AutoGenerator' do
   sourcery

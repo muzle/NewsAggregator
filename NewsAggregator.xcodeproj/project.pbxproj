@@ -10,6 +10,8 @@
 		00827996F89C3373F1427D73 /* ShortPostInfoSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C98C6C0A14A840A530AD5C /* ShortPostInfoSceneCoordinator.swift */; };
 		1385FA82AC53856AB5D68EAF /* PostsSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8493245155B6F1654E154F /* PostsSceneView.swift */; };
 		2C1F7D56CA683CE6B31CC415 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D249802FB4B91F212AC484B /* PostCard.swift */; };
+		2F6600C62793079B00C44A2D /* CoreDataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6600C52793079B00C44A2D /* CoreDataPlatform.framework */; };
+		2F6600C72793079B00C44A2D /* CoreDataPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6600C52793079B00C44A2D /* CoreDataPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F6F586E2790D2B40025552B /* TableViewWrapperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F586D2790D2B40025552B /* TableViewWrapperCell.swift */; };
 		2F6F58712790D5170025552B /* ReactiveReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58702790D5170025552B /* ReactiveReusable.swift */; };
 		2F6F58752790DC920025552B /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58742790DC920025552B /* UITableView+extension.swift */; };
@@ -136,6 +138,7 @@
 			files = (
 				2F6F58D627914F2D0025552B /* RealmPlatform.framework in Embed Frameworks */,
 				2FAE2972278FAD3D00F059B4 /* NetworkPlatform.framework in Embed Frameworks */,
+				2F6600C72793079B00C44A2D /* CoreDataPlatform.framework in Embed Frameworks */,
 				2FAE296E278FAD3800F059B4 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -158,6 +161,7 @@
 		152623E71815172AE3126F76 /* ShortPostInfoScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShortPostInfoScene.swift; sourceTree = "<group>"; };
 		1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211AF173688311AEB507230B /* PostsSceneUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostsSceneUnit.swift; sourceTree = "<group>"; };
+		2F6600C52793079B00C44A2D /* CoreDataPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreDataPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6F586D2790D2B40025552B /* TableViewWrapperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWrapperCell.swift; sourceTree = "<group>"; };
 		2F6F58702790D5170025552B /* ReactiveReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveReusable.swift; sourceTree = "<group>"; };
 		2F6F58742790DC920025552B /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 			files = (
 				2FAE296D278FAD3800F059B4 /* Domain.framework in Frameworks */,
 				2F6F58D527914F2D0025552B /* RealmPlatform.framework in Frameworks */,
+				2F6600C62793079B00C44A2D /* CoreDataPlatform.framework in Frameworks */,
 				2FAE2971278FAD3D00F059B4 /* NetworkPlatform.framework in Frameworks */,
 				726283D5FD1449B38539E02E /* Pods_NewsAggregator.framework in Frameworks */,
 			);
@@ -745,6 +750,7 @@
 		A1A872367AB9207483017AD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F6600C52793079B00C44A2D /* CoreDataPlatform.framework */,
 				2F6F58D427914F2D0025552B /* RealmPlatform.framework */,
 				2FAE2970278FAD3D00F059B4 /* NetworkPlatform.framework */,
 				2FAE296C278FAD3800F059B4 /* Domain.framework */,
