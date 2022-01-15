@@ -12,6 +12,14 @@
 		2F6600B72793072A00C44A2D /* CoreDataPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */; };
 		2F6600B82793072A00C44A2D /* CoreDataPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F6600AC2793072A00C44A2D /* CoreDataPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F6600C22793078B00C44A2D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6600C12793078B00C44A2D /* Domain.framework */; };
+		2F6600CA2793120200C44A2D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600C82793120200C44A2D /* Model.xcdatamodeld */; };
+		2F6600CC2793184500C44A2D /* DBLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600CB2793184500C44A2D /* DBLoader.swift */; };
+		2F6600FE279323D400C44A2D /* CDAuthor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600F8279323D400C44A2D /* CDAuthor+CoreDataProperties.swift */; };
+		2F6600FF279323D400C44A2D /* CDPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600F9279323D400C44A2D /* CDPost+CoreDataProperties.swift */; };
+		2F660100279323D400C44A2D /* CDAuthor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FA279323D400C44A2D /* CDAuthor+CoreDataClass.swift */; };
+		2F660101279323D400C44A2D /* CDImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */; };
+		2F660102279323D400C44A2D /* CDPost+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */; };
+		2F660103279323D400C44A2D /* CDImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */; };
 		5DDF84F6FF2D2F414432AEE5 /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +40,14 @@
 		2F6600B12793072A00C44A2D /* CoreDataPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPlatformTests.swift; sourceTree = "<group>"; };
 		2F6600C12793078B00C44A2D /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6600C92793120200C44A2D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2F6600CB2793184500C44A2D /* DBLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
+		2F6600F8279323D400C44A2D /* CDAuthor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDAuthor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F6600F9279323D400C44A2D /* CDPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F6600FA279323D400C44A2D /* CDAuthor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDAuthor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPost+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3352B3B516F22AABE0F5059F /* Pods_CoreDataPlatform_CoreDataPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataPlatform_CoreDataPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC4889CC1734EE03D63D7B7 /* Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform-CoreDataPlatformTests/Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE422C3FDCF4557D331DF6B /* Pods-CoreDataPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform.debug.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform/Pods-CoreDataPlatform.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +110,10 @@
 		2F6600AB2793072A00C44A2D /* CoreDataPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				2F6600CB2793184500C44A2D /* DBLoader.swift */,
+				2F6600CD2793196300C44A2D /* Entities */,
 				2F6600AC2793072A00C44A2D /* CoreDataPlatform.h */,
+				2F6600C82793120200C44A2D /* Model.xcdatamodeld */,
 			);
 			path = CoreDataPlatform;
 			sourceTree = "<group>";
@@ -105,6 +124,19 @@
 				2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */,
 			);
 			path = CoreDataPlatformTests;
+			sourceTree = "<group>";
+		};
+		2F6600CD2793196300C44A2D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2F6600FA279323D400C44A2D /* CDAuthor+CoreDataClass.swift */,
+				2F6600F8279323D400C44A2D /* CDAuthor+CoreDataProperties.swift */,
+				2F6600FD279323D400C44A2D /* CDImage+CoreDataClass.swift */,
+				2F6600FB279323D400C44A2D /* CDImage+CoreDataProperties.swift */,
+				2F6600FC279323D400C44A2D /* CDPost+CoreDataClass.swift */,
+				2F6600F9279323D400C44A2D /* CDPost+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		68978E83FAF7201F51D0906D /* Pods */ = {
@@ -184,6 +216,7 @@
 				TargetAttributes = {
 					2F6600A82793072A00C44A2D = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					2F6600B02793072A00C44A2D = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -295,6 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6600CC2793184500C44A2D /* DBLoader.swift in Sources */,
+				2F6600CA2793120200C44A2D /* Model.xcdatamodeld in Sources */,
+				2F660101279323D400C44A2D /* CDImage+CoreDataProperties.swift in Sources */,
+				2F660100279323D400C44A2D /* CDAuthor+CoreDataClass.swift in Sources */,
+				2F660103279323D400C44A2D /* CDImage+CoreDataClass.swift in Sources */,
+				2F6600FF279323D400C44A2D /* CDPost+CoreDataProperties.swift in Sources */,
+				2F6600FE279323D400C44A2D /* CDAuthor+CoreDataProperties.swift in Sources */,
+				2F660102279323D400C44A2D /* CDPost+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DE422C3FDCF4557D331DF6B /* Pods-CoreDataPlatform.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -463,6 +505,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C049D218CF98B191EB53D29 /* Pods-CoreDataPlatform.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -501,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AC4889CC1734EE03D63D7B7 /* Pods-CoreDataPlatform-CoreDataPlatformTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHXPN8A4H7;
@@ -518,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2765E5AEC570D0BD182BB8F1 /* Pods-CoreDataPlatform-CoreDataPlatformTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHXPN8A4H7;
@@ -562,6 +608,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F6600C82793120200C44A2D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F6600C92793120200C44A2D /* Model.xcdatamodel */,
+			);
+			currentVersion = 2F6600C92793120200C44A2D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2F6600A02793072A00C44A2D /* Project object */;
 }

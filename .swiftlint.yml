@@ -3,6 +3,7 @@ included:
     - Domain
     - NetworkPlatform
     - RealmPlatform
+    - CoreDataPlatform
 
 identifier_name:
   allowed_symbols: "_"
