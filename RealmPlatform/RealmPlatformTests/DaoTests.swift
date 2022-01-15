@@ -3,25 +3,35 @@ import XCTest
 import RxTest
 import RxBlocking
 import RxSwift
+import Realm
+import RealmSwift
+
+fileprivate enum RmConfigs {
+    static let testConfig = Realm.Configuration(
+        readOnly: false,
+        schemaVersion: 1,
+        migrationBlock: .none,
+        deleteRealmIfMigrationNeeded: true,
+        objectTypes: [
+            RMTestEntity.self
+        ]
+    )
+}
 
 class PostsDaoTests: XCTestCase {
-    var dao: DAOImpl<Post>!
-    var models: [Post] = []
+    var dao: DAOImpl<TestEntity>!
     var sheduler: TestScheduler!
     var disposeBag: DisposeBag!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        dao = try .init(
-            configuration: RealmConfigurationFactory.makePostsConfiguration()
-        )
+        dao = .init(configuration: RmConfigs.testConfig)
         sheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
     }
     
     override func tearDownWithError() throws {
         self.dao = nil
-        self.models = []
         sheduler = nil
         disposeBag = nil
         try super.tearDownWithError()
@@ -31,15 +41,20 @@ class PostsDaoTests: XCTestCase {
         try dao.deleteAll().toBlocking().first()
         XCTAssertTrue(try XCTUnwrap(try dao.entities().toBlocking().first()).isEmpty)
         
-        let posts = sheduler.createObserver([Post].self)
+        let entites = sheduler.createObserver([TestEntity].self)
+        
+        let testObjects = (0...3).map(String.init).map(TestEntity.init(id:))
+        
         dao.entities()
-            .subscribe(posts)
+            .subscribe(entites)
             .disposed(by: disposeBag)
         
         sheduler
             .createColdObservable(
                 [
-                    .next(5, makePostStub())
+                    .next(10, testObjects[0]),
+                    .next(20, testObjects[1]),
+                    .next(30, testObjects[2])
                 ]
             )
             .flatMap(dao.saveOrUpdate(entity:))
@@ -49,25 +64,35 @@ class PostsDaoTests: XCTestCase {
         sheduler.start()
         
         XCTAssertEqual(
-            posts.events,
-            [
-                .next(0, [Post]()),
-                .next(5, [makePostStub()])
-            ]
+            entites.events,
+                [
+                    .next(0, [TestEntity]()),
+                    .next(10, [testObjects[0]]),
+                    .next(20, [testObjects[0], testObjects[1]]),
+                    .next(30, [testObjects[0], testObjects[1], testObjects[2]])
+                ]
         )
     }
+}
+
+struct TestEntity: Equatable, RealmRepresentable {
+    let id: String
     
-    func makePostStub() -> Post {
-        Post(
-            uid: "8",
-            authorName: nil,
-            authorEmail: nil,
-            link: nil,
-            publicationDate: nil,
-            title: nil,
-            postDescription: nil,
-            category: nil,
-            imageUrl: nil
-        )
+    func asRealm() -> RMTestEntity {
+        let obj = RMTestEntity()
+        obj.id = id
+        return obj
+    }
+}
+
+final class RMTestEntity: Object, CommonRepresentable {
+    @objc dynamic var id: String = ""
+    
+    func asCommon() -> TestEntity {
+        TestEntity(id: id)
+    }
+    
+    override class func primaryKey() -> String? {
+        "id"
     }
 }
