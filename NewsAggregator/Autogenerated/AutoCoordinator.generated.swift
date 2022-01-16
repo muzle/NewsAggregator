@@ -12,10 +12,15 @@ protocol CoordinatorsFactory {
     func makeRootSceneCoordinator(
         navigation: SingleNavigatorType
     ) -> RootSceneCoordinator
+    func makeSettingsSceneCoordinator(
+        navigation: NavigatorType?
+    ) -> SettingsSceneCoordinator
     func makeShortPostInfoSceneCoordinator(
         configuration: ShortPostInfoSceneCoordinator.Configuration,
         router: AnyRouter<ShortPostInfoSceneCoordinatorEvent>
     ) -> ShortPostInfoSceneCoordinator
+    func makeTabBarSceneCoordinator(
+    ) -> TabBarSceneCoordinator
 }
 
 extension Context: CoordinatorsFactory {
@@ -43,6 +48,14 @@ extension Context: CoordinatorsFactory {
                 navigation: navigation
         )
     }
+    func makeSettingsSceneCoordinator(
+        navigation: NavigatorType?
+    ) -> SettingsSceneCoordinator {
+        SettingsSceneCoordinator(
+                context: self,
+                navigation: navigation
+        )
+    }
     func makeShortPostInfoSceneCoordinator(
         configuration: ShortPostInfoSceneCoordinator.Configuration,
         router: AnyRouter<ShortPostInfoSceneCoordinatorEvent>
@@ -51,6 +64,12 @@ extension Context: CoordinatorsFactory {
                 context: self,
                 configuration: configuration,
                 router: router
+        )
+    }
+    func makeTabBarSceneCoordinator(
+    ) -> TabBarSceneCoordinator {
+        TabBarSceneCoordinator(
+                context: self
         )
     }
 }

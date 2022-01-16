@@ -22,10 +22,8 @@ final class RootSceneCoordinator: AutoCoordinatorType {
 
 extension RootSceneCoordinator: CoordinatorType {
     func makeScene() -> UIViewController {
-        let nc = UINavigationController()
-        let coordinator = context.makePostsSceneCoordinator(navigation: nc)
-        coordinator.setScene()
-        return nc
+        let coordinator = context.makeTabBarSceneCoordinator()
+        return coordinator.makeScene()
     }
     
     func setScene() {

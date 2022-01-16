@@ -6,3 +6,5 @@
 "InvalidPostUrlAlert.message" = "Wrong URL";
 "InvalidPostUrlAlert.ok" = "Ok";
 "ShortPostInfo.completeButtonTitle" = "Open";
+"TabBarTitle.posts" = "News";
+"TabBarTitle.settings" = "Settings";

@@ -29,6 +29,8 @@ internal enum Asset {
   internal static let mainButtonTextColor = ColorAsset(name: "mainButtonTextColor")
   internal static let ic24CloseX = ImageAsset(name: "ic24CloseX")
   internal static let ic24Eye = ImageAsset(name: "ic24Eye")
+  internal static let ic24TabBarNews = ImageAsset(name: "ic24TabBarNews")
+  internal static let ic24TabBarSettings = ImageAsset(name: "ic24TabBarSettings")
   internal static let ic60ImagePlaceholder = ImageAsset(name: "ic60ImagePlaceholder")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

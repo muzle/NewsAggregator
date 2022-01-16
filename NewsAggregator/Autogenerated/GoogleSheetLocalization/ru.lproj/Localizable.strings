@@ -6,3 +6,5 @@
 "InvalidPostUrlAlert.message" = "Не правильный URL";
 "InvalidPostUrlAlert.ok" = "Хоршо";
 "ShortPostInfo.completeButtonTitle" = "Перейти";
+"TabBarTitle.posts" = "Новости";
+"TabBarTitle.settings" = "Настройки";
