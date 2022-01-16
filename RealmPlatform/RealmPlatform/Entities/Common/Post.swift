@@ -14,6 +14,8 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
     var isFavorite: Bool
     var addToFavoriteDate: Date?
     var visitCount: Int
+    let sourceName: String
+    let sourceURL: String?
     
     func asRealm() -> RMPost {
         let object = RMPost()
@@ -29,6 +31,8 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
         object.isFavorite = isFavorite
         object.addToFavoriteDate = addToFavoriteDate
         object.visitCount = visitCount
+        object.sourceName = sourceName
+        object.sourceURL = sourceURL
         return object
     }
     
@@ -41,7 +45,9 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
             title_: title,
             description_: postDescription,
             category_: category,
-            image_: .init(url_: .init(string: imageUrl ?? ""))
+            image_: .init(url_: .init(string: imageUrl ?? "")),
+            sourceName_: sourceName,
+            sourceLink_: URL(string: sourceURL ?? "")
         )
     }
 }

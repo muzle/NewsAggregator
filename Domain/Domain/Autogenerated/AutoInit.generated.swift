@@ -30,7 +30,9 @@ extension Post {
         title_: String? = nil,
         description_: String? = nil,
         category_: String? = nil,
-        image_: Image? = nil
+        image_: Image? = nil,
+        sourceName_: String,
+        sourceLink_: URL? = nil
     ) {
         self.id = id_
         self.author = author_
@@ -40,6 +42,8 @@ extension Post {
         self.description = description_
         self.category = category_
         self.image = image_
+        self.sourceName = sourceName_
+        self.sourceLink = sourceLink_
     }
 }
 // MARK: - PostsContainer

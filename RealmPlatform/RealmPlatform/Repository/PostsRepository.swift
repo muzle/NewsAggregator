@@ -109,7 +109,9 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
             imageUrl: post.image?.url?.absoluteString,
             isFavorite: isFavorite,
             addToFavoriteDate: addToFavoriteDate,
-            visitCount: visitCount
+            visitCount: visitCount,
+            sourceName: post.sourceName,
+            sourceURL: post.sourceLink?.absoluteString
         )
     }
 }

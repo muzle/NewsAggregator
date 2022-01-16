@@ -5,15 +5,21 @@ final class RssDtoMapperImpl {
     private let dateFormatter: DateFormatter
     private let emailChecker: EmailChecker
     private let resourceId: String
+    private let resourceName: String
+    private let resourceUrl: URL
     
     init(
         dateFormatter: DateFormatter,
         emailChecker: EmailChecker,
-        resourceId: String
+        resourceId: String,
+        resourceName: String,
+        resourceUrl: URL
     ) {
         self.dateFormatter = dateFormatter
         self.emailChecker = emailChecker
         self.resourceId = resourceId
+        self.resourceName = resourceName
+        self.resourceUrl = resourceUrl
     }
 }
 
@@ -21,7 +27,7 @@ final class RssDtoMapperImpl {
 
 extension RssDtoMapperImpl: DtoMapper {
     func map(_ result: RssChannel) -> PostsContainer {
-        let posts = result.items.map(makePost(_:))
+        let posts = result.items.map { post in makePost(post, sourceName: resourceName, sourceURL: self.resourceUrl) }
         
         var image: Image?
         if let imageUrlStr = result.image?.url, let imageUrl = URL(string: imageUrlStr) {
@@ -43,7 +49,7 @@ extension RssDtoMapperImpl: DtoMapper {
         )
     }
     
-    private func makePost(_ rssPost: RssPost) -> Post {
+    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL) -> Post {
         var date: Date?
         if let pubDate = rssPost.pubDate {
             date = dateFormatter.date(from: pubDate)
@@ -75,7 +81,9 @@ extension RssDtoMapperImpl: DtoMapper {
             title_: rssPost.title,
             description_: rssPost.description,
             category_: rssPost.category,
-            image_: image
+            image_: image,
+            sourceName_: sourceName,
+            sourceLink_: sourceURL
         )
     }
 }

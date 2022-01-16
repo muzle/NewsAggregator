@@ -5,8 +5,8 @@ import NetworkPlatform
 
 final class PostsUseCaseMock: PostsUseCase {
     private let postsArray: [Post] = [
-        .init(id_: "g", author_: nil, link_: .init(string: "https://lenta.ru/news/2022/01/14/passport/"), publicationDate_: Date(), title_: "Hello", description_: "Hello descr", category_: "Category", image_: .init(url_: .init(string: "https://icdn.lenta.ru/images/2022/01/13/15/20220113155257288/pic_0f467557db2f084c76dbd1e3722274cc.jpg"))),
-        .init(id_: "g", author_: nil, link_: nil, publicationDate_: Date(), title_: "goodby", description_: "goodby descr", category_: "goodby Category", image_: nil)
+        .init(id_: "g", author_: nil, link_: .init(string: "https://lenta.ru/news/2022/01/14/passport/"), publicationDate_: Date(), title_: "Hello", description_: "Hello descr", category_: "Category", image_: .init(url_: .init(string: "https://icdn.lenta.ru/images/2022/01/13/15/20220113155257288/pic_0f467557db2f084c76dbd1e3722274cc.jpg")), sourceName_: "lenta.ru", sourceLink_: nil),
+        .init(id_: "g", author_: nil, link_: nil, publicationDate_: Date(), title_: "goodby", description_: "goodby descr", category_: "goodby Category", image_: nil, sourceName_: "lenta.ru", sourceLink_: nil)
     ]
     private var visitedPostsArray = [Post]()
     private var favoritePostsArray = [Post]()

@@ -13,6 +13,8 @@
         <attribute name="link" optional="YES" attributeType="URI"/>
         <attribute name="postDescription" optional="YES" attributeType="String"/>
         <attribute name="publicationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sourceLink" attributeType="URI"/>
+        <attribute name="sourceName" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="author" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDAuthor"/>
         <relationship name="image" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDImage"/>
@@ -21,8 +23,8 @@
         </fetchIndex>
     </entity>
     <elements>
-        <element name="CDPost" positionX="-423.484375" positionY="-155" width="128" height="163"/>
-        <element name="CDImage" positionX="-54" positionY="-18" width="128" height="58"/>
         <element name="CDAuthor" positionX="-205.234375" positionY="102.578125" width="128" height="73"/>
+        <element name="CDImage" positionX="-54" positionY="-18" width="128" height="58"/>
+        <element name="CDPost" positionX="-423.484375" positionY="-155" width="128" height="179"/>
     </elements>
 </model>

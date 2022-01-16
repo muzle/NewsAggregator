@@ -7,7 +7,8 @@ final class NewsApiDtoMapper {
     private let name: String?
     private let title: String?
     private let description: String?
-    private let resourceURL: URL?
+    private let resourceURL: URL
+    private let resourceName: String
     
     init(
         resourceId: String,
@@ -15,7 +16,8 @@ final class NewsApiDtoMapper {
         name: String? = nil,
         title: String? = nil,
         description: String? = nil,
-        resourceURL: URL? = nil
+        resourceURL: URL,
+        resourceName: String
     ) {
         self.resourceId = resourceId
         self.imageUrl = imageUrl
@@ -23,6 +25,7 @@ final class NewsApiDtoMapper {
         self.title = title
         self.description = description
         self.resourceURL = resourceURL
+        self.resourceName = resourceName
     }
 }
 
@@ -56,7 +59,9 @@ extension NewsApiDtoMapper: DtoMapper {
             title_: naPost.title,
             description_: naPost.description,
             category_: nil,
-            image_: Image(url_: naPost.urlToImage)
+            image_: Image(url_: naPost.urlToImage),
+            sourceName_: resourceName,
+            sourceLink_: resourceURL
         )
     }
 }

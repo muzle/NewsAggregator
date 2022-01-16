@@ -17,4 +17,6 @@ extension CDPost {
     @NSManaged var category: String?
     @NSManaged var author: CDAuthor?
     @NSManaged var image: CDImage?
+    @NSManaged var sourceName: String?
+    @NSManaged var sourceLink: URL?
 }

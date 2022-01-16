@@ -13,7 +13,9 @@ extension CDPost: DomainConvertible {
             title_: title,
             description_: postDescription,
             category_: category,
-            image_: image?.asDomain()
+            image_: image?.asDomain(),
+            sourceName_: sourceName.unsafelyUnwrapped,
+            sourceLink_: sourceLink.unsafelyUnwrapped
         )
     }
 }
