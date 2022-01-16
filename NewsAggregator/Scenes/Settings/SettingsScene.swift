@@ -10,6 +10,9 @@ final class SettingsScene: UIViewController, ViewModelBindable {
     var viewModel: ViewModel?
     private let disposeBag = DisposeBag()
     
+    typealias Section = Unit.Section
+    typealias FieldCell = TableViewWrapperCell<SettingsItemCard<TextField>>
+    private var dataSource = [Section]()
     private lazy var contentView = ContentView()
 }
 
@@ -38,6 +41,7 @@ extension SettingsScene {
         let output = viewModel.transform(input: input)
         
         disposeBag.insert(
+            output.dataSource.drive(onNext: { [weak self] in self?.dataSource = $0; self?.contentView.tableView.reloadData() }),
             output.empty.emit()
         )
     }
@@ -48,5 +52,47 @@ extension SettingsScene {
 private extension SettingsScene {
     func commonInit() {
         navigationItem.title = GSln.SettingsScene.navigationTitle
+        contentView.tableView.run {
+            $0.register(FieldCell.self)
+            $0.dataSource = self
+        }
+    }
+}
+
+// MARK: - Implement UITableViewDataSource
+
+extension SettingsScene: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        dataSource.count
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        dataSource[section].models.count
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let section = dataSource[indexPath.section]
+        let modelType = section.models[indexPath.row]
+        let cell: UITableViewCell
+        switch modelType {
+        case .field(let model):
+            cell = tableView.dequeueReusableCell(FieldCell.self, for: indexPath).apply {
+                $0.bind(viewModel: model)
+            }
+        }
+        return cell
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        titleForHeaderInSection section: Int
+    ) -> String? {
+        dataSource[section].title
     }
 }

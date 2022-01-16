@@ -10,6 +10,7 @@
 		00827996F89C3373F1427D73 /* ShortPostInfoSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C98C6C0A14A840A530AD5C /* ShortPostInfoSceneCoordinator.swift */; };
 		068257F124EDEFC80B7FDE89 /* TabBarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9404BFF88AF8AD04CB5A8C /* TabBarScene.swift */; };
 		1385FA82AC53856AB5D68EAF /* PostsSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8493245155B6F1654E154F /* PostsSceneView.swift */; };
+		22A09E6A2C3760AF60015065 /* SettingsItemCardUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F9A862BACD2314028D13 /* SettingsItemCardUnit.swift */; };
 		2C1F7D56CA683CE6B31CC415 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D249802FB4B91F212AC484B /* PostCard.swift */; };
 		2CAAF2C2337C6A389241E714 /* SettingsSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6CF6EEBCC6142FFA26B66C /* SettingsSceneCoordinator.swift */; };
 		2F36A97A279460A2000A2AF2 /* SetNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A979279460A2000A2AF2 /* SetNavigatorType.swift */; };
@@ -117,10 +118,13 @@
 		72FB8146404CCE1085CF09DE /* TabBarSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F3D777F395C8CB98C96BB0 /* TabBarSceneCoordinator.swift */; };
 		981D75B0788718066056BB86 /* ShortPostInfoSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D770C2986EE05C4CF851EBE3 /* ShortPostInfoSceneView.swift */; };
 		C427E241F5DDD8F9ADED403C /* SettingsSceneUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B332285FDA45D887E5CBF /* SettingsSceneUnit.swift */; };
+		D195C4A150924374F52E45F5 /* SettingsItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81808B4310ACCBE1C017D8 /* SettingsItemCard.swift */; };
 		D3FA7FEF927296C906AD0282 /* ShortPostInfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152623E71815172AE3126F76 /* ShortPostInfoScene.swift */; };
+		D72BB413F42CA284147351B7 /* TextFieldUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B634F29C6D9FAE06DC0E4 /* TextFieldUnit.swift */; };
 		D7FC65A89294CD10D3510B38 /* ShortPostInfoSceneUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E44C0299DDB1AAD6E273293 /* ShortPostInfoSceneUnit.swift */; };
 		E231A3754D558CB8CD162FFD /* PostWebviewSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DD4FE3945DFAB1198B66E /* PostWebviewSceneCoordinator.swift */; };
 		E615D0C9D79A317667316F59 /* Pods_AutoGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */; };
+		F3F923FB57D712A5D1A37552 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622970CA1070D1CCBDADD9EA /* TextField.swift */; };
 		F6CA0D93593E71B880122425 /* PostWebviewSceneUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7084FEDC2485E8FBDF1A345 /* PostWebviewSceneUnit.swift */; };
 		FA6F122F5D3E4A44CE7E3A1C /* PostsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0B1A03CCB02B1445E0D60 /* PostsScene.swift */; };
 /* End PBXBuildFile section */
@@ -182,6 +186,7 @@
 		19F3D777F395C8CB98C96BB0 /* TabBarSceneCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarSceneCoordinator.swift; sourceTree = "<group>"; };
 		1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211AF173688311AEB507230B /* PostsSceneUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostsSceneUnit.swift; sourceTree = "<group>"; };
+		2D8B634F29C6D9FAE06DC0E4 /* TextFieldUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldUnit.swift; sourceTree = "<group>"; };
 		2F36A979279460A2000A2AF2 /* SetNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNavigatorType.swift; sourceTree = "<group>"; };
 		2F36A97C2794712B000A2AF2 /* SingleObjectStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleObjectStorageType.swift; sourceTree = "<group>"; };
 		2F36A97E2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleObjectStorageType+rx+extension.swift"; sourceTree = "<group>"; };
@@ -285,6 +290,9 @@
 		4FD8B2A861F4C8BB075308CE /* Pods-NewsAggregatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAggregatorTests.release.xcconfig"; path = "Target Support Files/Pods-NewsAggregatorTests/Pods-NewsAggregatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		58A2F510BDA7DFA13B66136D /* Pods_NewsAggregatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsAggregatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E06864BF4967717410FD95 /* Pods-AutoGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoGenerator.release.xcconfig"; path = "Target Support Files/Pods-AutoGenerator/Pods-AutoGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		622970CA1070D1CCBDADD9EA /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		66F9F9A862BACD2314028D13 /* SettingsItemCardUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsItemCardUnit.swift; sourceTree = "<group>"; };
+		6C81808B4310ACCBE1C017D8 /* SettingsItemCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsItemCard.swift; sourceTree = "<group>"; };
 		851B332285FDA45D887E5CBF /* SettingsSceneUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsSceneUnit.swift; sourceTree = "<group>"; };
 		8A9404BFF88AF8AD04CB5A8C /* TabBarScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabBarScene.swift; sourceTree = "<group>"; };
 		9E44C0299DDB1AAD6E273293 /* ShortPostInfoSceneUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShortPostInfoSceneUnit.swift; sourceTree = "<group>"; };
@@ -344,6 +352,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E50451D6BB41EE9E706909B /* SettingsItemCard */ = {
+			isa = PBXGroup;
+			children = (
+				6C81808B4310ACCBE1C017D8 /* SettingsItemCard.swift */,
+				66F9F9A862BACD2314028D13 /* SettingsItemCardUnit.swift */,
+			);
+			path = SettingsItemCard;
+			sourceTree = "<group>";
+		};
 		132C887181DB8C6974F43980 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +411,14 @@
 			path = AppSettingsUseCase;
 			sourceTree = "<group>";
 		};
+		2F36A9942794C637000A2AF2 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				B7E77443093F38B48748BFE7 /* TextField */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
 		2F5921462793AE6D00650153 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				E87560904019CBCA000F7156 /* PostCard */,
+				0E50451D6BB41EE9E706909B /* SettingsItemCard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -759,6 +785,7 @@
 		2FAE29B1278FE2B800F059B4 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2F36A9942794C637000A2AF2 /* Fields */,
 				2F6F586A2790D2270025552B /* Cell */,
 				2F6F586B2790D2330025552B /* View */,
 				2F6F589B27912B6E0025552B /* Control */,
@@ -866,6 +893,15 @@
 				1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7E77443093F38B48748BFE7 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				622970CA1070D1CCBDADD9EA /* TextField.swift */,
+				2D8B634F29C6D9FAE06DC0E4 /* TextFieldUnit.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		D65DF1F0AF6447535DC5B953 /* TabBar */ = {
@@ -1436,6 +1472,10 @@
 				630D640635DF66651D6BA1DC /* SettingsSceneView.swift in Sources */,
 				4DE06B04E6878008CFCDCF65 /* SettingsScene.swift in Sources */,
 				C427E241F5DDD8F9ADED403C /* SettingsSceneUnit.swift in Sources */,
+				D195C4A150924374F52E45F5 /* SettingsItemCard.swift in Sources */,
+				22A09E6A2C3760AF60015065 /* SettingsItemCardUnit.swift in Sources */,
+				F3F923FB57D712A5D1A37552 /* TextField.swift in Sources */,
+				D72BB413F42CA284147351B7 /* TextFieldUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

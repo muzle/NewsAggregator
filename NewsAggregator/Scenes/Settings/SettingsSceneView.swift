@@ -6,6 +6,8 @@ private struct Constants {
 private let constants = Constants()
 
 final class SettingsSceneView: UIView {
+    let tableView = UITableView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,19 +24,17 @@ final class SettingsSceneView: UIView {
 private extension SettingsSceneView {
     func commonInit() {
         setConstraints()
-        localize()
         applyStyle()
         setUI()
     }
     
     func setConstraints() {
-    
+        addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
-    func localize() {
-    
-    }
-
     func applyStyle() {
         applyViewStyle(ViewStyleFactory.View.commonSceneBackground)
     }

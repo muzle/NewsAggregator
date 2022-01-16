@@ -10,7 +10,7 @@ private let constants = Constants()
 final class {{ module_info.name }}: UIView, ViewModelBindable {
     typealias Unit = {{ module_info.name }}Unit
     typealias ViewModel = Unit.ViewModel
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,18 +30,23 @@ private extension {{ module_info.name }} {
         setConstraints()
         localize()
         setUI()
+        applyStyle()
     }
     
     func setConstraints() {
-    
+        
     }
     
     func localize() {
-    
+        
     }
 
     func setUI() {
+        
+    }
     
+    func applyStyle() {
+        
     }
 }
 
@@ -55,5 +60,13 @@ extension {{ module_info.name }} {
         disposeBag.insert(
             output.empty.emit()
         )
+    }
+}
+
+// MARK: - Implement ReactiveReusable
+
+extension {{ module_info.name }}: ReactiveReusable {
+    func reuse() {
+        disposeBag = DisposeBag()
     }
 }
