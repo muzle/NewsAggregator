@@ -47,6 +47,6 @@ extension SettingsScene {
 
 private extension SettingsScene {
     func commonInit() {
-        
+        navigationItem.title = GSln.SettingsScene.navigationTitle
     }
 }

@@ -8,3 +8,6 @@
 "ShortPostInfo.completeButtonTitle" = "Open";
 "TabBarTitle.posts" = "News";
 "TabBarTitle.settings" = "Settings";
+"SettingsScene.navigationTitle" = "Settings";
+"SettingsScene.loadSettings" = "News load settings";
+"SettingsScene.postsLoadTimeInterval" = "Update interval";

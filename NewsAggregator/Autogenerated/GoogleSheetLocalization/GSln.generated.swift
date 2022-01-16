@@ -32,6 +32,14 @@ internal enum GSln {
 		/// Настройки
 		internal static let settings = GSln.tr("Localizable", "TabBarTitle.settings")
 	}
+	internal enum SettingsScene {
+		/// Настройки
+		internal static let navigationTitle = GSln.tr("Localizable", "SettingsScene.navigationTitle")
+		/// Настройки загрузки новостей
+		internal static let loadSettings = GSln.tr("Localizable", "SettingsScene.loadSettings")
+		/// Интервал обнолвления
+		internal static let postsLoadTimeInterval = GSln.tr("Localizable", "SettingsScene.postsLoadTimeInterval")
+	}
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

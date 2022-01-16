@@ -8,3 +8,6 @@
 "ShortPostInfo.completeButtonTitle" = "Перейти";
 "TabBarTitle.posts" = "Новости";
 "TabBarTitle.settings" = "Настройки";
+"SettingsScene.navigationTitle" = "Настройки";
+"SettingsScene.loadSettings" = "Настройки загрузки новостей";
+"SettingsScene.postsLoadTimeInterval" = "Интервал обнолвления";
