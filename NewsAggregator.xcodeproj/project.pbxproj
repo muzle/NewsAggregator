@@ -19,6 +19,10 @@
 		2F36A983279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */; };
 		2F36A98727947346000A2AF2 /* JSONDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98627947346000A2AF2 /* JSONDecoderFactory.swift */; };
 		2F36A98927947352000A2AF2 /* JSONEncoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */; };
+		2F36A98C2794AD1F000A2AF2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98B2794AD1F000A2AF2 /* AppSettings.swift */; };
+		2F36A98E2794AE1B000A2AF2 /* AppSettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98D2794AE1B000A2AF2 /* AppSettingsUseCase.swift */; };
+		2F36A9902794B215000A2AF2 /* AppSettingsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98F2794B215000A2AF2 /* AppSettingsUseCaseImpl.swift */; };
+		2F36A9922794B534000A2AF2 /* UserDefaultsSingleObjectStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A9912794B534000A2AF2 /* UserDefaultsSingleObjectStorageFactory.swift */; };
 		2F5921482793AE8400650153 /* PostsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5921472793AE8400650153 /* PostsUseCaseImpl.swift */; };
 		2F59214A2793B00200650153 /* PrimitiveSequence+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5921492793B00200650153 /* PrimitiveSequence+extension.swift */; };
 		2F59214C2793B0B600650153 /* ObservableConvertibleType+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59214B2793B0B600650153 /* ObservableConvertibleType+extension.swift */; };
@@ -185,6 +189,10 @@
 		2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSingleObjectStorage.swift; sourceTree = "<group>"; };
 		2F36A98627947346000A2AF2 /* JSONDecoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderFactory.swift; sourceTree = "<group>"; };
 		2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderFactory.swift; sourceTree = "<group>"; };
+		2F36A98B2794AD1F000A2AF2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		2F36A98D2794AE1B000A2AF2 /* AppSettingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsUseCase.swift; sourceTree = "<group>"; };
+		2F36A98F2794B215000A2AF2 /* AppSettingsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsUseCaseImpl.swift; sourceTree = "<group>"; };
+		2F36A9912794B534000A2AF2 /* UserDefaultsSingleObjectStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSingleObjectStorageFactory.swift; sourceTree = "<group>"; };
 		2F5921472793AE8400650153 /* PostsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCaseImpl.swift; sourceTree = "<group>"; };
 		2F5921492793B00200650153 /* PrimitiveSequence+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+extension.swift"; sourceTree = "<group>"; };
 		2F59214B2793B0B600650153 /* ObservableConvertibleType+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+extension.swift"; sourceTree = "<group>"; };
@@ -362,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */,
+				2F36A9912794B534000A2AF2 /* UserDefaultsSingleObjectStorageFactory.swift */,
 			);
 			path = "UserDefaults+SOS";
 			sourceTree = "<group>";
@@ -373,6 +382,16 @@
 				2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */,
 			);
 			path = CodableSupport;
+			sourceTree = "<group>";
+		};
+		2F36A98A2794AD0C000A2AF2 /* AppSettingsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2F36A98B2794AD1F000A2AF2 /* AppSettings.swift */,
+				2F36A98D2794AE1B000A2AF2 /* AppSettingsUseCase.swift */,
+				2F36A98F2794B215000A2AF2 /* AppSettingsUseCaseImpl.swift */,
+			);
+			path = AppSettingsUseCase;
 			sourceTree = "<group>";
 		};
 		2F5921462793AE6D00650153 /* UseCases */ = {
@@ -450,6 +469,7 @@
 		2F6F58812790F9F30025552B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2F36A98A2794AD0C000A2AF2 /* AppSettingsUseCase */,
 				2F36A97B27947107000A2AF2 /* SingleObjectStorage */,
 				2F6F58842790FA1F0025552B /* DateHandler */,
 			);
@@ -1326,6 +1346,7 @@
 				2FAE2998278FB3E100F059B4 /* UnitType.swift in Sources */,
 				2FAE2953278FAB6900F059B4 /* AutoSetable.generated.swift in Sources */,
 				2FAE2949278FAA6700F059B4 /* TextStyle.swift in Sources */,
+				2F36A9922794B534000A2AF2 /* UserDefaultsSingleObjectStorageFactory.swift in Sources */,
 				2FAE297C278FAEF700F059B4 /* ContextBuilder.swift in Sources */,
 				2F6F58772790DCBF0025552B /* ClassNameType.swift in Sources */,
 				2FAE296B278FACAC00F059B4 /* AlertPresentable.swift in Sources */,
@@ -1335,6 +1356,7 @@
 				2F59214A2793B00200650153 /* PrimitiveSequence+extension.swift in Sources */,
 				2FAE2977278FAE4400F059B4 /* AutoCoordinatorType.swift in Sources */,
 				2FAE295E278FAC4600F059B4 /* SingleNavigatorType.swift in Sources */,
+				2F36A9902794B215000A2AF2 /* AppSettingsUseCaseImpl.swift in Sources */,
 				2FAE294B278FAA6C00F059B4 /* ShadowStyleApplicable.swift in Sources */,
 				2FAE294D278FAA6C00F059B4 /* ShadowStyle.swift in Sources */,
 				2FAE2994278FB3DD00F059B4 /* ViewModelType.swift in Sources */,
@@ -1384,9 +1406,11 @@
 				2FAE2950278FAAAB00F059B4 /* Markers.swift in Sources */,
 				2FAE299E278FB85E00F059B4 /* ViewStyleFactory.swift in Sources */,
 				2FAE29AB278FD62500F059B4 /* GSln.generated.swift in Sources */,
+				2F36A98E2794AE1B000A2AF2 /* AppSettingsUseCase.swift in Sources */,
 				2F6F58B12791494C0025552B /* FontFactory.swift in Sources */,
 				33C7FB27A6293D65A5A47AA5 /* PostsSceneCoordinator.swift in Sources */,
 				2F6F589827911B330025552B /* SharedSequenceConvertibleType+extension.swift in Sources */,
+				2F36A98C2794AD1F000A2AF2 /* AppSettings.swift in Sources */,
 				1385FA82AC53856AB5D68EAF /* PostsSceneView.swift in Sources */,
 				2F36A97F2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift in Sources */,
 				2F6F58832790FA0A0025552B /* DateToStringConverter.swift in Sources */,

@@ -5,6 +5,29 @@ import Foundation
 
 // MARK: - Setable for classes, structs
 
+// MARK: - AppSettings
+extension AppSettings {
+    enum Part {
+        case refreshTimeInternalMin(Int)
+    }
+    func byAdding(_ parts: Part...) -> AppSettings {
+        byAdding(parts)
+    }
+    func byAdding(_ parts: [Part]) -> AppSettings {
+        guard !parts.isEmpty else { return self }
+        var value = self
+        for part in parts {
+            value.update(part)
+        }
+        return value
+    }
+    private mutating func update(_ part: Part) {
+        switch part {
+        case .refreshTimeInternalMin(let refreshTimeInternalMin):
+            self.refreshTimeInternalMin = refreshTimeInternalMin
+        }
+    }
+}
 // MARK: - ShadowStyle
 extension ShadowStyle {
     enum Part {

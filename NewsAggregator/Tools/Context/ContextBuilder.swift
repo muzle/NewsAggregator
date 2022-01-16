@@ -5,6 +5,7 @@ import CoreDataPlatform
 import NetworkPlatform
 
 final class ContextBuilder {
+    private typealias UDStorageFactory = UserDefaultsSingleObjectStorageFactory
     func build() -> Context {
         
         let storageAndProviderRepo: Domain.PostsRepository & Domain.PostsStoreRepository  = CoreDataPlatform.RepositoryFactory.makeRepository()
@@ -22,8 +23,13 @@ final class ContextBuilder {
             imageRepository: NetworkPlatform.NetworkRepositoryFactory.makeImageRepository()
         )
         
+        let appSettingsUseCase = AppSettingsUseCaseImpl(
+            storage: UDStorageFactory.makeAppSettingsStorage()
+        )
+        
         return Context(
             postsUseCase: postsUseCase,
+            appSettingsUseCase: appSettingsUseCase,
             dateToStringConverter: DateToStringConverterImpl()
         )
     }
