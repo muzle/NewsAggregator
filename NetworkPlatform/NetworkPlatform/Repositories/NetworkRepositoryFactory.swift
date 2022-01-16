@@ -1,28 +1,40 @@
 import Foundation
 import Domain
 
+// swiftlint:disable line_length
 public enum NetworkRepositoryFactory {
     private static let loader = NetworkLoaderImpl()
     private static let newsApiMapper = NewsApiDtoMapper(
         resourceId: ResourceId.newApi,
         resourceURL: URL(string: "https://newsapi.org"),
-        resourceName: "NewsApi"
+        resourceName: "NewsApi",
+        encoder: JSONEncoderFactory.commomEncoder
     )
-    private static let emailChecker = EmailCheckerImpl()
-    private static let lentaMapper = RssDtoMapperImpl(
-        dateFormatter: Formatter.RFC822,
-        emailChecker: emailChecker,
+    private static let lentaMapper = makeRssMapper(
         resourceId: ResourceId.lenta,
         resourceName: "Lenta",
         resourceUrl: URL(string: "https://lenta.ru")
     )
-    private static let gazetaMapper = RssDtoMapperImpl(
-        dateFormatter: Formatter.RFC822,
-        emailChecker: emailChecker,
-        resourceId: ResourceId.lenta,
+    private static let gazetaMapper = makeRssMapper(
+        resourceId: ResourceId.gazeta,
         resourceName: "gazeta",
         resourceUrl: URL(string: "https://gazeta.ru")
     )
+    private static let emailChecker = EmailCheckerImpl()
+    private static func makeRssMapper(
+        resourceId: String,
+        resourceName: String,
+        resourceUrl: URL?
+    ) -> RssDtoMapperImpl {
+        RssDtoMapperImpl(
+            dateFormatter: Formatter.RFC822,
+            emailChecker: emailChecker,
+            resourceId: resourceId,
+            resourceName: resourceName,
+            resourceUrl: resourceUrl,
+            encoder: JSONEncoderFactory.commomEncoder
+        )
+    }
     private static let rssDecoder = RssDecoderImpl()
     
     public static func makeLentaRuRepository() -> Domain.PostsRepository {
@@ -41,3 +53,4 @@ public enum NetworkRepositoryFactory {
         ImageRepositoryImpl()
     }
 }
+// swiftlint:enable line_length

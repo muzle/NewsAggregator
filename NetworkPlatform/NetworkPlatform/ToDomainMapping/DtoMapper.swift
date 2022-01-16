@@ -4,5 +4,5 @@ import Domain
 internal protocol DtoMapper {
     associatedtype Result
     
-    func map(_ result: Result) -> PostsContainer
+    func map(_ result: Result) throws -> PostsContainer
 }

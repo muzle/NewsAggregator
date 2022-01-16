@@ -37,6 +37,7 @@
 		2F0A3EB4278F889B00C881BF /* RssDtoMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */; };
 		2F0A3EB6278F88AC00C881BF /* NewApiMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */; };
 		2F0A3EB9278F893200C881BF /* ResourceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB8278F893200C881BF /* ResourceId.swift */; };
+		2F59214E2793C8B100650153 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59214D2793C8B100650153 /* Data+extension.swift */; };
 		2F671784278DCBE400BD1F85 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */; };
 		2F67178A278DCBE400BD1F85 /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F6F58AA27913F6B0025552B /* ImageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58A927913F6B0025552B /* ImageRepositoryImpl.swift */; };
@@ -104,6 +105,7 @@
 		2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssDtoMapperTests.swift; sourceTree = "<group>"; };
 		2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApiMapperTest.swift; sourceTree = "<group>"; };
 		2F0A3EB8278F893200C881BF /* ResourceId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceId.swift; sourceTree = "<group>"; };
+		2F59214D2793C8B100650153 /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
 		2F67177B278DCBE400BD1F85 /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F67177E278DCBE400BD1F85 /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		2F671783278DCBE400BD1F85 /* NetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			children = (
 				2F0A3E6B278F241600C881BF /* Formatter+extension.swift */,
 				2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */,
+				2F59214D2793C8B100650153 /* Data+extension.swift */,
 			);
 			path = "Foundation+extension";
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				2F0A3E5C278F0A4300C881BF /* GazetaRuRouter.swift in Sources */,
 				2F0A3E5E278F0ABD00C881BF /* AbstractRouter+extension.swift in Sources */,
 				2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */,
+				2F59214E2793C8B100650153 /* Data+extension.swift in Sources */,
 				2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */,
 				2F0A3E74278F2D1B00C881BF /* GazetaRuRepository.swift in Sources */,
 				2F0A3EA1278F672A00C881BF /* NewsApiDtoMapperImpl.swift in Sources */,

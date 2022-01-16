@@ -1,6 +1,6 @@
 import Foundation
 
-internal final class RssPost: Decodable, AutoEquatable, AutoHashable {
+internal final class RssPost: Codable, AutoEquatable, AutoHashable {
     /// A string that uniquely identifies the publication.
     var guid: String?
     /// E-mail address of the author of the publication.

@@ -19,4 +19,3 @@ class DtoMapperTests<T, Mapper: DtoMapper>: XCTestCase where Mapper.Result == T,
         XCTAssertEqual(mapper.map(mappedData), result)
     }
 }
-

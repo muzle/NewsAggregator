@@ -7,27 +7,30 @@ final class RssDtoMapperImpl {
     private let resourceId: String
     private let resourceName: String
     private let resourceUrl: URL?
+    private let encoder: JSONEncoder
     
     init(
         dateFormatter: DateFormatter,
         emailChecker: EmailChecker,
         resourceId: String,
         resourceName: String,
-        resourceUrl: URL?
+        resourceUrl: URL?,
+        encoder: JSONEncoder
     ) {
         self.dateFormatter = dateFormatter
         self.emailChecker = emailChecker
         self.resourceId = resourceId
         self.resourceName = resourceName
         self.resourceUrl = resourceUrl
+        self.encoder = encoder
     }
 }
 
 // MARK: - Implement DtoMapper
 
 extension RssDtoMapperImpl: DtoMapper {
-    func map(_ result: RssChannel) -> PostsContainer {
-        let posts = result.items.map { post in makePost(post, sourceName: resourceName, sourceURL: self.resourceUrl) }
+    func map(_ result: RssChannel) throws -> PostsContainer {
+        let posts = try result.items.map { post in try makePost(post, sourceName: resourceName, sourceURL: self.resourceUrl) }
         
         var image: Image?
         if let imageUrlStr = result.image?.url, let imageUrl = URL(string: imageUrlStr) {
@@ -49,7 +52,7 @@ extension RssDtoMapperImpl: DtoMapper {
         )
     }
     
-    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL?) -> Post {
+    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL?) throws -> Post {
         var date: Date?
         if let pubDate = rssPost.pubDate {
             date = dateFormatter.date(from: pubDate)
@@ -73,8 +76,10 @@ extension RssDtoMapperImpl: DtoMapper {
             )
         }
         
+        let data = try encoder.encode(rssPost)
+        
         return Post(
-            id_: "\(rssPost.hashValue)",
+            id_: data.sha256(),
             author_: author,
             link_: url,
             publicationDate_: date,

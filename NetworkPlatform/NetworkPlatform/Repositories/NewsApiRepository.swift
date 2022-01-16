@@ -22,7 +22,7 @@ internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: Root
             encoder: JSONEncoderFactory.commomEncoder,
             decoder: JSONDecoderFactory.dateDecoder
         )
-            .map { [mapper] in mapper.map($0)  }
+            .map { [mapper] in try mapper.map($0)  }
             .asObservable()
             .map { $0.posts }
     }

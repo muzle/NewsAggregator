@@ -27,7 +27,9 @@ final class DAOImpl<Entity: CoreDataRepresentable>: DAO where Entity == Entity.C
     }
     
     func saveOrUpdate(entities: [Entity]) -> Single<Void> {
-        context.rx.sync(entities: entities)
+        Single
+            .zip(entities.map { $0.sync(in: context) })
+            .map { _ in }
             .flatMap(context.rx.save)
     }
     

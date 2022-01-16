@@ -10,4 +10,5 @@ public protocol PostsUseCase {
     
     func changeFavoriteState(post: Post) -> Single<Void>
     func favoritePosts() -> Observable<[Post]>
+    func postIsFavorite(post: Post) -> Observable<Bool>
 }

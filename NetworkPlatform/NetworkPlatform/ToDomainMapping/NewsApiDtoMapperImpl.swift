@@ -9,6 +9,7 @@ final class NewsApiDtoMapper {
     private let description: String?
     private let resourceURL: URL?
     private let resourceName: String
+    private let encoder: JSONEncoder
     
     init(
         resourceId: String,
@@ -17,7 +18,8 @@ final class NewsApiDtoMapper {
         title: String? = nil,
         description: String? = nil,
         resourceURL: URL?,
-        resourceName: String
+        resourceName: String,
+        encoder: JSONEncoder
     ) {
         self.resourceId = resourceId
         self.imageUrl = imageUrl
@@ -26,14 +28,15 @@ final class NewsApiDtoMapper {
         self.description = description
         self.resourceURL = resourceURL
         self.resourceName = resourceName
+        self.encoder = encoder
     }
 }
 
 // MARK: - Implement DtoMapper
 
 extension NewsApiDtoMapper: DtoMapper {
-    func map(_ result: NAPostsContainer) -> PostsContainer {
-        let posts = result.posts.map(makePost(_:))
+    func map(_ result: NAPostsContainer) throws -> PostsContainer {
+        let posts = try result.posts.map(makePost(_:))
         
         var image: Image?
         if let imageUrl = imageUrl {
@@ -50,9 +53,10 @@ extension NewsApiDtoMapper: DtoMapper {
         )
     }
     
-    private func makePost(_ naPost: NAPost) -> Post {
-        Post(
-            id_: "\(naPost.hashValue)",
+    private func makePost(_ naPost: NAPost) throws -> Post {
+        let data = try encoder.encode(naPost)
+        return Post(
+            id_: data.sha256(),
             author_: Author(name_: naPost.author),
             link_: naPost.url,
             publicationDate_: naPost.publishedAt,

@@ -85,24 +85,4 @@ extension Reactive where Base: NSManagedObjectContext {
                 return .just(object)
             }
     }
-    
-    func sync<C: CoreDataRepresentable, P>(
-        entities: [C]
-    ) -> Single<Void> where C.CoreDataType == P {
-        Single.create { observer in
-            for entity in entities {
-                let predicate = NSPredicate(format: "\(P.primaryKey) == %@", entity.uid)
-                let request = C.CoreDataType.fetchRequest()
-                request.predicate = predicate
-                do {
-                    let object = try base.fetch(request).first ?? base.create()
-                    entity.update(entity: object)
-                } catch {
-                    observer(.failure(error))
-                }
-                observer(.success(()))
-            }
-            return Disposables.create()
-        }
-    }
 }
