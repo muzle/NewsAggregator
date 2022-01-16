@@ -14,6 +14,7 @@ enum PostsSceneUnit: UnitType {
     
     struct Output {
         let dataSource: Driver<[CellModel]>
+        let updateCellFrame: Signal<(indexPath: IndexPath, isBegin: Bool)>
         let empty: Signal<Void>
     }
 }
@@ -28,6 +29,7 @@ final class PostsSceneModel: ViewModelType {
     private let context: Context
     private let configuration: Configuration
     private let router: Unit.Router
+    private let updateCellFrameRelay = PublishRelay<(indexPath: IndexPath, isBegin: Bool)>()
     
     init(
         context: Context,
@@ -56,6 +58,7 @@ final class PostsSceneModel: ViewModelType {
         
         return Unit.Output(
             dataSource: cellModels,
+            updateCellFrame: updateCellFrameRelay.asSignal(),
             empty: empty
         )
     }
@@ -65,12 +68,28 @@ final class PostsSceneModel: ViewModelType {
 
 private extension PostsSceneModel {
     private func makeCellModels(for posts: [Post]) -> [Unit.CellModel] {
-        posts.map(makeCellModel(for:))
+        posts.enumerated().map(makeCellModel(for:))
     }
     
-    private func makeCellModel(for post: Post) -> Unit.CellModel {
-        let config = PostCardModel.Configuration(post: post)
-        let model = PostCardModel(context: context, configuration: config)
+    private func makeCellModel(for postIt: EnumeratedSequence<[Post]>.Iterator.Element) -> Unit.CellModel {
+        let config = PostCardModel.Configuration(post: postIt.element)
+        let model = PostCardModel(
+            context: context,
+            configuration: config,
+            router: makeCellModelRouter(with: postIt.offset)
+        )
         return model.asAnyViewModel()
+    }
+    
+    private func makeCellModelRouter(with index: Int) -> PostCardUnit.Router {
+        PostCardUnit.Router { [index, updateCellFrameRelay] event in
+            let indexPath = IndexPath(row: index, section: 0)
+            switch event {
+            case .bedinUpdateFrame:
+                updateCellFrameRelay.accept((indexPath, true))
+            case .endUpdateFrame:
+                updateCellFrameRelay.accept((indexPath, false))
+            }
+        }
     }
 }

@@ -44,8 +44,19 @@ extension PostsScene {
             output.dataSource.drive(contentView.tableView.rx.items(cellIdentifier: Cell.className, cellType: Cell.self)) {
                 $2.bind(viewModel: $1)
             },
+            output.updateCellFrame.emit(onNext: { [weak self] in self?.updateCell(indexPath: $0.indexPath, isBegin: $0.isBegin) }),
             output.empty.emit()
         )
+    }
+    
+    private func updateCell(indexPath: IndexPath, isBegin: Bool) {
+        guard
+            let indexies = contentView.tableView.indexPathsForRows(in: contentView.tableView.bounds),
+            indexies.contains(indexPath)
+        else { return }
+        contentView.tableView.run {
+            isBegin ? $0.beginUpdates() : $0.endUpdates()
+        }
     }
 }
 

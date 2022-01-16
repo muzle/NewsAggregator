@@ -42,6 +42,13 @@ final class ShortPostInfoSceneModel: ViewModelType {
     }
     
     func transform(input: Unit.Input) -> Unit.Output {
+        let errorTracker = ErrorTracker()
+        
+        let watchEvent = context.postsUseCase
+            .visit(post: configuration.post)
+            .trackToSignal(errorTracker)
+            .mapToVoid()
+        
         let completeEvent = input.tap
             .map { Unit.Event.complete }
             .route(with: router)
@@ -49,11 +56,13 @@ final class ShortPostInfoSceneModel: ViewModelType {
         let image = context.postsUseCase.image(for: configuration.post)
             .asDriver(onErrorJustReturn: nil)
         
+        let empty = Signal.merge(watchEvent, completeEvent)
+        
         return Unit.Output(
             image: image,
             title: .just(configuration.post.title),
             description: .just(configuration.post.description),
-            empty: completeEvent
+            empty: empty
         )
     }
 }
