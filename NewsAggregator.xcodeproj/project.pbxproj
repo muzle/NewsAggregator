@@ -13,6 +13,12 @@
 		2C1F7D56CA683CE6B31CC415 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D249802FB4B91F212AC484B /* PostCard.swift */; };
 		2CAAF2C2337C6A389241E714 /* SettingsSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6CF6EEBCC6142FFA26B66C /* SettingsSceneCoordinator.swift */; };
 		2F36A97A279460A2000A2AF2 /* SetNavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A979279460A2000A2AF2 /* SetNavigatorType.swift */; };
+		2F36A97D2794712B000A2AF2 /* SingleObjectStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A97C2794712B000A2AF2 /* SingleObjectStorageType.swift */; };
+		2F36A97F2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A97E2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift */; };
+		2F36A9812794721D000A2AF2 /* SingleObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A9802794721D000A2AF2 /* SingleObjectStorage.swift */; };
+		2F36A983279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */; };
+		2F36A98727947346000A2AF2 /* JSONDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98627947346000A2AF2 /* JSONDecoderFactory.swift */; };
+		2F36A98927947352000A2AF2 /* JSONEncoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */; };
 		2F5921482793AE8400650153 /* PostsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5921472793AE8400650153 /* PostsUseCaseImpl.swift */; };
 		2F59214A2793B00200650153 /* PrimitiveSequence+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5921492793B00200650153 /* PrimitiveSequence+extension.swift */; };
 		2F59214C2793B0B600650153 /* ObservableConvertibleType+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59214B2793B0B600650153 /* ObservableConvertibleType+extension.swift */; };
@@ -173,6 +179,12 @@
 		1C71AF1572DAFBA9BBC68A03 /* Pods_AutoGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211AF173688311AEB507230B /* PostsSceneUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostsSceneUnit.swift; sourceTree = "<group>"; };
 		2F36A979279460A2000A2AF2 /* SetNavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNavigatorType.swift; sourceTree = "<group>"; };
+		2F36A97C2794712B000A2AF2 /* SingleObjectStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleObjectStorageType.swift; sourceTree = "<group>"; };
+		2F36A97E2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleObjectStorageType+rx+extension.swift"; sourceTree = "<group>"; };
+		2F36A9802794721D000A2AF2 /* SingleObjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleObjectStorage.swift; sourceTree = "<group>"; };
+		2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSingleObjectStorage.swift; sourceTree = "<group>"; };
+		2F36A98627947346000A2AF2 /* JSONDecoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderFactory.swift; sourceTree = "<group>"; };
+		2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderFactory.swift; sourceTree = "<group>"; };
 		2F5921472793AE8400650153 /* PostsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCaseImpl.swift; sourceTree = "<group>"; };
 		2F5921492793B00200650153 /* PrimitiveSequence+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+extension.swift"; sourceTree = "<group>"; };
 		2F59214B2793B0B600650153 /* ObservableConvertibleType+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+extension.swift"; sourceTree = "<group>"; };
@@ -335,6 +347,34 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		2F36A97B27947107000A2AF2 /* SingleObjectStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2F36A97C2794712B000A2AF2 /* SingleObjectStorageType.swift */,
+				2F36A97E2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift */,
+				2F36A9802794721D000A2AF2 /* SingleObjectStorage.swift */,
+				2F36A984279472D0000A2AF2 /* UserDefaults+SOS */,
+			);
+			path = SingleObjectStorage;
+			sourceTree = "<group>";
+		};
+		2F36A984279472D0000A2AF2 /* UserDefaults+SOS */ = {
+			isa = PBXGroup;
+			children = (
+				2F36A982279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift */,
+			);
+			path = "UserDefaults+SOS";
+			sourceTree = "<group>";
+		};
+		2F36A9852794732E000A2AF2 /* CodableSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2F36A98627947346000A2AF2 /* JSONDecoderFactory.swift */,
+				2F36A98827947352000A2AF2 /* JSONEncoderFactory.swift */,
+			);
+			path = CodableSupport;
+			sourceTree = "<group>";
+		};
 		2F5921462793AE6D00650153 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +450,7 @@
 		2F6F58812790F9F30025552B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2F36A97B27947107000A2AF2 /* SingleObjectStorage */,
 				2F6F58842790FA1F0025552B /* DateHandler */,
 			);
 			path = Services;
@@ -503,6 +544,7 @@
 				2F6F586F2790D49A0025552B /* Helpers */,
 				2F6F58722790DC420025552B /* Extension */,
 				2F6F58A1279130F20025552B /* LottieAnimationSupport */,
+				2F36A9852794732E000A2AF2 /* CodableSupport */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1299,6 +1341,7 @@
 				2FAE2968278FACAC00F059B4 /* AlertConfigurationBlock.swift in Sources */,
 				2FAE295D278FAC4600F059B4 /* EmptyNavigator.swift in Sources */,
 				2FAE2980278FB23900F059B4 /* AutoProperties.generated.swift in Sources */,
+				2F36A9812794721D000A2AF2 /* SingleObjectStorage.swift in Sources */,
 				2F6F58752790DC920025552B /* UITableView+extension.swift in Sources */,
 				2FAE295C278FAC4600F059B4 /* ModalNavigatorType.swift in Sources */,
 				2FAE297D278FAEF700F059B4 /* NoContext.swift in Sources */,
@@ -1307,15 +1350,18 @@
 				2FAE2946278FAA6300F059B4 /* ViewStyleApplicable.swift in Sources */,
 				2FAE29A4278FD45200F059B4 /* Assets.generated.swift in Sources */,
 				2FAE2947278FAA6300F059B4 /* UIKit+ViewStyleApplicable+extension.swift in Sources */,
+				2F36A98727947346000A2AF2 /* JSONDecoderFactory.swift in Sources */,
 				2FAE297E278FAEF700F059B4 /* Context.swift in Sources */,
 				2FAE2976278FAE4400F059B4 /* CoordinatorType.swift in Sources */,
 				2FAE29A1278FC9C100F059B4 /* RootSceneCoordinator.swift in Sources */,
 				2FAE2948278FAA6300F059B4 /* ViewStyle.swift in Sources */,
 				2FAE2969278FACAC00F059B4 /* AlertStyle.swift in Sources */,
 				2F6F586E2790D2B40025552B /* TableViewWrapperCell.swift in Sources */,
+				2F36A98927947352000A2AF2 /* JSONEncoderFactory.swift in Sources */,
 				2FE75140278BBB0A00C252E9 /* SceneDelegate.swift in Sources */,
 				2FAE2991278FB3D400F059B4 /* RouterType.swift in Sources */,
 				2F6F587C2790DDE40025552B /* Runnable.swift in Sources */,
+				2F36A983279472CC000A2AF2 /* UserDefaultsSingleObjectStorage.swift in Sources */,
 				2F6F58A027912D0F0025552B /* UIControl+Rx+extension.swift in Sources */,
 				2FAE2990278FB3D400F059B4 /* AnyRouter.swift in Sources */,
 				2F36A97A279460A2000A2AF2 /* SetNavigatorType.swift in Sources */,
@@ -1342,6 +1388,7 @@
 				33C7FB27A6293D65A5A47AA5 /* PostsSceneCoordinator.swift in Sources */,
 				2F6F589827911B330025552B /* SharedSequenceConvertibleType+extension.swift in Sources */,
 				1385FA82AC53856AB5D68EAF /* PostsSceneView.swift in Sources */,
+				2F36A97F2794717B000A2AF2 /* SingleObjectStorageType+rx+extension.swift in Sources */,
 				2F6F58832790FA0A0025552B /* DateToStringConverter.swift in Sources */,
 				FA6F122F5D3E4A44CE7E3A1C /* PostsScene.swift in Sources */,
 				6AF0386B1F31F3EBA00010A7 /* PostsSceneUnit.swift in Sources */,
@@ -1351,6 +1398,7 @@
 				4EE95E93C4407773F501C39F /* PostCardUnit.swift in Sources */,
 				00827996F89C3373F1427D73 /* ShortPostInfoSceneCoordinator.swift in Sources */,
 				981D75B0788718066056BB86 /* ShortPostInfoSceneView.swift in Sources */,
+				2F36A97D2794712B000A2AF2 /* SingleObjectStorageType.swift in Sources */,
 				D3FA7FEF927296C906AD0282 /* ShortPostInfoScene.swift in Sources */,
 				D7FC65A89294CD10D3510B38 /* ShortPostInfoSceneUnit.swift in Sources */,
 				2F6F589D27912BB60025552B /* RoundedControl.swift in Sources */,
