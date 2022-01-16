@@ -24,12 +24,10 @@ final class NetworkLoaderImpl: NetworkLoader {
         return task
     }
     
-    func load(
+    func loadData(
         _ request: URLRequest,
         session: URLSession,
-        decoder: JSONDecoder,
         completionQueue: DispatchQueue,
-        decodingQueue: DispatchQueue?,
         completion: @escaping (Result<Data, Error>) -> Void
     ) -> Cancelable {
         let task = session.dataTask(with: request) { [self] data, respose, error in

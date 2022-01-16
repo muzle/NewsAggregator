@@ -2,8 +2,23 @@ import Foundation
 import Domain
 import RxSwift
 
-internal class LentaRuRepository<Loader: NetworkLoader>: RootRepository<Loader>, Domain.PostsRepository {
+// swiftlint:disable line_length
+internal class LentaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsRepository where Mapper.Result == RssChannel {
+    private let mapper: Mapper
+    private let rssDecoder: RssDecoder
+    
+    init(loader: Loader, rssDecoder: RssDecoder, mapper: Mapper) {
+        self.mapper = mapper
+        self.rssDecoder = rssDecoder
+        super.init(loader: loader)
+    }
+    
     func posts() -> Observable<[Post]> {
-        .never()
+        loadData(requestConvertible: LentaRuRouter.posts)
+            .map(rssDecoder.decode(data:))
+            .map(mapper.map(_:))
+            .map { $0.posts }
+            .asObservable()
     }
 }
+// swiftlint:enable line_length

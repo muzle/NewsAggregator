@@ -1,10 +1,10 @@
 import Foundation
 
 public struct PostsContainer: AutoInit, Hashable {
-    let id: String
-    let name: String?
-    let image: Image?
-    let url: URL?
-    let description: String?
-    let posts: [Post]
+    public let id: String
+    public let name: String?
+    public let image: Image?
+    public let url: URL?
+    public let description: String?
+    public let posts: [Post]
 }

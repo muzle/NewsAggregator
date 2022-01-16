@@ -2,13 +2,12 @@ import Foundation
 import RxSwift
 import Domain
 
+// swiftlint:disable function_parameter_count, identifier_name
 internal protocol NetworkLoader: ReactiveCompatible {
-    func load(
+    func loadData(
         _ request: URLRequest,
         session: URLSession,
-        decoder: JSONDecoder,
         completionQueue: DispatchQueue,
-        decodingQueue: DispatchQueue?,
         completion: @escaping (Result<Data, Error>) -> Void
     ) -> Domain.Cancelable
     
@@ -42,12 +41,10 @@ extension NetworkLoader {
         decodingQueue: DispatchQueue?,
         completion: @escaping (Result<T, Error>) -> Void
     ) -> Domain.Cancelable {
-        load(
+        loadData(
             request,
             session: session,
-            decoder: decoder,
-            completionQueue: completionQueue,
-            decodingQueue: decodingQueue
+            completionQueue: completionQueue
         ) { r in
             let result = r.flatMap { data -> Result<T, Error> in
                 do {
@@ -59,37 +56,6 @@ extension NetworkLoader {
             }
             completion(result)
         }
-    }
-    
-    func load(
-        _ request: URLRequest,
-        session: URLSession = .shared,
-        decoder: JSONDecoder = JSONDecoderFactory.commomDecoder,
-        completionQueue: DispatchQueue = .main,
-        decodingQueue: DispatchQueue? = nil,
-        completion: @escaping (Result<Data, Error>) -> Void
-    ) -> Domain.Cancelable {
-        load(
-            request,
-            session: session,
-            decoder: decoder,
-            completionQueue: completionQueue,
-            decodingQueue: decodingQueue,
-            completion: completion
-        )
-    }
-    
-    func load(
-        _ request: URLRequest,
-        session: URLSession = .shared,
-        completionQueue: DispatchQueue = .main,
-        completion: @escaping (Result<Void, Error>) -> Void
-    ) -> Domain.Cancelable {
-        load(request,
-             session: session,
-             completionQueue: completionQueue,
-             completion: completion
-        )
     }
 }
 
@@ -127,6 +93,29 @@ extension Reactive where Base: NetworkLoader {
         }
     }
     
+    func loadData(
+        _ request: URLRequest,
+        session: URLSession,
+        completionQueue: DispatchQueue
+    ) -> Single<Data> {
+        Single.create { obsever in
+            let cancelable = base.loadData(
+                request,
+                session: .shared,
+                completionQueue: .main) { result in
+                    switch result {
+                    case .success(let data):
+                        obsever(.success(data))
+                    case .failure(let error):
+                        obsever(.failure(error))
+                    }
+                }
+            return Disposables.create {
+                cancelable.cancel()
+            }
+        }
+    }
+    
     func load(
         _ request: URLRequest,
         session: URLSession = URLSession.shared,
@@ -152,3 +141,4 @@ extension Reactive where Base: NetworkLoader {
         }
     }
 }
+// swiftlint:enable function_parameter_count, identifier_name

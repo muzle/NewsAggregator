@@ -6,14 +6,14 @@ final class RssDtoMapperImpl {
     private let emailChecker: EmailChecker
     private let resourceId: String
     private let resourceName: String
-    private let resourceUrl: URL
+    private let resourceUrl: URL?
     
     init(
         dateFormatter: DateFormatter,
         emailChecker: EmailChecker,
         resourceId: String,
         resourceName: String,
-        resourceUrl: URL
+        resourceUrl: URL?
     ) {
         self.dateFormatter = dateFormatter
         self.emailChecker = emailChecker
@@ -49,7 +49,7 @@ extension RssDtoMapperImpl: DtoMapper {
         )
     }
     
-    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL) -> Post {
+    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL?) -> Post {
         var date: Date?
         if let pubDate = rssPost.pubDate {
             date = dateFormatter.date(from: pubDate)

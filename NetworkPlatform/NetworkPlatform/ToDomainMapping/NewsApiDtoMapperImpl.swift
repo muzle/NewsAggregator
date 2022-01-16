@@ -7,7 +7,7 @@ final class NewsApiDtoMapper {
     private let name: String?
     private let title: String?
     private let description: String?
-    private let resourceURL: URL
+    private let resourceURL: URL?
     private let resourceName: String
     
     init(
@@ -16,7 +16,7 @@ final class NewsApiDtoMapper {
         name: String? = nil,
         title: String? = nil,
         description: String? = nil,
-        resourceURL: URL,
+        resourceURL: URL?,
         resourceName: String
     ) {
         self.resourceId = resourceId

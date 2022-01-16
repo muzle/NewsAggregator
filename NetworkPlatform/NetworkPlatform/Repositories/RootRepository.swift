@@ -28,4 +28,20 @@ internal class RootRepository<Loader: NetworkLoader> {
             return .error(error)
         }
     }
+    
+    func loadData(
+        requestConvertible: URLRequestConvertible,
+        encoder: JSONEncoder = JSONEncoderFactory.commomEncoder
+    ) -> Single<Data> {
+        do {
+            let request = try requestConvertible.convertToURLRequest(with: encoder)
+            return loader.rx.loadData(
+                request,
+                session: .shared,
+                completionQueue: .main
+            )
+        } catch {
+            return .error(error)
+        }
+    }
 }

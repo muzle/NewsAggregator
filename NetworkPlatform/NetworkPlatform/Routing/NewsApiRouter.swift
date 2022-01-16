@@ -13,7 +13,10 @@ extension NewsApiRouter: AbstractRouter {
     }
     
     var path: String {
-        ""
+        switch self {
+        case .posts:
+            return "/v2/top-headlines"
+        }
     }
     
     var method: HTTPMethod {
