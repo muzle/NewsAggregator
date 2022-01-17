@@ -15,6 +15,8 @@ final class ShortPostInfoSceneView: UIView {
     let descriptionLabel = UILabel()
     let completeButton = UIButton()
     
+    private var imageViewHeightConstraint: NSLayoutConstraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -23,6 +25,17 @@ final class ShortPostInfoSceneView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
+    }
+    
+    func setImage(_ image: UIImage) {
+        imageViewHeightConstraint?.isActive = false
+        imageViewHeightConstraint = imageView.heightAnchor.constraint(
+            equalTo: imageView.widthAnchor,
+            multiplier: image.size.height/image.size.width
+        ).apply {
+            $0.isActive = true
+        }
+        imageView.image = image
     }
 }
 
@@ -60,11 +73,12 @@ private extension ShortPostInfoSceneView {
         stackView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(constants.contentStackViewInset)
             $0.top.equalTo(imageView.snp.bottom).offset(constants.contentStackViewInset.top)
-            $0.bottom.lessThanOrEqualTo(completeButton.snp.top).offset(-constants.contentStackViewInset.bottom)
+            $0.bottom.greaterThanOrEqualToSuperview().offset(-constants.contentStackViewInset.bottom)
         }
         completeButton.snp.makeConstraints {
             $0.leading.bottom.trailing.equalTo(safeAreaLayoutGuide).inset(constants.completeButtonInset)
         }
+        imageView.setContentCompressionResistancePriority(.required, for: .vertical)
     }
     
     func localize() {
@@ -79,5 +93,6 @@ private extension ShortPostInfoSceneView {
     }
 
     func setUI() {
+        imageView.contentMode = .scaleAspectFit
     }
 }

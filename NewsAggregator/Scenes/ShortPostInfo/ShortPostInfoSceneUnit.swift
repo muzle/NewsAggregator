@@ -66,9 +66,3 @@ final class ShortPostInfoSceneModel: ViewModelType {
         )
     }
 }
-
-// MARK: - ViewModel transform
-
-private extension ShortPostInfoSceneModel {
-    
-}

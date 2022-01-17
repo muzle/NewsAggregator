@@ -25,7 +25,6 @@ extension ShortPostInfoScene {
         guard let viewModel = viewModel else {
             preconditionFailure("viewModel must be assigned before viewDidLoad")
         }
-        commonInit()
         bind(viewModel: viewModel)
     }
 }
@@ -40,18 +39,10 @@ extension ShortPostInfoScene {
         let output = viewModel.transform(input: input)
         
         disposeBag.insert(
-            output.image.drive(contentView.imageView.rx.image),
+            output.image.map { $0 ?? Asset.ic60ImagePlaceholder.image }.drive(onNext: { [weak contentView] in contentView?.setImage($0) }),
             output.title.drive(contentView.titleLabel.rx.text),
             output.description.drive(contentView.descriptionLabel.rx.text),
             output.empty.emit()
         )
-    }
-}
-
-// MARK: - Common init
-
-private extension ShortPostInfoScene {
-    func commonInit() {
-        
     }
 }

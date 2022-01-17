@@ -38,6 +38,7 @@ private extension PostCard {
     func commonInit() {
         setConstraints()
         applyStyle()
+        setUI()
     }
     
     func setConstraints() {
@@ -63,6 +64,10 @@ private extension PostCard {
     func applyStyle() {
         titleLabel.applyTextStyle(TextStyleFactory.BigMessage.left)
         sourceInfoLabel.applyTextStyle(TextStyleFactory.SmallMessage.left)
+    }
+    
+    func setUI() {
+        imageView.contentMode = .scaleAspectFit
     }
 }
 
