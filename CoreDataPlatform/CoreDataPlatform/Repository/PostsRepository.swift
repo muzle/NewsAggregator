@@ -20,7 +20,7 @@ final class PostsRepository<PostsDAO: DAO>: PostsStoreRepository, QueryablePosts
     }
     
     func queryPosts(
-        with predicate: NSPredicate,
+        with predicate: NSPredicate?,
         sortDescriptors: [NSSortDescriptor]
     ) -> Observable<[Post]> {
         postsDao.query(with: predicate, sortDescriptors: sortDescriptors)

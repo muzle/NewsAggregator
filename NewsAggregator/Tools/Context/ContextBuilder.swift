@@ -4,11 +4,12 @@ import RealmPlatform
 import CoreDataPlatform
 import NetworkPlatform
 
+// swiftlint:disable line_length
 final class ContextBuilder {
     private typealias UDStorageFactory = UserDefaultsSingleObjectStorageFactory
     func build() -> Context {
         
-        let storageAndProviderRepo: Domain.PostsRepository & Domain.PostsStoreRepository = CoreDataPlatform.RepositoryFactory.makeRepository()
+        let storageAndProviderRepo: Domain.QueryablePostsRepository & Domain.PostsStoreRepository = CoreDataPlatform.RepositoryFactory.makeRepository()
         
         let appSettingsService = AppSettingsServiceImpl(
             storage: UDStorageFactory.makeAppSettingsStorage()
@@ -30,12 +31,17 @@ final class ContextBuilder {
             appSettingsService: appSettingsService
         )
         
+        let postsProvider = PostsProvider(
+            appSettingsService: appSettingsService,
+            queryablePostsRepository: storageAndProviderRepo
+        )
+        
         let postsUseCase = PostsUseCaseImpl(
             postsFetcher: postsFetcher,
             postsUpdater: postsUpdater,
             postsVisitTraker: RealmPlatform.RepositoryFactory.makeVisitedPostsRepository(),
             favoritePostsTraker: RealmPlatform.RepositoryFactory.makeFavoritePostsRepository(),
-            postsProvider: storageAndProviderRepo,
+            postsProvider: postsProvider,
             postsStorage: storageAndProviderRepo,
             imageRepository: NetworkPlatform.NetworkRepositoryFactory.makeImageRepository()
         )
@@ -53,3 +59,4 @@ final class ContextBuilder {
         )
     }
 }
+// swiftlint:enable line_length
