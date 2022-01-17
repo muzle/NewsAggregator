@@ -35,6 +35,9 @@ extension PostWebviewSceneCoordinator: CoordinatorType {
             $0.viewModel = sceneModel.asAnyViewModel()
         }
         let nc = UINavigationController(rootViewController: scene)
+        nc.navigationBar.run {
+            $0.scrollEdgeAppearance = $0.standardAppearance
+        }
         navigation = nc
         return nc
     }
