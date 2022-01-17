@@ -11,13 +11,8 @@ final class DAOImpl<Entity: CoreDataRepresentable>: DAO where Entity == Entity.C
         self.context = context
     }
     
-    func entities() -> Observable<[Entity]> {
-        let request = Entity.CoreDataType.fetchRequest()
-        return context.rx.entities(fetchRequest: request).mapToDomain()
-    }
-    
     func query(
-        with predicate: NSPredicate,
+        with predicate: NSPredicate?,
         sortDescriptors: [NSSortDescriptor] = []
     ) -> Observable<[Entity]> {
         let request = Entity.CoreDataType.fetchRequest()

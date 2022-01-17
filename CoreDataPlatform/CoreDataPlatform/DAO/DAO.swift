@@ -3,10 +3,9 @@ import RxSwift
 
 internal protocol DAO {
     associatedtype Entity
-    func entities() -> Observable<[Entity]>
     
     func query(
-        with predicate: NSPredicate,
+        with predicate: NSPredicate?,
         sortDescriptors: [NSSortDescriptor]
     ) -> Observable<[Entity]>
     

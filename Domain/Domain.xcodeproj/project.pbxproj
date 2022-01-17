@@ -29,6 +29,7 @@
 		2F6F58FF2791D9E80025552B /* FavoritePostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F58FE2791D9E80025552B /* FavoritePostsRepository.swift */; };
 		2F6F59012791D9F90025552B /* VisitedPostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F59002791D9F90025552B /* VisitedPostsRepository.swift */; };
 		2FAE29AE278FDB6300F059B4 /* PostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE29AD278FDB6300F059B4 /* PostsUseCase.swift */; };
+		2FDE17BA27951E1A00A67537 /* QueryablePostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE17B927951E1A00A67537 /* QueryablePostsRepository.swift */; };
 		3653E58A447D8D9E01C02FB7 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0CB73FED9795D0D4798157 /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		2F6F58FE2791D9E80025552B /* FavoritePostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePostsRepository.swift; sourceTree = "<group>"; };
 		2F6F59002791D9F90025552B /* VisitedPostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedPostsRepository.swift; sourceTree = "<group>"; };
 		2FAE29AD278FDB6300F059B4 /* PostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCase.swift; sourceTree = "<group>"; };
+		2FDE17B927951E1A00A67537 /* QueryablePostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryablePostsRepository.swift; sourceTree = "<group>"; };
 		36B6CA4B00CCEE4EABA60D01 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0CB73FED9795D0D4798157 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 		2F0A3E6D278F295C00C881BF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				2FDE17B927951E1A00A67537 /* QueryablePostsRepository.swift */,
 				2F0A3E6E278F2C2100C881BF /* PostsRepository.swift */,
 				2F6F58A627913DDB0025552B /* ImageRepository.swift */,
 				2F6F58FE2791D9E80025552B /* FavoritePostsRepository.swift */,
@@ -363,6 +366,7 @@
 				2F0A3E7E278F32FF00C881BF /* Applicable.swift in Sources */,
 				2F4BAE9E278C697200E9CFD6 /* Domain.docc in Sources */,
 				2F1AD0932794E8B600983800 /* PostsResourceInfo.swift in Sources */,
+				2FDE17BA27951E1A00A67537 /* QueryablePostsRepository.swift in Sources */,
 				2F4BAEB9278C6BEB00E9CFD6 /* Image.swift in Sources */,
 				2F0A3E97278F52DE00C881BF /* Markers.swift in Sources */,
 				2F0A3E9C278F598700C881BF /* PostsContainer.swift in Sources */,

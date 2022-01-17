@@ -2,7 +2,7 @@ import Foundation
 import Domain
 import RxSwift
 
-final class PostsRepository<PostsDAO: DAO>: PostsStoreRepository, Domain.PostsRepository where PostsDAO.Entity == Post {
+final class PostsRepository<PostsDAO: DAO>: PostsStoreRepository, QueryablePostsRepository where PostsDAO.Entity == Post {
     private let postsDao: PostsDAO
     
     init(postsDao: PostsDAO) {
@@ -16,6 +16,13 @@ final class PostsRepository<PostsDAO: DAO>: PostsStoreRepository, Domain.PostsRe
     }
     
     func posts() -> Observable<[Post]> {
-        postsDao.entities()
+        postsDao.query(with: nil, sortDescriptors: [])
+    }
+    
+    func queryPosts(
+        with predicate: NSPredicate,
+        sortDescriptors: [NSSortDescriptor]
+    ) -> Observable<[Post]> {
+        postsDao.query(with: predicate, sortDescriptors: sortDescriptors)
     }
 }
