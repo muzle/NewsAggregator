@@ -23,13 +23,13 @@ final class ContextBuilder {
             imageRepository: NetworkPlatform.NetworkRepositoryFactory.makeImageRepository()
         )
         
-        let appSettingsUseCase = AppSettingsUseCaseImpl(
+        let appSettingsService = AppSettingsServiceImpl(
             storage: UDStorageFactory.makeAppSettingsStorage()
         )
         
         return Context(
             postsUseCase: postsUseCase,
-            appSettingsUseCase: appSettingsUseCase,
+            appSettingsService: appSettingsService,
             dateToStringConverter: DateToStringConverterImpl()
         )
     }

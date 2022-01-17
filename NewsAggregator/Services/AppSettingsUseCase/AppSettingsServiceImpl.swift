@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-final class AppSettingsUseCaseImpl: AppSettingsUseCase {
+final class AppSettingsServiceImpl: AppSettingsService {
     private let storage: SingleObjectStorage<AppSettings>
     
     init(storage: SingleObjectStorage<AppSettings>) {

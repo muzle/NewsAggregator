@@ -9,6 +9,7 @@ import Foundation
 extension AppSettings {
     enum Part {
         case refreshTimeInternalMin(Int)
+        case resourcesTrackingStates([ResourceTrackingState])
     }
     func byAdding(_ parts: Part...) -> AppSettings {
         byAdding(parts)
@@ -25,6 +26,31 @@ extension AppSettings {
         switch part {
         case .refreshTimeInternalMin(let refreshTimeInternalMin):
             self.refreshTimeInternalMin = refreshTimeInternalMin
+        case .resourcesTrackingStates(let resourcesTrackingStates):
+            self.resourcesTrackingStates = resourcesTrackingStates
+        }
+    }
+}
+// MARK: - ResourceTrackingState
+extension ResourceTrackingState {
+    enum Part {
+        case isTacked(Bool)
+    }
+    func byAdding(_ parts: Part...) -> ResourceTrackingState {
+        byAdding(parts)
+    }
+    func byAdding(_ parts: [Part]) -> ResourceTrackingState {
+        guard !parts.isEmpty else { return self }
+        var value = self
+        for part in parts {
+            value.update(part)
+        }
+        return value
+    }
+    private mutating func update(_ part: Part) {
+        switch part {
+        case .isTacked(let isTacked):
+            self.isTacked = isTacked
         }
     }
 }

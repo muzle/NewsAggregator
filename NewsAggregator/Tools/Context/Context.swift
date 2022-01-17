@@ -3,17 +3,16 @@ import Domain
 
 final class Context {
     let postsUseCase: PostsUseCase
-    let appSettingsUseCase: AppSettingsUseCase
-    
+    let appSettingsService: AppSettingsService
     let dateToStringConverter: DateToStringConverter
     
     init(
         postsUseCase: PostsUseCase,
-        appSettingsUseCase: AppSettingsUseCase,
+        appSettingsService: AppSettingsService,
         dateToStringConverter: DateToStringConverter
     ) {
         self.postsUseCase = postsUseCase
-        self.appSettingsUseCase = appSettingsUseCase
+        self.appSettingsService = appSettingsService
         self.dateToStringConverter = dateToStringConverter
     }
 }

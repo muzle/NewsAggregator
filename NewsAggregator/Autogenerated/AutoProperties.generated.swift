@@ -8,8 +8,8 @@ import Domain
 protocol HasPostsUseCase { var postsUseCase: PostsUseCase { get } }
 extension Context: HasPostsUseCase { }
 
-protocol HasAppSettingsUseCase { var appSettingsUseCase: AppSettingsUseCase { get } }
-extension Context: HasAppSettingsUseCase { }
+protocol HasAppSettingsService { var appSettingsService: AppSettingsService { get } }
+extension Context: HasAppSettingsService { }
 
 protocol HasDateToStringConverter { var dateToStringConverter: DateToStringConverter { get } }
 extension Context: HasDateToStringConverter { }
