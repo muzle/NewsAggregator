@@ -3,7 +3,8 @@ import Domain
 import RxSwift
 
 final class PostsUseCaseImpl: Domain.PostsUseCase {
-    private let postsloaders: [Domain.PostsRepository]
+    private let postsFetcher: Domain.PostsRepository
+    private let postsUpdater: Domain.PostsRepository
     private let postsVisitTraker: Domain.VisitedPostsRepository
     private let favoritePostsTraker: Domain.FavoritePostsRepository
     private let postsProvider: Domain.PostsRepository
@@ -13,14 +14,16 @@ final class PostsUseCaseImpl: Domain.PostsUseCase {
     private let disposeBag = DisposeBag()
     
     init(
-        postsloaders: [Domain.PostsRepository],
+        postsFetcher: Domain.PostsRepository,
+        postsUpdater: Domain.PostsRepository,
         postsVisitTraker: Domain.VisitedPostsRepository,
         favoritePostsTraker: Domain.FavoritePostsRepository,
         postsProvider: Domain.PostsRepository,
         postsStorage: Domain.PostsStoreRepository,
         imageRepository: Domain.ImageRepository
     ) {
-        self.postsloaders = postsloaders
+        self.postsFetcher = postsFetcher
+        self.postsUpdater = postsUpdater
         self.postsVisitTraker = postsVisitTraker
         self.favoritePostsTraker = favoritePostsTraker
         self.postsProvider = postsProvider
@@ -30,8 +33,8 @@ final class PostsUseCaseImpl: Domain.PostsUseCase {
     }
     
     private func configure() {
-        Observable
-            .merge(postsloaders.map { $0.posts() })
+        postsUpdater
+            .posts()
             .flatMap(postsStorage.save(posts:))
             .subscribe()
             .disposed(by: disposeBag)

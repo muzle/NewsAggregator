@@ -9,4 +9,5 @@ protocol AppSettingsService {
     func udpate(settings: AppSettings) -> Single<Void>
     func addTrackableResources(resources: [PostsResourceInfo]) throws
     func resetTrackableResources(resources: [PostsResourceInfo]) throws
+    func isTrackableResource(resource: PostsResourceInfo?) -> Bool
 }

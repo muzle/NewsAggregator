@@ -20,8 +20,19 @@ final class ContextBuilder {
             NetworkPlatform.NetworkRepositoryFactory.makeNewsApiRepository()
         ]
         
+        let postsFetcher = PostsFetcher(
+            appSettingsService: appSettingsService,
+            postsLoaders: postsLoaders
+        )
+        
+        let postsUpdater = PostsUpdater(
+            postsFetcher: postsFetcher,
+            appSettingsService: appSettingsService
+        )
+        
         let postsUseCase = PostsUseCaseImpl(
-            postsloaders: postsLoaders,
+            postsFetcher: postsFetcher,
+            postsUpdater: postsUpdater,
             postsVisitTraker: RealmPlatform.RepositoryFactory.makeVisitedPostsRepository(),
             favoritePostsTraker: RealmPlatform.RepositoryFactory.makeFavoritePostsRepository(),
             postsProvider: storageAndProviderRepo,

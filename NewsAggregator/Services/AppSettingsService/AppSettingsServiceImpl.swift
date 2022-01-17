@@ -72,6 +72,12 @@ final class AppSettingsServiceImpl: AppSettingsService {
         _ = try storage.update(data: newModel)
     }
     
+    func isTrackableResource(resource: PostsResourceInfo?) -> Bool {
+        guard let id = resource?.id else { return false }
+        let settings = try? storage.data()
+        return settings?.resourcesTrackingStates.first(where: { $0.resource.id == id })?.isTacked ?? false
+    }
+    
     private enum AppSettingsUseCaseError: Error {
         case emptyData
         case invalidRefreshTimeInterval

@@ -3,7 +3,7 @@ import Domain
 import RxSwift
 
 private struct Constants {
-    let token = "0ce3ce6211a24a41aaef880d40ab08cf"
+    let token = "e37d5dddc223423f80d6d8def5494587"
 }
 private let constants = Constants()
 
