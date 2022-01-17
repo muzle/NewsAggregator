@@ -1,14 +1,28 @@
-## Task (`full description will be added when the program is ready :)`)
+## NewsAggregator
+This is a simple application built using the [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel) + Coordinator + Router design pattern.
+Application [Requirements](Docs/Task.md).
+I tried to follow the [SOLID](https://en.wikipedia.org/wiki/SOLID) principles.
 
-News feed aggregator from several sources (for example [lenta](http://lenta.ru/rss) and [gazeta](http://www.gazeta.ru/export/rss/lenta.xml) or [newsapi](https://newsapi.org/) with different sources)
-- The application must display news in one list, sorted by publication date, from two or more sources
-- Applications must be scalable to add new sources
-- The application must indicate its source in the news
-- A count of the number of transitions to the news should be implemented.
-- A count of the number of transitions to the news should be implemented.
-- Adding selected news should be implemented.
-- Update by timer (period selection in settings).
-- Settings (for example: update frequency, enable/disable news source), saved on restart.
-- Using a database to store news
-- Thoughtful and scalable project structure
-- Test coverage
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/muzle/NewsAggregator/blob/master/LICENSE)
+[![codebeat badge](https://codebeat.co/badges/6c346142-a942-4c13-ae6b-5517b4c50b1d)](https://codebeat.co/projects/github-com-muzle-newsaggregator-master)
+
+<table>
+<tr>
+    <th rowspan="9"><img src="Docs/1.png"></th>
+    <th rowspan="9"><img src="Docs/2.png"></th>
+    <th rowspan="9"><img src="Docs/3.png"></th>
+  </tr>
+</table>
+
+## Instalation
+1. The project uses the [Cocoapods](https://cocoapods.org) dependency manager, so the first step is to install it. The installation process is described in the official documentation.
+2. After installing the [Cocoapods](https://cocoapods.org), run the following set of commands in a terminal:
+```shell
+git clone https://github.com/muzle/NewsAggregator.git
+cd NewsAggregator
+pod install
+open NewsAggregator.xcworkspace
+```
+
+## Authors
+Eugene Rudakov - [linkedin](https://www.linkedin.com/in/voragomod/)
