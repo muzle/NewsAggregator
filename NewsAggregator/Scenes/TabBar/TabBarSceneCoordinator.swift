@@ -49,7 +49,7 @@ extension TabBarSceneCoordinator: RouterType {
                 controllers.append(scene)
             }
             self.scenesContainer = scenesContainer
-            navigation?.setItems(items: controllers, animated: true)
+            navigation?.setItems(items: controllers, animated: false)
         }
     }
     
