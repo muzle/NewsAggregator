@@ -12,8 +12,10 @@ final class SettingsScene: UIViewController, ViewModelBindable {
     
     typealias Section = Unit.Section
     typealias FieldCell = TableViewWrapperCell<SettingsItemCard<TextField>>
+    typealias SwitchCell = TableViewWrapperCell<SettingsItemCard<Switch>>
     private var dataSource = [Section]()
     private lazy var contentView = ContentView()
+    private let saveButton = UIBarButtonItem()
 }
 
 // MARK: - Life cycle
@@ -37,11 +39,14 @@ extension SettingsScene {
 
 extension SettingsScene {
     func bind(viewModel: ViewModel) {
-        let input = ViewModel.Input()
+        let input = ViewModel.Input(
+            save: saveButton.rx.tap.asSignal()
+        )
         let output = viewModel.transform(input: input)
         
         disposeBag.insert(
             output.dataSource.drive(onNext: { [weak self] in self?.dataSource = $0; self?.contentView.tableView.reloadData() }),
+            output.saveIsEnabled.drive(saveButton.rx.isEnabled),
             output.empty.emit()
         )
     }
@@ -51,9 +56,16 @@ extension SettingsScene {
 
 private extension SettingsScene {
     func commonInit() {
-        navigationItem.title = GSln.SettingsScene.navigationTitle
+        navigationItem.run {
+            $0.title = GSln.SettingsScene.navigationTitle
+            $0.rightBarButtonItem = saveButton
+        }
+        saveButton.run {
+            $0.title = GSln.SettingsScene.saveButtonTitle
+        }
         contentView.tableView.run {
             $0.register(FieldCell.self)
+            $0.register(SwitchCell.self)
             $0.dataSource = self
         }
     }
@@ -83,6 +95,10 @@ extension SettingsScene: UITableViewDataSource {
         switch modelType {
         case .field(let model):
             cell = tableView.dequeueReusableCell(FieldCell.self, for: indexPath).apply {
+                $0.bind(viewModel: model)
+            }
+        case .switch(let model):
+            cell = tableView.dequeueReusableCell(SwitchCell.self, for: indexPath).apply {
                 $0.bind(viewModel: model)
             }
         }

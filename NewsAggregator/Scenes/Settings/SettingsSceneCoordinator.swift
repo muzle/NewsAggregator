@@ -39,5 +39,9 @@ extension SettingsSceneCoordinator: CoordinatorType {
 
 extension SettingsSceneCoordinator: RouterType {
     func handle(event: SettingsSceneUnit.Event) {
+        switch event {
+        case .alert(let block):
+            navigation?.presentAlert(block: block)
+        }
     }
 }

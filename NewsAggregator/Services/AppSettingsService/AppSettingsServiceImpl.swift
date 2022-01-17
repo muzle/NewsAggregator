@@ -21,6 +21,13 @@ final class AppSettingsServiceImpl: AppSettingsService {
         value > 0
     }
     
+    func settingsModel() throws -> AppSettings {
+        guard let model = try storage.data() else {
+            return try storage.update(data: .makeDefault())
+        }
+        return model
+    }
+    
     func settings() -> Observable<AppSettings> {
         storage.rx.data()
             .map { model in

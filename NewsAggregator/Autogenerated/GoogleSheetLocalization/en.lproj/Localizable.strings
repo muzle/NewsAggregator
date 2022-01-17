@@ -9,5 +9,10 @@
 "TabBarTitle.posts" = "News";
 "TabBarTitle.settings" = "Settings";
 "SettingsScene.navigationTitle" = "Settings";
-"SettingsScene.loadSettings" = "News load settings";
-"SettingsScene.postsLoadTimeInterval" = "Update interval";
+"SettingsScene.refreshTimeSectionTitle" = "Updating";
+"SettingsScene.trackedReourcesSectionTitle" = "Monitored Resources";
+"SettingsScene.postsLoadTimeInterval" = "Update interval(min)";
+"SettingsScene.saveButtonTitle" = "Save";
+"Alert.ok" = "Ok";
+"Alert.cancel" = "Cancel";
+"Alert.error" = "Error";

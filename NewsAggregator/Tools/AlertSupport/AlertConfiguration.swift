@@ -39,4 +39,14 @@ struct AlertConfiguration {
         self.style = style
         self.position = position
     }
+    
+    static func makeErrorAlert(message: String?) -> Self {
+        return AlertConfiguration(
+            title: GSln.Alert.error,
+            message: message,
+            action: GSln.Alert.ok,
+            style: .error,
+            position: .bottom
+        )
+    }
 }

@@ -35,10 +35,22 @@ internal enum GSln {
 	internal enum SettingsScene {
 		/// Настройки
 		internal static let navigationTitle = GSln.tr("Localizable", "SettingsScene.navigationTitle")
-		/// Настройки загрузки новостей
-		internal static let loadSettings = GSln.tr("Localizable", "SettingsScene.loadSettings")
-		/// Интервал обнолвления
+		/// Обновление
+		internal static let refreshTimeSectionTitle = GSln.tr("Localizable", "SettingsScene.refreshTimeSectionTitle")
+		/// Отслеживаемые ресурсы
+		internal static let trackedReourcesSectionTitle = GSln.tr("Localizable", "SettingsScene.trackedReourcesSectionTitle")
+		/// Интервал обнолвления(мин)
 		internal static let postsLoadTimeInterval = GSln.tr("Localizable", "SettingsScene.postsLoadTimeInterval")
+		/// Сохранить
+		internal static let saveButtonTitle = GSln.tr("Localizable", "SettingsScene.saveButtonTitle")
+	}
+	internal enum Alert {
+		/// Хорошо
+		internal static let ok = GSln.tr("Localizable", "Alert.ok")
+		/// Отмена
+		internal static let cancel = GSln.tr("Localizable", "Alert.cancel")
+		/// Ошибка
+		internal static let error = GSln.tr("Localizable", "Alert.error")
 	}
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

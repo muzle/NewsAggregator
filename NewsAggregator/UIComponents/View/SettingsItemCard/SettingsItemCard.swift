@@ -5,7 +5,7 @@ import SnapKit
 
 private struct Constants {
     let stackViewSpacing = CGFloat(16)
-    let stackViewInset = UIEdgeInsets.zero
+    let stackViewInset = UIEdgeInsets(all: 16)
 }
 private let constants = Constants()
 
@@ -50,6 +50,9 @@ private extension SettingsItemCard {
         addSubview(stackView)
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(constants.stackViewInset)
+        }
+        component.snp.makeConstraints {
+            $0.width.lessThanOrEqualToSuperview().multipliedBy(0.2)
         }
     }
     

@@ -25,7 +25,6 @@ private extension SettingsSceneView {
     func commonInit() {
         setConstraints()
         applyStyle()
-        setUI()
     }
     
     func setConstraints() {
@@ -37,8 +36,5 @@ private extension SettingsSceneView {
     
     func applyStyle() {
         applyViewStyle(ViewStyleFactory.View.commonSceneBackground)
-    }
-
-    func setUI() {
     }
 }

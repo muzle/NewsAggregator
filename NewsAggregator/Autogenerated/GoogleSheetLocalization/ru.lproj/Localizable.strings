@@ -9,5 +9,10 @@
 "TabBarTitle.posts" = "Новости";
 "TabBarTitle.settings" = "Настройки";
 "SettingsScene.navigationTitle" = "Настройки";
-"SettingsScene.loadSettings" = "Настройки загрузки новостей";
-"SettingsScene.postsLoadTimeInterval" = "Интервал обнолвления";
+"SettingsScene.refreshTimeSectionTitle" = "Обновление";
+"SettingsScene.trackedReourcesSectionTitle" = "Отслеживаемые ресурсы";
+"SettingsScene.postsLoadTimeInterval" = "Интервал обнолвления(мин)";
+"SettingsScene.saveButtonTitle" = "Сохранить";
+"Alert.ok" = "Хорошо";
+"Alert.cancel" = "Отмена";
+"Alert.error" = "Ошибка";
