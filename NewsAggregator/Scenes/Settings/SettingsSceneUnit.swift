@@ -111,7 +111,7 @@ private extension SettingsSceneModel {
         return section
     }
     
-    func makeUpdateTimeFieldModel() -> TextFieldUnit.ViewModel {
+    private func makeUpdateTimeFieldModel() -> TextFieldUnit.ViewModel {
         let router = TextFieldUnit.Router { [context, appSettingsRelay] event in
             switch event {
             case .text(let text):
@@ -136,7 +136,7 @@ private extension SettingsSceneModel {
         )
     }
     
-    func makeSwitchSettinsModel(state: ResourceTrackingState) -> Unit.SwitchModel {
+    private func makeSwitchSettinsModel(state: ResourceTrackingState) -> Unit.SwitchModel {
         let config = SettingsItemCardModel<SwitchUnit.ViewModel>.Configuration(
             title: state.resource.name,
             viewModel: makeSwitchModel(state: state)
@@ -145,7 +145,7 @@ private extension SettingsSceneModel {
         return model.asAnyViewModel()
     }
     
-    func makeSwitchModel(state: ResourceTrackingState) -> SwitchUnit.ViewModel {
+    private func makeSwitchModel(state: ResourceTrackingState) -> SwitchUnit.ViewModel {
         let isOn = context.appSettingsService
             .settings()
             .map { [state] in $0.resourcesTrackingStates.first(where: { $0.resource.id == state.resource.id })?.isTacked }
@@ -162,7 +162,7 @@ private extension SettingsSceneModel {
         )
     }
     
-    func makeSwitchModel(
+    private func makeSwitchModel(
         isOn: Driver<Bool>,
         isOnCompletion: @escaping (Bool) -> Void
     ) -> SwitchUnit.ViewModel {
