@@ -118,12 +118,23 @@ private extension SettingsSceneModel {
                 guard
                     let int = Int(text),
                     context.appSettingsService.isValidRefreshTim(value: int)
-                else { return }
+                else {
+                    appSettingsRelay.accept(appSettingsRelay.value.byAdding(.refreshTimeInternalMin(0)))
+                    return
+                }
                 appSettingsRelay.accept(appSettingsRelay.value.byAdding(.refreshTimeInternalMin(int)))
             }
         }
+        let config = TextFieldModel.Configuration(
+            text: context.appSettingsService.settings().map { "\($0.refreshTimeInternalMin)" }.asDriver(onErrorJustReturn: ""),
+            isErrorState: appSettingsRelay
+                .map { [context] in !context.appSettingsService.isValidRefreshTim(value: $0.refreshTimeInternalMin) }
+                .asDriver(onErrorJustReturn: false),
+            keyboardType: .numberPad,
+            filterRule: { Int($0) != nil || $0.isDelite }
+        )
         let model = TextFieldModel(
-            configuration: .init(),
+            configuration: config,
             router: router
         )
         return model.asAnyViewModel()
