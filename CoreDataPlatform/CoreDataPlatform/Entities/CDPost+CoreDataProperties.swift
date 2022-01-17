@@ -15,6 +15,7 @@ extension CDPost {
     @NSManaged var title: String?
     @NSManaged var postDescription: String?
     @NSManaged var category: String?
+    @NSManaged var sourceId: String
     @NSManaged var sourceName: String
     @NSManaged var sourceLink: URL?
     @NSManaged var authorName: String?

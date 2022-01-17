@@ -9,6 +9,7 @@
         <attribute name="link" optional="YES" attributeType="URI"/>
         <attribute name="postDescription" optional="YES" attributeType="String"/>
         <attribute name="publicationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sourceId" attributeType="String"/>
         <attribute name="sourceLink" optional="YES" attributeType="URI"/>
         <attribute name="sourceName" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -17,6 +18,6 @@
         </fetchIndex>
     </entity>
     <elements>
-        <element name="CDPost" positionX="-423.484375" positionY="-155" width="128" height="194"/>
+        <element name="CDPost" positionX="-423.484375" positionY="-155" width="128" height="209"/>
     </elements>
 </model>

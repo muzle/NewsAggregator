@@ -6,10 +6,17 @@ import RxSwift
 internal class GazetaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsRepository where Mapper.Result == RssChannel {
     private let mapper: Mapper
     private let rssDecoder: RssDecoder
+    private let sourceInfo: PostsResourceInfo
     
-    init(loader: Loader, rssDecoder: RssDecoder, mapper: Mapper) {
+    init(
+        loader: Loader,
+        rssDecoder: RssDecoder,
+        mapper: Mapper,
+        sourceInfo: PostsResourceInfo
+    ) {
         self.mapper = mapper
         self.rssDecoder = rssDecoder
+        self.sourceInfo = sourceInfo
         super.init(loader: loader)
     }
     
@@ -19,6 +26,10 @@ internal class GazetaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: Roo
             .map(mapper.map(_:))
             .map { $0.posts }
             .asObservable()
+    }
+    
+    var postsResourceInfo: PostsResourceInfo? {
+        sourceInfo
     }
 }
 // swiftlint:enable line_length

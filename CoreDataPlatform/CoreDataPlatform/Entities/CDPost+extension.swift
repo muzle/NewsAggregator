@@ -14,6 +14,7 @@ extension CDPost: DomainConvertible {
             description_: postDescription,
             category_: category,
             image_: Image(url_: imageURL),
+            sourceId_: sourceId,
             sourceName_: sourceName,
             sourceLink_: sourceLink
         )
@@ -36,6 +37,7 @@ extension Post: CoreDataRepresentable {
         entity.title = title
         entity.postDescription = description
         entity.category = category
+        entity.sourceId = sourceId
         entity.sourceLink = sourceLink
         entity.sourceName = sourceName
         entity.imageURL = image?.url

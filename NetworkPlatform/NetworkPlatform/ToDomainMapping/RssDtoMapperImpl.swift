@@ -3,26 +3,20 @@ import Domain
 
 final class RssDtoMapperImpl {
     private let dateFormatter: DateFormatter
-    private let emailChecker: EmailChecker
-    private let resourceId: String
-    private let resourceName: String
-    private let resourceUrl: URL?
     private let encoder: JSONEncoder
+    private let emailChecker: EmailChecker
+    private let resourceInfo: PostsResourceInfo
     
     init(
         dateFormatter: DateFormatter,
+        encoder: JSONEncoder,
         emailChecker: EmailChecker,
-        resourceId: String,
-        resourceName: String,
-        resourceUrl: URL?,
-        encoder: JSONEncoder
+        resourceInfo: PostsResourceInfo
     ) {
         self.dateFormatter = dateFormatter
-        self.emailChecker = emailChecker
-        self.resourceId = resourceId
-        self.resourceName = resourceName
-        self.resourceUrl = resourceUrl
         self.encoder = encoder
+        self.emailChecker = emailChecker
+        self.resourceInfo = resourceInfo
     }
 }
 
@@ -30,29 +24,24 @@ final class RssDtoMapperImpl {
 
 extension RssDtoMapperImpl: DtoMapper {
     func map(_ result: RssChannel) throws -> PostsContainer {
-        let posts = try result.items.map { post in try makePost(post, sourceName: resourceName, sourceURL: self.resourceUrl) }
+        let posts = try result.items.map(makePost(_:))
         
         var image: Image?
         if let imageUrlStr = result.image?.url, let imageUrl = URL(string: imageUrlStr) {
             image = .init(url_: imageUrl)
         }
         
-        var resourceUrl: URL?
-        if let link = result.link {
-            resourceUrl = URL(string: link)
-        }
-        
         return PostsContainer(
-            id_: resourceId,
-            name_: result.title,
+            id_: resourceInfo.id,
+            name_: resourceInfo.name,
             image_: image,
-            url_: resourceUrl,
+            url_: resourceInfo.url,
             description_: result.description,
             posts_: posts
         )
     }
     
-    private func makePost(_ rssPost: RssPost, sourceName: String, sourceURL: URL?) throws -> Post {
+    private func makePost(_ rssPost: RssPost) throws -> Post {
         var date: Date?
         if let pubDate = rssPost.pubDate {
             date = dateFormatter.date(from: pubDate)
@@ -87,8 +76,9 @@ extension RssDtoMapperImpl: DtoMapper {
             description_: rssPost.description,
             category_: rssPost.category,
             image_: image,
-            sourceName_: sourceName,
-            sourceLink_: sourceURL
+            sourceId_: resourceInfo.id,
+            sourceName_: resourceInfo.name,
+            sourceLink_: resourceInfo.url
         )
     }
 }

@@ -31,6 +31,7 @@ extension Post {
         description_: String? = nil,
         category_: String? = nil,
         image_: Image? = nil,
+        sourceId_: String,
         sourceName_: String,
         sourceLink_: URL? = nil
     ) {
@@ -42,6 +43,7 @@ extension Post {
         self.description = description_
         self.category = category_
         self.image = image_
+        self.sourceId = sourceId_
         self.sourceName = sourceName_
         self.sourceLink = sourceLink_
     }
@@ -62,6 +64,18 @@ extension PostsContainer {
         self.url = url_
         self.description = description_
         self.posts = posts_
+    }
+}
+// MARK: - PostsResourceInfo
+extension PostsResourceInfo {
+    public init(
+        id_: String,
+        url_: URL? = nil,
+        name_: String
+    ) {
+        self.id = id_
+        self.url = url_
+        self.name = name_
     }
 }
 // swiftlint:enable all

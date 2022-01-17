@@ -14,6 +14,7 @@
 		2F0A3E97278F52DE00C881BF /* Markers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E96278F52DE00C881BF /* Markers.swift */; };
 		2F0A3E9A278F537800C881BF /* AutoInit.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E99278F537800C881BF /* AutoInit.generated.swift */; };
 		2F0A3E9C278F598700C881BF /* PostsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3E9B278F598700C881BF /* PostsContainer.swift */; };
+		2F1AD0932794E8B600983800 /* PostsResourceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AD0922794E8B600983800 /* PostsResourceInfo.swift */; };
 		2F4BAE9E278C697200E9CFD6 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAE9D278C697200E9CFD6 /* Domain.docc */; };
 		2F4BAEA4278C697200E9CFD6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4BAE99278C697200E9CFD6 /* Domain.framework */; };
 		2F4BAEA9278C697200E9CFD6 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BAEA8278C697200E9CFD6 /* DomainTests.swift */; };
@@ -50,6 +51,7 @@
 		2F0A3E96278F52DE00C881BF /* Markers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markers.swift; sourceTree = "<group>"; };
 		2F0A3E99278F537800C881BF /* AutoInit.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInit.generated.swift; sourceTree = "<group>"; };
 		2F0A3E9B278F598700C881BF /* PostsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsContainer.swift; sourceTree = "<group>"; };
+		2F1AD0922794E8B600983800 /* PostsResourceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResourceInfo.swift; sourceTree = "<group>"; };
 		2F4BAE99278C697200E9CFD6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4BAE9C278C697200E9CFD6 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		2F4BAE9D278C697200E9CFD6 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				2F4BAEB6278C6A3400E9CFD6 /* Post.swift */,
 				2F4BAEB8278C6BEB00E9CFD6 /* Image.swift */,
 				2F4BAEB4278C6A2400E9CFD6 /* Author.swift */,
+				2F1AD0922794E8B600983800 /* PostsResourceInfo.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				2F0A3E9A278F537800C881BF /* AutoInit.generated.swift in Sources */,
 				2F0A3E7E278F32FF00C881BF /* Applicable.swift in Sources */,
 				2F4BAE9E278C697200E9CFD6 /* Domain.docc in Sources */,
+				2F1AD0932794E8B600983800 /* PostsResourceInfo.swift in Sources */,
 				2F4BAEB9278C6BEB00E9CFD6 /* Image.swift in Sources */,
 				2F0A3E97278F52DE00C881BF /* Markers.swift in Sources */,
 				2F0A3E9C278F598700C881BF /* PostsContainer.swift in Sources */,

@@ -14,6 +14,7 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
     var isFavorite: Bool
     var addToFavoriteDate: Date?
     var visitCount: Int
+    let sourceId: String
     let sourceName: String
     let sourceURL: String?
     
@@ -31,6 +32,7 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
         object.isFavorite = isFavorite
         object.addToFavoriteDate = addToFavoriteDate
         object.visitCount = visitCount
+        object.sourceId = sourceId
         object.sourceName = sourceName
         object.sourceURL = sourceURL
         return object
@@ -46,6 +48,7 @@ internal struct Post: Equatable, RealmRepresentable, DomainRepresentable, AutoSe
             description_: postDescription,
             category_: category,
             image_: .init(url_: .init(string: imageUrl ?? "")),
+            sourceId_: sourceId,
             sourceName_: sourceName,
             sourceLink_: URL(string: sourceURL ?? "")
         )

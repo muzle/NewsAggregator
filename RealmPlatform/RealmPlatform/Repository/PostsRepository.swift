@@ -110,6 +110,7 @@ final class PostsRepository<PostsDAO: DAO>: FavoritePostsRepository, VisitedPost
             isFavorite: isFavorite,
             addToFavoriteDate: addToFavoriteDate,
             visitCount: visitCount,
+            sourceId: post.sourceId,
             sourceName: post.sourceName,
             sourceURL: post.sourceLink?.absoluteString
         )

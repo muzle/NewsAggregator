@@ -10,9 +10,15 @@ private let constants = Constants()
 // swiftlint:disable line_length
 internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsRepository where Mapper.Result == NAPostsContainer {
     private let mapper: Mapper
+    private let sourceInfo: PostsResourceInfo
     
-    init(loader: Loader, mapper: Mapper) {
+    init(
+        loader: Loader,
+        mapper: Mapper,
+        sourceInfo: PostsResourceInfo
+    ) {
         self.mapper = mapper
+        self.sourceInfo = sourceInfo
         super.init(loader: loader)
     }
     
@@ -35,6 +41,10 @@ internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: Root
             from: Date(),
             sort: .pubDate
         )
+    }
+    
+    var postsResourceInfo: PostsResourceInfo? {
+        sourceInfo
     }
 }
 // swiftlint:enable line_length
