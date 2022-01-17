@@ -8,14 +8,20 @@ final class ContextBuilder {
     private typealias UDStorageFactory = UserDefaultsSingleObjectStorageFactory
     func build() -> Context {
         
-        let storageAndProviderRepo: Domain.PostsRepository & Domain.PostsStoreRepository  = CoreDataPlatform.RepositoryFactory.makeRepository()
+        let storageAndProviderRepo: Domain.PostsRepository & Domain.PostsStoreRepository = CoreDataPlatform.RepositoryFactory.makeRepository()
+        
+        let appSettingsService = AppSettingsServiceImpl(
+            storage: UDStorageFactory.makeAppSettingsStorage()
+        )
+        
+        let postsLoaders = [
+            NetworkPlatform.NetworkRepositoryFactory.makeGazetaRuRepository(),
+            NetworkPlatform.NetworkRepositoryFactory.makeLentaRuRepository(),
+            NetworkPlatform.NetworkRepositoryFactory.makeNewsApiRepository()
+        ]
         
         let postsUseCase = PostsUseCaseImpl(
-            postsloaders: [
-                NetworkPlatform.NetworkRepositoryFactory.makeGazetaRuRepository(),
-                NetworkPlatform.NetworkRepositoryFactory.makeLentaRuRepository(),
-                NetworkPlatform.NetworkRepositoryFactory.makeNewsApiRepository()
-            ],
+            postsloaders: postsLoaders,
             postsVisitTraker: RealmPlatform.RepositoryFactory.makeVisitedPostsRepository(),
             favoritePostsTraker: RealmPlatform.RepositoryFactory.makeFavoritePostsRepository(),
             postsProvider: storageAndProviderRepo,
@@ -23,9 +29,11 @@ final class ContextBuilder {
             imageRepository: NetworkPlatform.NetworkRepositoryFactory.makeImageRepository()
         )
         
-        let appSettingsService = AppSettingsServiceImpl(
-            storage: UDStorageFactory.makeAppSettingsStorage()
-        )
+        do {
+            try appSettingsService.resetTrackableResources(resources: postsLoaders.compactMap { $0.postsResourceInfo })
+        } catch {
+            print(error.localizedDescription)
+        }
         
         return Context(
             postsUseCase: postsUseCase,
