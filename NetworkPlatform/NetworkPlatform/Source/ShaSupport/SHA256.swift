@@ -1,9 +1,9 @@
 import Foundation
 import CommonCrypto
 
-extension Data {
-    func sha256() -> String {
-        hexStringFromData(input: digest(input: self as NSData))
+final class SHA256: SHAService {
+    func sha(for data: Data) throws -> String {
+        hexStringFromData(input: digest(input: data as NSData))
     }
     
     private func digest(input: NSData) -> NSData {
@@ -21,16 +21,6 @@ extension Data {
         for byte in bytes {
             hexString += String(format: "%02x", UInt8(byte))
         }
-        
         return hexString
-    }
-}
-
-public extension String {
-    func sha256() -> String {
-        if let stringData = self.data(using: String.Encoding.utf8) {
-            return stringData.sha256()
-        }
-        return ""
     }
 }

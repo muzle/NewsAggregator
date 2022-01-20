@@ -6,17 +6,20 @@ final class RssDtoMapperImpl {
     private let encoder: JSONEncoder
     private let emailChecker: EmailChecker
     private let resourceInfo: PostsResourceInfo
+    private let shaService: SHAService
     
     init(
         dateFormatter: DateFormatter,
         encoder: JSONEncoder,
         emailChecker: EmailChecker,
-        resourceInfo: PostsResourceInfo
+        resourceInfo: PostsResourceInfo,
+        shaService: SHAService
     ) {
         self.dateFormatter = dateFormatter
         self.encoder = encoder
         self.emailChecker = emailChecker
         self.resourceInfo = resourceInfo
+        self.shaService = shaService
     }
 }
 
@@ -65,10 +68,10 @@ extension RssDtoMapperImpl: DtoMapper {
             )
         }
         
-        let data = try encoder.encode(rssPost)
+        let id = try shaService.sha(for: rssPost, with: encoder)
         
         return Post(
-            id_: data.sha256(),
+            id_: id,
             author_: author,
             link_: url,
             publicationDate_: date,

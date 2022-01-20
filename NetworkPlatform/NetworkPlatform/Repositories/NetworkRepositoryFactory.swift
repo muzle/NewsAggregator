@@ -4,9 +4,11 @@ import Domain
 // swiftlint:disable line_length
 public enum NetworkRepositoryFactory {
     private static let loader = NetworkLoaderImpl()
+    private static let shaService = SHA256()
     private static let newsApiMapper = NewsApiDtoMapper(
         encoder: JSONEncoderFactory.commomEncoder,
-        resourceInfo: PostsResourceInfoFactory.newsApi
+        resourceInfo: PostsResourceInfoFactory.newsApi,
+        shaService: shaService
     )
     private static let lentaMapper = makeRssMapper(resourceInfo: PostsResourceInfoFactory.lenta)
     private static let gazetaMapper = makeRssMapper(resourceInfo: PostsResourceInfoFactory.gazeta)
@@ -16,7 +18,8 @@ public enum NetworkRepositoryFactory {
             dateFormatter: Formatter.RFC822,
             encoder: JSONEncoderFactory.commomEncoder,
             emailChecker: emailChecker,
-            resourceInfo: resourceInfo
+            resourceInfo: resourceInfo,
+            shaService: shaService
         )
     }
     private static let rssDecoder = RssDecoderImpl()

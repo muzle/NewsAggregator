@@ -35,7 +35,8 @@
 		2F0A3EB4278F889B00C881BF /* RssDtoMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */; };
 		2F0A3EB6278F88AC00C881BF /* NewApiMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */; };
 		2F1AD0962794E97700983800 /* PostsResourceInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AD0952794E97700983800 /* PostsResourceInfoFactory.swift */; };
-		2F59214E2793C8B100650153 /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59214D2793C8B100650153 /* Data+extension.swift */; };
+		2F5DBCC92799934E00689F4D /* SHAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCC82799934E00689F4D /* SHAService.swift */; };
+		2F5DBCCB2799939200689F4D /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCCA2799939200689F4D /* SHA256.swift */; };
 		2F653B332799559900C5521B /* RssPostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B322799559900C5521B /* RssPostsRepository.swift */; };
 		2F653B352799562B00C5521B /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B342799562B00C5521B /* PostsRouter.swift */; };
 		2F653B3927995B8F00C5521B /* NAPostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B3827995B8F00C5521B /* NAPostsRouter.swift */; };
@@ -106,7 +107,8 @@
 		2F0A3EB3278F889B00C881BF /* RssDtoMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssDtoMapperTests.swift; sourceTree = "<group>"; };
 		2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApiMapperTest.swift; sourceTree = "<group>"; };
 		2F1AD0952794E97700983800 /* PostsResourceInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResourceInfoFactory.swift; sourceTree = "<group>"; };
-		2F59214D2793C8B100650153 /* Data+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
+		2F5DBCC82799934E00689F4D /* SHAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAService.swift; sourceTree = "<group>"; };
+		2F5DBCCA2799939200689F4D /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		2F653B322799559900C5521B /* RssPostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssPostsRepository.swift; sourceTree = "<group>"; };
 		2F653B342799562B00C5521B /* PostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRouter.swift; sourceTree = "<group>"; };
 		2F653B3827995B8F00C5521B /* NAPostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPostsRouter.swift; sourceTree = "<group>"; };
@@ -192,7 +194,6 @@
 			children = (
 				2F0A3E6B278F241600C881BF /* Formatter+extension.swift */,
 				2F0A3E8D278F39D600C881BF /* URLSessionDataTask+Cancelable.swift */,
-				2F59214D2793C8B100650153 /* Data+extension.swift */,
 			);
 			path = "Foundation+extension";
 			sourceTree = "<group>";
@@ -246,6 +247,15 @@
 				2F0A3EB5278F88AC00C881BF /* NewApiMapperTest.swift */,
 			);
 			path = MappToDomainTests;
+			sourceTree = "<group>";
+		};
+		2F5DBCC72799931D00689F4D /* ShaSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2F5DBCC82799934E00689F4D /* SHAService.swift */,
+				2F5DBCCA2799939200689F4D /* SHA256.swift */,
+			);
+			path = ShaSupport;
 			sourceTree = "<group>";
 		};
 		2F653B3627995B5B00C5521B /* RouteProviders */ = {
@@ -325,6 +335,7 @@
 				2FAAB405278E058C0096901B /* RssDecodingSupport */,
 				2F0A3E65278F236300C881BF /* CodableFactory */,
 				2F0A3EA4278F6B4E00C881BF /* EmailChecker */,
+				2F5DBCC72799931D00689F4D /* ShaSupport */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -607,11 +618,11 @@
 				2FAAB400278E00940096901B /* RssChanel.swift in Sources */,
 				2F653B332799559900C5521B /* RssPostsRepository.swift in Sources */,
 				2F0A3E8E278F39D600C881BF /* URLSessionDataTask+Cancelable.swift in Sources */,
+				2F5DBCC92799934E00689F4D /* SHAService.swift in Sources */,
 				2F653B3B27995B9F00C5521B /* LentaPostsRouter.swift in Sources */,
 				2F0A3E5C278F0A4300C881BF /* GazetaRuRouter.swift in Sources */,
 				2F0A3E5E278F0ABD00C881BF /* AbstractRouter+extension.swift in Sources */,
 				2F0A3E90278F3A8C00C881BF /* NetworkLoaderError.swift in Sources */,
-				2F59214E2793C8B100650153 /* Data+extension.swift in Sources */,
 				2FAAB3E1278DF1F00096901B /* NAPost.swift in Sources */,
 				2F0A3EA1278F672A00C881BF /* NewsApiDtoMapperImpl.swift in Sources */,
 				2F0A3E8C278F38E200C881BF /* NetworkLoaderImpl.swift in Sources */,
@@ -619,6 +630,7 @@
 				2FAAB407278E058C0096901B /* RssDecoder.swift in Sources */,
 				2FAAB3E3278DF2250096901B /* NASource.swift in Sources */,
 				2F1AD0962794E97700983800 /* PostsResourceInfoFactory.swift in Sources */,
+				2F5DBCCB2799939200689F4D /* SHA256.swift in Sources */,
 				2F0A3E8A278F350400C881BF /* JSONDecoderFactory.swift in Sources */,
 				2FFF5E25278E3E2700567F7B /* Markers.swift in Sources */,
 				2F6F58AA27913F6B0025552B /* ImageRepositoryImpl.swift in Sources */,

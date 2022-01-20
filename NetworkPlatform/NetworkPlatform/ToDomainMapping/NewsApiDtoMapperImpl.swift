@@ -4,13 +4,16 @@ import Domain
 final class NewsApiDtoMapper {
     private let encoder: JSONEncoder
     private let resourceInfo: PostsResourceInfo
+    private let shaService: SHAService
     
     init(
         encoder: JSONEncoder,
-        resourceInfo: PostsResourceInfo
+        resourceInfo: PostsResourceInfo,
+        shaService: SHAService
     ) {
         self.encoder = encoder
         self.resourceInfo = resourceInfo
+        self.shaService = shaService
     }
 }
 
@@ -31,9 +34,10 @@ extension NewsApiDtoMapper: DtoMapper {
     }
     
     private func makePost(_ naPost: NAPost) throws -> Post {
-        let data = try encoder.encode(naPost)
+        let id = try shaService.sha(for: naPost, with: encoder)
+        
         return Post(
-            id_: data.sha256(),
+            id_: id,
             author_: Author(name_: naPost.author),
             link_: naPost.url,
             publicationDate_: naPost.publishedAt,
