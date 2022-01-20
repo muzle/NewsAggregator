@@ -21,7 +21,7 @@ public enum NetworkRepositoryFactory {
     }
     private static let rssDecoder = RssDecoderImpl()
     
-    public static func makeLentaRuRepository() -> Domain.PostsRepository {
+    public static func makeLentaRuRepository() -> Domain.PostsResourceRepository {
         LentaRuRepository(
             loader: loader,
             rssDecoder: rssDecoder,
@@ -30,7 +30,7 @@ public enum NetworkRepositoryFactory {
         )
     }
     
-    public static func makeGazetaRuRepository() -> Domain.PostsRepository {
+    public static func makeGazetaRuRepository() -> Domain.PostsResourceRepository {
         GazetaRuRepository(
             loader: loader,
             rssDecoder: rssDecoder,
@@ -39,7 +39,7 @@ public enum NetworkRepositoryFactory {
         )
     }
     
-    public static func makeNewsApiRepository() -> Domain.PostsRepository {
+    public static func makeNewsApiRepository() -> Domain.PostsResourceRepository {
         NewsApiRepository(
             loader: loader,
             mapper: newsApiMapper,

@@ -15,7 +15,7 @@ final class ContextBuilder {
             storage: UDStorageFactory.makeAppSettingsStorage()
         )
         
-        let postsLoaders = [
+        let postsLoaders: [PostsResourceRepository] = [
             NetworkPlatform.NetworkRepositoryFactory.makeGazetaRuRepository(),
             NetworkPlatform.NetworkRepositoryFactory.makeLentaRuRepository(),
             NetworkPlatform.NetworkRepositoryFactory.makeNewsApiRepository()

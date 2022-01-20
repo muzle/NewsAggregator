@@ -3,7 +3,7 @@ import Domain
 import RxSwift
 
 // swiftlint:disable line_length
-internal class LentaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsRepository where Mapper.Result == RssChannel {
+internal class LentaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsResourceRepository where Mapper.Result == RssChannel {
     private let mapper: Mapper
     private let rssDecoder: RssDecoder
     private let sourceInfo: PostsResourceInfo
@@ -28,7 +28,7 @@ internal class LentaRuRepository<Loader: NetworkLoader, Mapper: DtoMapper>: Root
             .asObservable()
     }
     
-    var postsResourceInfo: PostsResourceInfo? {
+    var postsResourceInfo: PostsResourceInfo {
         sourceInfo
     }
 }

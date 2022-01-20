@@ -5,11 +5,11 @@ import RxCocoa
 
 final class PostsFetcher {
     private let appSettingsService: AppSettingsService
-    private let postsLoaders: [PostsRepository]
+    private let postsLoaders: [PostsResourceRepository]
     
     init(
         appSettingsService: AppSettingsService,
-        postsLoaders: [PostsRepository]
+        postsLoaders: [PostsResourceRepository]
     ) {
         self.appSettingsService = appSettingsService
         self.postsLoaders = postsLoaders

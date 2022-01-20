@@ -8,7 +8,7 @@ private struct Constants {
 private let constants = Constants()
 
 // swiftlint:disable line_length
-internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsRepository where Mapper.Result == NAPostsContainer {
+internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: RootRepository<Loader>, Domain.PostsResourceRepository where Mapper.Result == NAPostsContainer {
     private let mapper: Mapper
     private let sourceInfo: PostsResourceInfo
     
@@ -43,7 +43,7 @@ internal class NewsApiRepository<Loader: NetworkLoader, Mapper: DtoMapper>: Root
         )
     }
     
-    var postsResourceInfo: PostsResourceInfo? {
+    var postsResourceInfo: PostsResourceInfo {
         sourceInfo
     }
 }
