@@ -7,10 +7,13 @@ class RssDtoMapperTests: DtoMapperTests<RssChannel, RssDtoMapperImpl> {
         try super.setUpWithError()
         
         mapper = .init(
-            dateFormatter: Formatter.RFC822,
+            dateFormatter: .RFC822,
+            encoder: JSONEncoderFactory.commomEncoder,
             emailChecker: EmailCheckerImpl(),
-            resourceId: ResourceId.lenta
+            resourceInfo: PostsResourceInfoFactory.lenta,
+            shaService: SHA256()
         )
+        
         mappedData = RssChannel.makeStubAsInFile()
         result = .makeRssContainerStubAsInFile()
     }

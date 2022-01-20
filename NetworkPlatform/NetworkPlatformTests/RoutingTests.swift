@@ -2,13 +2,6 @@ import XCTest
 @testable import NetworkPlatform
 
 class RoutingTests: XCTestCase {
-    override func setUpWithError() throws {
-        
-    }
-    
-    override func tearDownWithError() throws {
-        
-    }
     
     func testLentaPostsRoute() throws {
         let url = try LentaRuRouter.posts.convertToURL(with: JSONEncoderFactory.commomEncoder)
@@ -34,14 +27,16 @@ class RoutingTests: XCTestCase {
         let date = Date()
         let query = NAPostsQuery(
             token: "token",
-            query: "query",
+            country: "ru",
+            category: "info",
             from: date,
             sort: .pubDate
         )
+        
         let dateText = Formatter.yyyyMMdd.string(from: date)
         let url = try NewsApiRouter.posts(query: query)
             .convertToURL(with: JSONEncoderFactory.yyyyMMddDateSupportEncoder)
-        let result = "https://newsapi.org?q=\(query.query!)&from=\(dateText)&apiKey=\(query.token)&sortBy=\(query.sort!.rawValue)"
+        let result = "https://newsapi.org/v2/top-headlines?from=\(dateText)&apiKey=\(query.token)&sortBy=\(query.sort!.rawValue)&category=\(query.category!)&country=\(query.country!)"
         XCTAssertEqual(url.absoluteString, result)
         
         let request = try NewsApiRouter.posts(query: query).convertToURLRequest(with: JSONEncoderFactory.yyyyMMddDateSupportEncoder)

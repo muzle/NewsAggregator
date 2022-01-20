@@ -71,23 +71,28 @@ extension PostsContainer {
     static func makeRssContainerStubAsInFile() -> Self {
         let chanel = RssChannel.makeStubAsInFile()
         let rssPost = chanel.items.first!
+        let resourceInfo = PostsResourceInfoFactory.lenta
+        let id = try! SHA256().sha(for: rssPost, with: JSONEncoder())
         
         let post = Post(
-            id_: "\(rssPost.hashValue)",
+            id_: id,
             author_: .init(name_: rssPost.author, email_: nil),
             link_: URL(string: rssPost.link!),
             publicationDate_: Formatter.RFC822.date(from: rssPost.pubDate!),
             title_: rssPost.title,
             description_: rssPost.description,
             category_: rssPost.category,
-            image_: .init(url_: URL(string: rssPost.enclosure!.url!))
+            image_: .init(url_: URL(string: rssPost.enclosure!.url!)),
+            sourceId_: resourceInfo.id,
+            sourceName_: resourceInfo.name,
+            sourceLink_: resourceInfo.url
         )
         
         return .init(
-            id_: ResourceId.lenta,
-            name_: chanel.title!,
+            id_: resourceInfo.id,
+            name_: resourceInfo.name,
             image_: .init(url_: URL(string: chanel.image!.url!)),
-            url_: URL(string: chanel.link!),
+            url_: resourceInfo.url,
             description_: chanel.description,
             posts_: [post]
         )
@@ -96,21 +101,29 @@ extension PostsContainer {
     static func makeNewApiContainerStubAsInFile() -> Self {
         let naPostContainer = NAPostsContainer.makeStubAsInFile()
         let naPost = naPostContainer.posts.first!
+        let resourceInfo = PostsResourceInfoFactory.newsApi
+        
+        let id = try! SHA256().sha(for: naPost, with: JSONEncoderFactory.yyyyMMddDateSupportEncoder)
+        
         let post = Post(
-            id_: "\(naPost.hashValue)",
+            id_: id,
             author_: .init(name_: naPost.author, email_: nil),
             link_: naPost.url,
             publicationDate_: naPost.publishedAt,
             title_: naPost.title,
             description_: naPost.description,
             category_: nil,
-            image_: .init(url_: naPost.urlToImage)
+            image_: .init(url_: naPost.urlToImage),
+            sourceId_: resourceInfo.id,
+            sourceName_: resourceInfo.name,
+            sourceLink_: resourceInfo.url
         )
+        
         return .init(
-            id_: ResourceId.newApi,
-            name_: nil,
+            id_: resourceInfo.id,
+            name_: resourceInfo.name,
             image_: nil,
-            url_: .init(string: "https://newsapi.org"),
+            url_: resourceInfo.url,
             description_: nil,
             posts_: [post]
         )

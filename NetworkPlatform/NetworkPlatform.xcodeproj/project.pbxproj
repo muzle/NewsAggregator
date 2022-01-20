@@ -37,6 +37,7 @@
 		2F1AD0962794E97700983800 /* PostsResourceInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1AD0952794E97700983800 /* PostsResourceInfoFactory.swift */; };
 		2F5DBCC92799934E00689F4D /* SHAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCC82799934E00689F4D /* SHAService.swift */; };
 		2F5DBCCB2799939200689F4D /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCCA2799939200689F4D /* SHA256.swift */; };
+		2F5DBCCD279995BD00689F4D /* SHAServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCCC279995BD00689F4D /* SHAServiceTests.swift */; };
 		2F653B332799559900C5521B /* RssPostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B322799559900C5521B /* RssPostsRepository.swift */; };
 		2F653B352799562B00C5521B /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B342799562B00C5521B /* PostsRouter.swift */; };
 		2F653B3927995B8F00C5521B /* NAPostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F653B3827995B8F00C5521B /* NAPostsRouter.swift */; };
@@ -109,6 +110,7 @@
 		2F1AD0952794E97700983800 /* PostsResourceInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResourceInfoFactory.swift; sourceTree = "<group>"; };
 		2F5DBCC82799934E00689F4D /* SHAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAService.swift; sourceTree = "<group>"; };
 		2F5DBCCA2799939200689F4D /* SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
+		2F5DBCCC279995BD00689F4D /* SHAServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAServiceTests.swift; sourceTree = "<group>"; };
 		2F653B322799559900C5521B /* RssPostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssPostsRepository.swift; sourceTree = "<group>"; };
 		2F653B342799562B00C5521B /* PostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRouter.swift; sourceTree = "<group>"; };
 		2F653B3827995B8F00C5521B /* NAPostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPostsRouter.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				2F0A3EB2278F887500C881BF /* MappToDomainTests */,
 				2F0A3E5F278F0F6400C881BF /* RoutingTests.swift */,
 				2F0A3EAB278F7F0100C881BF /* EmailCheckerTests.swift */,
+				2F5DBCCC279995BD00689F4D /* SHAServiceTests.swift */,
 			);
 			path = NetworkPlatformTests;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				2F0A3E60278F0F6400C881BF /* RoutingTests.swift in Sources */,
 				2FAAB3EE278DF65B0096901B /* NewsApiParsingTest.swift in Sources */,
 				2F0A3EAC278F7F0100C881BF /* EmailCheckerTests.swift in Sources */,
+				2F5DBCCD279995BD00689F4D /* SHAServiceTests.swift in Sources */,
 				2F0A3EB6278F88AC00C881BF /* NewApiMapperTest.swift in Sources */,
 				2FAAB3F0278DF6CC0096901B /* Helpers.swift in Sources */,
 				2F0A3EB4278F889B00C881BF /* RssDtoMapperTests.swift in Sources */,

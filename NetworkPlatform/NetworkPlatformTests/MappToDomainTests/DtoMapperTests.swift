@@ -16,6 +16,6 @@ class DtoMapperTests<T, Mapper: DtoMapper>: XCTestCase where Mapper.Result == T,
     }
     
     func testMapping() {
-        XCTAssertEqual(mapper.map(mappedData), result)
+        XCTAssertEqual(try mapper.map(mappedData), result)
     }
 }

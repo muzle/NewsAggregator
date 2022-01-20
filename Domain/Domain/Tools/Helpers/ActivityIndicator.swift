@@ -1,3 +1,4 @@
+#if canImport(RxCocoa)
 import RxSwift
 import RxCocoa
 
@@ -64,3 +65,4 @@ extension ObservableConvertibleType {
         activityIndicator.trackActivityOfObservable(self)
     }
 }
+#endif

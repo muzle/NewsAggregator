@@ -7,13 +7,11 @@ class NewsApiDtoMapperTests: DtoMapperTests<NAPostsContainer, NewsApiDtoMapper> 
         try super.setUpWithError()
         
         mapper = .init(
-            resourceId: ResourceId.newApi,
-            imageUrl: nil,
-            name: nil,
-            title: nil,
-            description: nil,
-            resourceURL: .init(string: "https://newsapi.org")
+            encoder: JSONEncoderFactory.yyyyMMddDateSupportEncoder,
+            resourceInfo: PostsResourceInfoFactory.newsApi,
+            shaService: SHA256()
         )
+        
         mappedData = .makeStubAsInFile()
         result = .makeNewApiContainerStubAsInFile()
     }

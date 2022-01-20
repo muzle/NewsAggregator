@@ -1,5 +1,4 @@
 import RxSwift
-import RxCocoa
 
 // https://github.com/sergdort/CleanArchitectureRxSwift/blob/master/CleanArchitectureRxSwift/Utility/ErrorTracker.swift
 
@@ -28,17 +27,20 @@ public final class ErrorTracker {
     }
 }
 
+public extension ObservableConvertibleType {
+    func trackError(_ tracker: ErrorTracker) -> Observable<Element> {
+        return tracker.track(self)
+    }
+}
+
+#if canImport(RxCocoa)
+import RxCocoa
+
 extension ErrorTracker: SharedSequenceConvertibleType {
     public typealias Element = Error
     public typealias SharingStrategy = SignalSharingStrategy
     public func asSharedSequence() -> SharedSequence<SharingStrategy, Error> {
         return _errors.asSignal(onErrorSignalWith: .empty())
-    }
-}
-
-public extension ObservableConvertibleType {
-    func trackError(_ tracker: ErrorTracker) -> Observable<Element> {
-        return tracker.track(self)
     }
 }
 
@@ -51,3 +53,4 @@ public extension ObservableConvertibleType {
         return tracker.track(self).asDriver(onErrorDriveWith: .empty())
     }
 }
+#endif
