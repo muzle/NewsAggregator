@@ -7,13 +7,13 @@ extension CDPost: DomainConvertible {
     func asDomain() -> Post {
         Post(
             id_: id,
-            author_: Author(name_: authorName, email_: authorEmail),
+            author_: authorName == nil && authorEmail == nil ? nil : Author(name_: authorName, email_: authorEmail),
             link_: link,
             publicationDate_: publicationDate,
             title_: title,
             description_: postDescription,
             category_: category,
-            image_: Image(url_: imageURL),
+            image_: imageURL == nil ? nil : Image(url_: imageURL),
             sourceId_: sourceId,
             sourceName_: sourceName,
             sourceLink_: sourceLink

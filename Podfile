@@ -93,6 +93,7 @@ end
 target 'CoreDataPlatform' do
   project 'CoreDataPlatform/CoreDataPlatform'
   rxSwift
+  rxCocoa
   
   target 'CoreDataPlatformTests' do
     rxTest

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00BA22B6346DA1D49C3E8A8F /* Pods_CoreDataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E7FBF2B50E5C4A88BECF75 /* Pods_CoreDataPlatform.framework */; };
+		2F5DBCCF2799A60C00689F4D /* DaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCCE2799A60C00689F4D /* DaoTests.swift */; };
+		2F5DBCD12799AAEF00689F4D /* PostsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5DBCD02799AAEF00689F4D /* PostsRepositoryTests.swift */; };
 		2F6600B22793072A00C44A2D /* CoreDataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6600A92793072A00C44A2D /* CoreDataPlatform.framework */; };
-		2F6600B72793072A00C44A2D /* CoreDataPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */; };
 		2F6600B82793072A00C44A2D /* CoreDataPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F6600AC2793072A00C44A2D /* CoreDataPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F6600C22793078B00C44A2D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6600C12793078B00C44A2D /* Domain.framework */; };
 		2F6600CA2793120200C44A2D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6600C82793120200C44A2D /* Model.xcdatamodeld */; };
@@ -44,10 +45,11 @@
 
 /* Begin PBXFileReference section */
 		2765E5AEC570D0BD182BB8F1 /* Pods-CoreDataPlatform-CoreDataPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatform-CoreDataPlatformTests.release.xcconfig"; path = "Target Support Files/Pods-CoreDataPlatform-CoreDataPlatformTests/Pods-CoreDataPlatform-CoreDataPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F5DBCCE2799A60C00689F4D /* DaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoTests.swift; sourceTree = "<group>"; };
+		2F5DBCD02799AAEF00689F4D /* PostsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositoryTests.swift; sourceTree = "<group>"; };
 		2F6600A92793072A00C44A2D /* CoreDataPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6600AC2793072A00C44A2D /* CoreDataPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataPlatform.h; sourceTree = "<group>"; };
 		2F6600B12793072A00C44A2D /* CoreDataPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPlatformTests.swift; sourceTree = "<group>"; };
 		2F6600C12793078B00C44A2D /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6600C92793120200C44A2D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2F6600CB2793184500C44A2D /* DBLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoader.swift; sourceTree = "<group>"; };
@@ -143,7 +145,8 @@
 		2F6600B52793072A00C44A2D /* CoreDataPlatformTests */ = {
 			isa = PBXGroup;
 			children = (
-				2F6600B62793072A00C44A2D /* CoreDataPlatformTests.swift */,
+				2F5DBCCE2799A60C00689F4D /* DaoTests.swift */,
+				2F5DBCD02799AAEF00689F4D /* PostsRepositoryTests.swift */,
 			);
 			path = CoreDataPlatformTests;
 			sourceTree = "<group>";
@@ -419,7 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F6600B72793072A00C44A2D /* CoreDataPlatformTests.swift in Sources */,
+				2F5DBCCF2799A60C00689F4D /* DaoTests.swift in Sources */,
+				2F5DBCD12799AAEF00689F4D /* PostsRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
