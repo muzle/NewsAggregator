@@ -64,6 +64,7 @@ end
 target 'Domain' do
   project 'Domain/Domain'
   rxSwift
+  rxCocoa
 end
 
 
@@ -72,6 +73,7 @@ target 'NetworkPlatform' do
   rxSwift
   apiRouter
   imageLoader
+  rxCocoa
   
   target 'NetworkPlatformTests' do
     rxTest

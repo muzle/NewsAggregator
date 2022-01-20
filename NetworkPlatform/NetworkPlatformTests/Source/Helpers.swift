@@ -72,7 +72,7 @@ extension PostsContainer {
         let chanel = RssChannel.makeStubAsInFile()
         let rssPost = chanel.items.first!
         let resourceInfo = PostsResourceInfoFactory.lenta
-        let id = try! SHA256().sha(for: rssPost, with: JSONEncoder())
+        let id = (try? SHA256().sha(for: rssPost, with: JSONEncoder())) ?? ""
         
         let post = Post(
             id_: id,
@@ -103,7 +103,7 @@ extension PostsContainer {
         let naPost = naPostContainer.posts.first!
         let resourceInfo = PostsResourceInfoFactory.newsApi
         
-        let id = try! SHA256().sha(for: naPost, with: JSONEncoderFactory.yyyyMMddDateSupportEncoder)
+        let id = (try? SHA256().sha(for: naPost, with: JSONEncoderFactory.yyyyMMddDateSupportEncoder)) ?? ""
         
         let post = Post(
             id_: id,
