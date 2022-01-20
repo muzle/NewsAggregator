@@ -22,27 +22,30 @@ public enum NetworkRepositoryFactory {
     private static let rssDecoder = RssDecoderImpl()
     
     public static func makeLentaRuRepository() -> Domain.PostsResourceRepository {
-        LentaRuRepository(
+        RssPostsRepository(
             loader: loader,
             rssDecoder: rssDecoder,
             mapper: lentaMapper,
+            postsRouter: LentaPostsRouter(),
             sourceInfo: PostsResourceInfoFactory.lenta
         )
     }
     
     public static func makeGazetaRuRepository() -> Domain.PostsResourceRepository {
-        GazetaRuRepository(
+        RssPostsRepository(
             loader: loader,
             rssDecoder: rssDecoder,
-            mapper: gazetaMapper,
-            sourceInfo: PostsResourceInfoFactory.gazeta
+            mapper: lentaMapper,
+            postsRouter: GazetaPostsRouter(),
+            sourceInfo: PostsResourceInfoFactory.lenta
         )
     }
     
     public static func makeNewsApiRepository() -> Domain.PostsResourceRepository {
-        NewsApiRepository(
+        NAPostsRepository(
             loader: loader,
             mapper: newsApiMapper,
+            postsRouter: NAPostsRouter(),
             sourceInfo: PostsResourceInfoFactory.newsApi
         )
     }
